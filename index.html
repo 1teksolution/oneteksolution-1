@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>One Tek Solution | Professional Sourcing</title>
-  <meta name="description" content="One Tek Solution - Semiconductor sourcing, RF components, industrial electronics and global procurement support." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>One Tek Solution | Global Semiconductor Sourcing & Electronics Solutions</title>
+  <meta name="description" content="One Tek Solution provides semiconductor components, microcontrollers, RF devices, industrial electronics and global sourcing solutions.">
   <style>
     * {
       margin: 0;
@@ -18,12 +18,13 @@
     }
 
     body {
-      background: #020817;
-      color: #ffffff;
+      background: #08111f;
+      color: #fff;
       line-height: 1.6;
     }
 
     a {
+      color: #7dd3fc;
       text-decoration: none;
     }
 
@@ -31,8 +32,8 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(15, 23, 42, 0.96);
-      border-bottom: 1px solid #1e293b;
+      background: #111827;
+      border-bottom: 1px solid #334155;
     }
 
     .nav-wrap {
@@ -53,13 +54,13 @@
 
     nav {
       display: flex;
-      gap: 24px;
       align-items: center;
+      gap: 24px;
       flex-wrap: wrap;
     }
 
     nav a {
-      color: #ffffff;
+      color: #fff;
       font-weight: bold;
       font-size: 15px;
     }
@@ -69,25 +70,25 @@
     }
 
     .hero {
-      min-height: 88vh;
+      min-height: 90vh;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       padding: 60px 20px;
       background:
-        linear-gradient(rgba(2, 8, 23, 0.72), rgba(2, 8, 23, 0.82)),
-        url("logo1.png?v=5") center center / cover no-repeat;
+        linear-gradient(rgba(8, 17, 31, 0.72), rgba(8, 17, 31, 0.82)),
+        url('logo1.png') center center / cover no-repeat;
       border-bottom: 3px solid #38bdf8;
     }
 
     .hero-content {
-      max-width: 980px;
+      max-width: 1000px;
       width: 100%;
     }
 
     .hero-logo {
-      max-width: 440px;
+      max-width: 420px;
       width: 90%;
       display: block;
       margin: 0 auto 24px;
@@ -118,37 +119,37 @@
 
     .btn {
       display: inline-block;
+      background: #38bdf8;
+      color: #000;
       padding: 14px 28px;
       border-radius: 8px;
       font-weight: bold;
-      transition: 0.3s;
     }
 
-    .btn-primary {
-      background: #38bdf8;
-      color: #001018;
-    }
-
-    .btn-primary:hover {
+    .btn:hover {
       background: #0ea5e9;
-      color: #ffffff;
+      color: #fff;
     }
 
-    .btn-secondary {
+    .btn-outline {
+      display: inline-block;
       border: 1px solid #38bdf8;
-      color: #ffffff;
-      background: rgba(15, 23, 42, 0.45);
+      color: #fff;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-weight: bold;
+      background: rgba(17, 24, 39, 0.45);
     }
 
-    .btn-secondary:hover {
+    .btn-outline:hover {
       background: #38bdf8;
-      color: #001018;
+      color: #000;
     }
 
     .search-box {
       max-width: 720px;
       margin: 0 auto;
-      background: #ffffff;
+      background: #fff;
       border-radius: 999px;
       display: flex;
       padding: 6px;
@@ -167,8 +168,8 @@
 
     .search-box button {
       border: none;
-      background: #1d4ed8;
-      color: #ffffff;
+      background: #1d9bf0;
+      color: #fff;
       padding: 0 28px;
       border-radius: 999px;
       font-weight: bold;
@@ -184,35 +185,34 @@
     .section h2 {
       text-align: center;
       color: #38bdf8;
+      margin-bottom: 30px;
       font-size: 34px;
-      margin-bottom: 18px;
     }
 
-    .section-subtext {
-      text-align: center;
-      max-width: 850px;
+    .section-intro {
+      max-width: 900px;
       margin: 0 auto 40px;
+      text-align: center;
       color: #cbd5e1;
     }
 
     .cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 22px;
+      gap: 20px;
     }
 
     .card {
-      background: #0f172a;
-      border: 1px solid #243041;
-      border-radius: 16px;
-      padding: 24px;
+      background: #111827;
+      border: 1px solid #334155;
+      padding: 22px;
+      border-radius: 12px;
       transition: 0.3s;
     }
 
     .card:hover {
       transform: translateY(-6px);
       border-color: #38bdf8;
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
     }
 
     .card h3 {
@@ -229,47 +229,42 @@
     }
 
     .contact-box {
-      background: #0f172a;
-      border: 1px solid #243041;
-      border-radius: 18px;
-      padding: 30px;
+      background: #111827;
+      padding: 25px;
+      border-radius: 12px;
+      border: 1px solid #334155;
       margin-bottom: 30px;
     }
 
     .contact-box p {
       margin-bottom: 10px;
-      color: #e2e8f0;
-    }
-
-    .contact-box a {
-      color: #7dd3fc;
     }
 
     .form-wrap {
-      background: #0f172a;
-      border: 1px solid #243041;
-      border-radius: 18px;
+      background: #111827;
       padding: 30px;
-      max-width: 850px;
-      margin: 0 auto;
+      border-radius: 12px;
+      border: 1px solid #334155;
+      max-width: 900px;
+      margin: auto;
     }
 
     .form-wrap h3 {
-      text-align: center;
+      margin-bottom: 20px;
       color: #38bdf8;
-      margin-bottom: 24px;
+      text-align: center;
       font-size: 28px;
     }
 
     input,
     textarea {
       width: 100%;
-      padding: 14px 16px;
+      padding: 12px;
       margin: 10px 0;
-      border-radius: 10px;
       border: 1px solid #334155;
-      background: #162133;
-      color: #ffffff;
+      border-radius: 8px;
+      background: #0f172a;
+      color: #fff;
       outline: none;
     }
 
@@ -278,29 +273,29 @@
       border-color: #38bdf8;
     }
 
-    button.submit-btn {
+    .submit-btn {
+      background: #38bdf8;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      color: #000;
       width: 100%;
       margin-top: 10px;
-      border: none;
-      background: #38bdf8;
-      color: #001018;
-      font-weight: bold;
-      padding: 15px 20px;
-      border-radius: 10px;
-      cursor: pointer;
       font-size: 16px;
     }
 
-    button.submit-btn:hover {
+    .submit-btn:hover {
       background: #0ea5e9;
-      color: #ffffff;
+      color: #fff;
     }
 
     footer {
       background: #020617;
-      border-top: 1px solid #1e293b;
+      padding: 25px;
       text-align: center;
-      padding: 28px 20px;
+      border-top: 1px solid #1e293b;
       color: #94a3b8;
     }
 
@@ -308,11 +303,11 @@
       position: fixed;
       right: 20px;
       bottom: 20px;
+      background: #25D366;
+      color: #fff;
       width: 58px;
       height: 58px;
       border-radius: 50%;
-      background: #25d366;
-      color: #ffffff;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -358,7 +353,7 @@
 
   <header>
     <div class="nav-wrap">
-      <img src="logo.png?v=5" alt="One Tek Solution Logo" class="header-logo">
+      <img src="logo.png" alt="One Tek Solution Logo" class="header-logo">
 
       <nav>
         <a href="#home">Home</a>
@@ -372,21 +367,18 @@
 
   <section class="hero" id="home">
     <div class="hero-content">
-      <img src="logo.png?v=5" alt="One Tek Solution" class="hero-logo">
+      <img src="logo.png" alt="One Tek Solution" class="hero-logo">
 
       <h1>Electronics & Semiconductor Solutions</h1>
-      <p>
-        Microcontrollers, RF Components, Industrial Electronics and Global Semiconductor Sourcing
-        for OEMs, manufacturers and engineering teams.
-      </p>
+      <p>Microcontrollers • RF Components • Industrial Electronics • Global Semiconductor Sourcing</p>
 
       <div class="hero-buttons">
-        <a class="btn btn-primary" href="[wa.me](https://wa.me/918505807245)">WhatsApp Us</a>
-        <a class="btn btn-secondary" href="#contact">Get Quote</a>
+        <a class="btn" href="[wa.me](https://wa.me/918505807245)">WhatsApp Us</a>
+        <a class="btn-outline" href="#contact">Get Quote</a>
       </div>
 
       <div class="search-box">
-        <input type="text" placeholder="Search Part Number (e.g. STM32, NXP, TI...)" />
+        <input type="text" placeholder="Search Part Number (e.g. STM32, NXP, TI...)">
         <button type="button">Search</button>
       </div>
     </div>
@@ -394,62 +386,32 @@
 
   <section class="section" id="about">
     <h2>About One Tek Solution</h2>
-    <p class="section-subtext">
+    <p class="section-intro">
       One Tek Solution is a supplier of semiconductor components, microcontrollers, RF devices,
-      industrial electronics and sourcing solutions. We support OEMs, manufacturers, system
-      integrators and engineering teams with genuine components and responsive technical support.
+      industrial electronics and sourcing solutions. We support OEMs, manufacturers, system integrators
+      and engineering teams with genuine components and responsive technical support.
     </p>
   </section>
 
   <section class="section stats">
     <h2>Our Strength</h2>
     <div class="cards">
-      <div class="card">
-        <h3>5000+</h3>
-        <p>Components</p>
-      </div>
-      <div class="card">
-        <h3>100+</h3>
-        <p>Global Suppliers</p>
-      </div>
-      <div class="card">
-        <h3>24/7</h3>
-        <p>Support</p>
-      </div>
-      <div class="card">
-        <h3>Pan India</h3>
-        <p>Delivery Network</p>
-      </div>
+      <div class="card"><h3>5000+</h3><p>Components</p></div>
+      <div class="card"><h3>100+</h3><p>Global Suppliers</p></div>
+      <div class="card"><h3>24/7</h3><p>Support</p></div>
+      <div class="card"><h3>Pan India</h3><p>Delivery Network</p></div>
     </div>
   </section>
 
   <section class="section" id="products">
     <h2>Products & Solutions</h2>
     <div class="cards">
-      <div class="card">
-        <h3>Microcontrollers</h3>
-        <p>Industrial and automotive grade MCU solutions.</p>
-      </div>
-      <div class="card">
-        <h3>RF Components</h3>
-        <p>Wireless and communication components.</p>
-      </div>
-      <div class="card">
-        <h3>Semiconductors</h3>
-        <p>ICs, processors, memory and power devices.</p>
-      </div>
-      <div class="card">
-        <h3>Industrial Electronics</h3>
-        <p>Reliable components for automation systems.</p>
-      </div>
-      <div class="card">
-        <h3>Sensors</h3>
-        <p>Industrial and embedded sensing solutions.</p>
-      </div>
-      <div class="card">
-        <h3>Automotive Flashers</h3>
-        <p>Electronic flasher and control products.</p>
-      </div>
+      <div class="card"><h3>Microcontrollers</h3><p>Industrial and automotive grade MCU solutions.</p></div>
+      <div class="card"><h3>RF Components</h3><p>Wireless and communication components.</p></div>
+      <div class="card"><h3>Semiconductors</h3><p>ICs, processors, memory and power devices.</p></div>
+      <div class="card"><h3>Industrial Electronics</h3><p>Reliable components for automation systems.</p></div>
+      <div class="card"><h3>Sensors</h3><p>Industrial and embedded sensing solutions.</p></div>
+      <div class="card"><h3>Automotive Flashers</h3><p>Electronic flasher and control products.</p></div>
     </div>
   </section>
 

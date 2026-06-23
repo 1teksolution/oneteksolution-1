@@ -38,7 +38,7 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(17, 24, 39, 0.97);
+      background: rgba(20, 32, 52, 0.97);
       border-bottom: 1px solid #334155;
     }
 
@@ -79,7 +79,7 @@
     }
 
     nav a:hover {
-      color: #38bdf8;
+      color: #4cc3ff;
     }
 
     .hero {
@@ -90,50 +90,88 @@
       text-align: center;
       padding: 150px 20px 70px;
       background:
-        linear-gradient(rgba(8, 17, 31, 0.72), rgba(8, 17, 31, 0.84)),
-        url('logo1.png') center center / cover no-repeat;
-      border-bottom: 3px solid #38bdf8;
+        linear-gradient(rgba(15, 32, 56, 0.58), rgba(8, 17, 31, 0.68)),
+        url("logo1.png") center center / cover no-repeat;
+      border-bottom: 3px solid #4cc3ff;
     }
 
     .hero-content {
       max-width: 1000px;
       width: 100%;
-      margin-top: 40px;
+      margin-top: 50px;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.45);
+      color: #7dd3fc;
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 0.4px;
+      margin-bottom: 22px;
     }
 
     .hero h1 {
-      font-size: 56px;
+      font-size: 54px;
       line-height: 1.15;
-      color: #38bdf8;
+      color: #4cc3ff;
       margin-bottom: 18px;
-      letter-spacing: 1px;
+      letter-spacing: 0.8px;
+      text-shadow: 0 0 18px rgba(76, 195, 255, 0.18);
     }
 
-    .hero p {
+    .hero-subtext {
       max-width: 900px;
-      margin: 0 auto 30px;
+      margin: 0 auto 22px;
       font-size: 21px;
       color: #e2e8f0;
+    }
+
+    .hero-highlights {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .hero-highlights span {
+      background: rgba(15, 23, 42, 0.78);
+      border: 1px solid #334155;
+      color: #dbeafe;
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .hero-support-line {
+      color: #cbd5e1;
+      font-size: 15px;
+      margin-bottom: 28px;
     }
 
     .hero-buttons {
       display: flex;
       justify-content: center;
-      gap: 16px;
+      gap: 14px;
       flex-wrap: wrap;
       margin-bottom: 32px;
     }
 
     .btn {
       display: inline-block;
-      padding: 14px 30px;
+      padding: 14px 28px;
       border-radius: 10px;
       font-weight: bold;
       transition: 0.3s;
     }
 
     .btn-primary {
-      background: #38bdf8;
+      background: #4cc3ff;
       color: #001018;
     }
 
@@ -145,12 +183,24 @@
     .btn-secondary {
       background: rgba(15, 23, 42, 0.55);
       color: #ffffff;
-      border: 1px solid #38bdf8;
+      border: 1px solid #4cc3ff;
     }
 
     .btn-secondary:hover {
-      background: #38bdf8;
+      background: #4cc3ff;
       color: #001018;
+    }
+
+    .btn-outline-light {
+      background: transparent;
+      color: #ffffff;
+      border: 1px solid #64748b;
+    }
+
+    .btn-outline-light:hover {
+      border-color: #4cc3ff;
+      background: rgba(56, 189, 248, 0.12);
+      color: #ffffff;
     }
 
     .search-box {
@@ -191,7 +241,7 @@
 
     .section h2 {
       text-align: center;
-      color: #38bdf8;
+      color: #4cc3ff;
       font-size: 36px;
       margin-bottom: 22px;
     }
@@ -211,7 +261,7 @@
     }
 
     .card {
-      background: #111827;
+      background: #182334;
       border: 1px solid #334155;
       padding: 24px;
       border-radius: 14px;
@@ -220,12 +270,12 @@
 
     .card:hover {
       transform: translateY(-6px);
-      border-color: #38bdf8;
+      border-color: #4cc3ff;
       box-shadow: 0 12px 28px rgba(0, 0, 0, 0.24);
     }
 
     .card h3 {
-      color: #38bdf8;
+      color: #4cc3ff;
       margin-bottom: 10px;
       font-size: 22px;
     }
@@ -239,7 +289,7 @@
     }
 
     .contact-box {
-      background: #111827;
+      background: #182334;
       border: 1px solid #334155;
       padding: 28px;
       border-radius: 14px;
@@ -252,7 +302,7 @@
     }
 
     .form-wrap {
-      background: #111827;
+      background: #182334;
       border: 1px solid #334155;
       padding: 32px;
       border-radius: 14px;
@@ -262,7 +312,7 @@
 
     .form-wrap h3 {
       text-align: center;
-      color: #38bdf8;
+      color: #4cc3ff;
       font-size: 30px;
       margin-bottom: 20px;
     }
@@ -281,13 +331,13 @@
 
     input:focus,
     textarea:focus {
-      border-color: #38bdf8;
+      border-color: #4cc3ff;
     }
 
     .submit-btn {
       width: 100%;
       margin-top: 10px;
-      background: #38bdf8;
+      background: #4cc3ff;
       border: none;
       color: #001018;
       padding: 15px 20px;
@@ -304,7 +354,7 @@
     }
 
     footer {
-      background: #020617;
+      background: #08111f;
       border-top: 1px solid #243041;
       text-align: center;
       padding: 28px 20px;
@@ -329,10 +379,10 @@
 
     @media (max-width: 900px) {
       .hero h1 {
-        font-size: 42px;
+        font-size: 40px;
       }
 
-      .hero p {
+      .hero-subtext {
         font-size: 18px;
       }
     }
@@ -361,15 +411,19 @@
       }
 
       .hero-content {
-        margin-top: 10px;
+        margin-top: 20px;
       }
 
       .hero h1 {
-        font-size: 34px;
+        font-size: 32px;
       }
 
-      .hero p {
+      .hero-subtext {
         font-size: 16px;
+      }
+
+      .hero-support-line {
+        font-size: 14px;
       }
 
       .search-box {
@@ -394,7 +448,7 @@
   <header>
     <div class="nav-wrap">
       <div class="brand">
-        <img src="logo.png?v=2" alt="One Tek Solution Logo" class="header-logo">
+        <img src="logo.png" alt="One Tek Solution Logo" class="header-logo">
       </div>
 
       <nav>
@@ -407,203 +461,39 @@
     </div>
   </header>
 
-  .hero {
-  min-height: 92vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 150px 20px 70px;
-  background:
-    linear-gradient(rgba(15, 32, 56, 0.58), rgba(8, 17, 31, 0.68)),
-    url("logo1.png") center center / cover no-repeat;
-  border-bottom: 3px solid #38bdf8;
-}
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <p class="hero-tag">Trusted B2B Semiconductor Sourcing Partner</p>
 
-.hero-content {
-  max-width: 1000px;
-  width: 100%;
-  margin-top: 50px;
-}
+      <h1>Global Semiconductor Sourcing for OEMs & Industrial Buyers</h1>
 
-.hero-tag {
-  display: inline-block;
-  background: rgba(56, 189, 248, 0.12);
-  border: 1px solid rgba(56, 189, 248, 0.45);
-  color: #7dd3fc;
-  padding: 8px 16px;
-  border-radius: 999px;
-  font-size: 14px;
-  font-weight: bold;
-  letter-spacing: 0.4px;
-  margin-bottom: 22px;
-}
+      <p class="hero-subtext">
+        Reliable sourcing support for Microcontrollers, RF Components, Sensors, Industrial Electronics
+        and hard-to-find semiconductor parts.
+      </p>
 
-.hero h1 {
-  font-size: 54px;
-  line-height: 1.15;
-  color: #38bdf8;
-  margin-bottom: 18px;
-  letter-spacing: 0.8px;
-}
+      <div class="hero-highlights">
+        <span>Genuine Components</span>
+        <span>Global Sourcing</span>
+        <span>Fast Response</span>
+      </div>
 
-.hero-subtext {
-  max-width: 900px;
-  margin: 0 auto 22px;
-  font-size: 21px;
-  color: #e2e8f0;
-}
+      <p class="hero-support-line">
+        MOQ support | Bulk orders | BOM sourcing assistance for urgent and scheduled requirements
+      </p>
 
-.hero-highlights {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 18px;
-}
+      <div class="hero-buttons">
+        <a class="btn btn-primary" href="[wa.me](https://wa.me/918505807245)">WhatsApp Us</a>
+        <a class="btn btn-secondary" href="#contact">Get Quote</a>
+        <a class="btn btn-outline-light" href="#contact">Upload BOM</a>
+      </div>
 
-.hero-highlights span {
-  background: rgba(15, 23, 42, 0.78);
-  border: 1px solid #334155;
-  color: #dbeafe;
-  padding: 10px 16px;
-  border-radius: 999px;
-  font-size: 14px;
-  font-weight: 600;
-}
-
-.hero-support-line {
-  color: #cbd5e1;
-  font-size: 15px;
-  margin-bottom: 28px;
-}
-
-.hero-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 14px;
-  flex-wrap: wrap;
-  margin-bottom: 32px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 14px 28px;
-  border-radius: 10px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.btn-primary {
-  background: #38bdf8;
-  color: #001018;
-}
-
-.btn-primary:hover {
-  background: #0ea5e9;
-  color: #ffffff;
-}
-
-.btn-secondary {
-  background: rgba(15, 23, 42, 0.55);
-  color: #ffffff;
-  border: 1px solid #38bdf8;
-}
-
-.btn-secondary:hover {
-  background: #38bdf8;
-  color: #001018;
-}
-
-.btn-outline-light {
-  background: transparent;
-  color: #ffffff;
-  border: 1px solid #64748b;
-}
-
-.btn-outline-light:hover {
-  border-color: #38bdf8;
-  background: rgba(56, 189, 248, 0.12);
-  color: #ffffff;
-}
-
-.search-box {
-  max-width: 760px;
-  margin: 0 auto;
-  background: #ffffff;
-  border-radius: 999px;
-  display: flex;
-  padding: 6px;
-  overflow: hidden;
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
-}
-
-.search-box input {
-  flex: 1;
-  border: none;
-  outline: none;
-  padding: 17px 22px;
-  font-size: 16px;
-  color: #111827;
-}
-
-.search-box button {
-  border: none;
-  background: #1d9bf0;
-  color: #ffffff;
-  padding: 0 30px;
-  border-radius: 999px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-@media (max-width: 900px) {
-  .hero h1 {
-    font-size: 40px;
-  }
-
-  .hero-subtext {
-    font-size: 18px;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero {
-    padding: 130px 20px 60px;
-  }
-
-  .hero-content {
-    margin-top: 20px;
-  }
-
-  .hero h1 {
-    font-size: 32px;
-  }
-
-  .hero-subtext {
-    font-size: 16px;
-  }
-
-  .hero-support-line {
-    font-size: 14px;
-  }
-
-  .search-box {
-    flex-direction: column;
-    border-radius: 18px;
-  }
-
-  .search-box input {
-    width: 100%;
-  }
-
-  .search-box button {
-    margin-top: 6px;
-    padding: 14px;
-    border-radius: 14px;
-  }
-}
-
+      <div class="search-box">
+        <input type="text" placeholder="Search Part Number (e.g. STM32, NXP, TI...)">
+        <button type="button">Search</button>
+      </div>
+    </div>
+  </section>
 
   <section class="section" id="about">
     <h2>About One Tek Solution</h2>

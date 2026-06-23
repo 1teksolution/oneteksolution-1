@@ -5,160 +5,206 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>One Tek Solution | Semiconductor Sourcing</title>
     <style>
-        /* Modern Professional Styles */
-        :root {
-            --primary: #0ea5e9;
-            --bg: #020617;
-            --card-bg: #0f172a;
-            --text-main: #f8fafc;
-            --text-dim: #94a3b8;
+        /* Modern Professional Full-Screen CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, sans-serif; }
-        
-        body { background-color: var(--bg); color: var(--text-main); line-height: 1.6; }
+        body {
+            background-color: #020617;
+            color: #f8fafc;
+            line-height: 1.6;
+        }
 
-        /* Header & Nav */
+        /* Full Width Header */
         header {
-            background: rgba(15, 23, 42, 0.9);
+            background: #0f172a;
             padding: 15px 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            border-bottom: 1px solid #1e293b;
             position: sticky;
             top: 0;
             z-index: 1000;
+        }
+
+        .logo-box {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-img {
+            height: 50px;
+            width: auto;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        /* Hero Section - Full Width */
+        .hero {
+            width: 100%;
+            padding: 100px 5%;
+            text-align: center;
+            background: linear-gradient(rgba(2, 6, 23, 0.8), rgba(2, 6, 23, 0.8)), 
+                        radial-gradient(circle, #1e293b 0%, #020617 100%);
             border-bottom: 1px solid #1e293b;
         }
 
-        .logo-area { display: flex; align-items: center; gap: 10px; }
-        .logo-img { height: 45px; }
-
-        nav a { color: var(--text-main); text-decoration: none; margin-left: 20px; font-size: 14px; font-weight: bold; transition: 0.3s; }
-        nav a:hover { color: var(--primary); }
-
-        /* Hero Section */
-        .hero {
-            padding: 100px 20px;
-            text-align: center;
-            background: radial-gradient(circle at center, #1e293b 0%, #020617 100%);
+        .hero h1 {
+            font-size: 48px;
+            color: #38bdf8;
+            margin-bottom: 20px;
         }
 
-        .hero h1 { font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 20px; color: #fff; }
-        .hero p { color: var(--text-dim); max-width: 700px; margin: 0 auto 30px; }
+        .hero p {
+            max-width: 800px;
+            margin: 0 auto 30px;
+            color: #94a3b8;
+            font-size: 18px;
+        }
 
-        /* Search Bar (E-commerce Style) */
-        .search-container {
-            max-width: 600px;
+        /* Professional Search Bar */
+        .search-box {
+            max-width: 700px;
             margin: 0 auto;
             display: flex;
             background: #fff;
-            border-radius: 50px;
             padding: 5px;
-            overflow: hidden;
+            border-radius: 50px;
         }
 
-        .search-container input {
+        .search-box input {
             flex: 1;
             border: none;
-            padding: 12px 20px;
+            padding: 15px 25px;
             outline: none;
             font-size: 16px;
-        }
-
-        .search-container button {
-            background: var(--primary);
-            color: #fff;
-            border: none;
-            padding: 0 25px;
             border-radius: 50px;
-            cursor: pointer;
-            font-weight: bold;
+            color: #333;
         }
 
-        /* Product Cards */
-        .section { padding: 80px 5%; max-width: 1200px; margin: auto; }
+        .search-box button {
+            background: #0ea5e9;
+            color: white;
+            border: none;
+            padding: 0 30px;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Product Grid - Full Screen Layout */
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 80px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 50px;
+            color: #38bdf8;
+        }
+
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-top: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
         }
 
         .card {
-            background: var(--card-bg);
+            background: #0f172a;
             border: 1px solid #1e293b;
-            padding: 30px;
-            border-radius: 15px;
-            transition: 0.3s;
+            padding: 40px 30px;
+            border-radius: 20px;
             text-align: center;
-        }
-
-        .card:hover { transform: translateY(-10px); border-color: var(--primary); }
-        .card h3 { color: var(--primary); margin-bottom: 15px; }
-        .card p { font-size: 14px; color: var(--text-dim); margin-bottom: 20px; }
-
-        .btn-quote {
-            display: inline-block;
-            border: 1px solid var(--primary);
-            color: var(--primary);
-            padding: 8px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
             transition: 0.3s;
         }
 
-        .btn-quote:hover { background: var(--primary); color: #fff; }
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: #38bdf8;
+        }
 
-        /* Form */
-        .contact-box {
-            background: var(--card-bg);
+        .card h3 {
+            margin-bottom: 15px;
+            color: #38bdf8;
+        }
+
+        .btn-enquiry {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            border: 1px solid #38bdf8;
+            color: #38bdf8;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .btn-enquiry:hover {
+            background: #38bdf8;
+            color: #000;
+        }
+
+        /* Contact Section */
+        .contact-form {
+            background: #0f172a;
             padding: 40px;
             border-radius: 20px;
             max-width: 800px;
-            margin: auto;
+            margin: 50px auto;
         }
 
         input, textarea {
             width: 100%;
-            padding: 12px;
+            padding: 15px;
             margin-bottom: 15px;
             background: #1e293b;
             border: 1px solid #334155;
             color: white;
-            border-radius: 8px;
+            border-radius: 10px;
         }
 
-        form button {
+        .submit-btn {
             width: 100%;
             padding: 15px;
-            background: var(--primary);
+            background: #38bdf8;
             border: none;
-            color: white;
             font-weight: bold;
-            border-radius: 8px;
+            font-size: 16px;
+            border-radius: 10px;
             cursor: pointer;
         }
 
-        /* Floating WhatsApp */
-        .whatsapp {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #25D366;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        footer {
+            text-align: center;
+            padding: 50px;
+            background: #020617;
+            border-top: 1px solid #1e293b;
+            color: #64748b;
         }
 
+        /* Mobile Adjustments */
         @media (max-width: 768px) {
-            header { flex-direction: column; gap: 15px; }
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero h1 { font-size: 32px; }
+            nav { margin-top: 15px; }
             nav a { margin: 0 10px; }
         }
     </style>
@@ -166,70 +212,65 @@
 <body>
 
     <header>
-        <div class="logo-area">
-            <img src="logo1.png" alt="Logo" class="logo-img">
-            <h2 style="font-size: 18px; letter-spacing: 1px;">ONE TEK SOLUTION</h2>
+        <div class="logo-box">
+            <img src="logo1.png" alt="One Tek Logo" class="logo-img">
+            <h2>ONE TEK SOLUTION</h2>
         </div>
         <nav>
+            <a href="#home">Home</a>
             <a href="#products">Products</a>
-            <a href="#manufacturers">Brands</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
 
-    <section class="hero">
-        <h1>Global Semiconductor Sourcing</h1>
-        <p>Your reliable partner for ICs, Microcontrollers, and Industrial Electronics. We bridge the gap between global manufacturers and your production line.</p>
+    <section class="hero" id="home">
+        <h1>Global Component Sourcing</h1>
+        <p>Your professional partner for Microcontrollers, RF Components, and Industrial Electronics. Serving OEMs with 100% genuine parts.</p>
         
-        <div class="search-container">
-            <input type="text" placeholder="Search Part Numbers (e.g. STM32, TI...)">
+        <div class="search-box">
+            <input type="text" placeholder="Search Part Number (e.g. STM32G0...)">
             <button>Search</button>
         </div>
     </section>
 
-    <section class="section" id="products">
-        <h2 style="text-align:center;">Our Product Solutions</h2>
+    <div class="container" id="products">
+        <h2 class="section-title">Major Product Categories</h2>
         <div class="grid">
             <div class="card">
-                <h3>Microcontrollers</h3>
-                <p>Industrial grade 8-bit, 16-bit, and 32-bit MCUs from top brands.</p>
-                <a href="#contact" class="btn-quote">Get Quote</a>
+                <h3>Semiconductors</h3>
+                <p>Industrial-grade ICs, processors, and memory devices from TI, NXP, and ST.</p>
+                <a href="#contact" class="btn-enquiry">Add to Quote</a>
             </div>
             <div class="card">
                 <h3>RF Components</h3>
-                <p>Wireless communication modules, antennas, and RF amplifiers.</p>
-                <a href="#contact" class="btn-quote">Get Quote</a>
+                <p>Advanced wireless modules and high-frequency communication parts.</p>
+                <a href="#contact" class="btn-enquiry">Add to Quote</a>
             </div>
             <div class="card">
-                <h3>Power Devices</h3>
-                <p>MOSFETs, IGBTs, and high-efficiency power management chips.</p>
-                <a href="#contact" class="btn-quote">Get Quote</a>
+                <h3>Industrial Units</h3>
+                <p>Precision sensors and automation electronics for manufacturing units.</p>
+                <a href="#contact" class="btn-enquiry">Add to Quote</a>
             </div>
         </div>
-    </section>
+    </div>
 
-    <section class="section" id="contact">
-        <div class="contact-box">
-            <h2 style="margin-bottom: 20px; text-align: center;">Direct Enquiry</h2>
+    <section class="container" id="contact">
+        <div class="contact-form">
+            <h2 style="text-align: center; margin-bottom: 30px;">Request a Quote</h2>
             <form action="[formsubmit.co](https://formsubmit.co/ARVINDO2308@gmail.com)" method="POST">
-                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="text" name="name" placeholder="Contact Person Name" required>
                 <input type="email" name="email" placeholder="Business Email" required>
-                <textarea name="message" rows="5" placeholder="Requirement Details (Part Numbers / Quantity)" required></textarea>
-                <button type="submit">Submit Request</button>
+                <input type="tel" name="phone" placeholder="Phone/WhatsApp Number" required>
+                <textarea name="message" rows="5" placeholder="List your required Part Numbers and Quantities..." required></textarea>
+                <button type="submit" class="submit-btn">Send Requirement</button>
             </form>
         </div>
     </section>
 
-    <footer style="text-align: center; padding: 40px; border-top: 1px solid #1e293b; color: var(--text-dim);">
+    <footer>
         <p>© 2024 One Tek Solution. All Rights Reserved.</p>
-        <p style="font-size: 12px; margin-top: 10px;">GST: 07AIOPC4519Q1ZR</p>
+        <p style="margin-top: 10px; font-size: 13px;">GST: 07AIOPC4519Q1ZR | Global Sourcing Partner</p>
     </footer>
-
-    <a href="[wa.me](https://wa.me/918505807245)" class="whatsapp">
-        <svg width="30" height="30" fill="white" viewBox="0 0 16 16">
-            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93a7.898 7.898 0 0 0-2.327-5.594l.001-.005zm-5.607 11.048c-1.185 0-2.34-.32-3.345-.927l-.24-.144-2.486.651.663-2.42-.157-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
-        </svg>
-    </a>
 
 </body>
 </html>

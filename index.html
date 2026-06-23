@@ -1,130 +1,511 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>One Tek Solution | Semiconductor Sourcing</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
-        body { background-color: #020617; color: #f8fafc; line-height: 1.6; }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>One Tek Solution | Professional Sourcing</title>
+  <meta name="description" content="One Tek Solution - Semiconductor sourcing, RF components, industrial electronics and global procurement support." />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
 
-        /* HEADER */
-        header {
-            background: #0f172a;
-            padding: 10px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 2px solid #1e293b;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        .corner-logo { height: 50px; width: auto; }
-        nav a { color: #fff; text-decoration: none; margin-left: 20px; font-weight: 600; font-size: 14px; }
-        nav a:hover { color: #38bdf8; }
+    html {
+      scroll-behavior: smooth;
+    }
 
-        /* FULL BANNER HERO */
-        .hero {
-            width: 100%;
-            min-height: 500px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background: radial-gradient(circle at center, #1e293b 0%, #020617 100%);
-            padding: 40px 20px;
-            border-bottom: 4px solid #0ea5e9;
-        }
-        .center-logo { max-width: 450px; width: 85%; margin-bottom: 30px; filter: drop-shadow(0 0 15px rgba(56, 189, 248, 0.4)); }
-        
-        /* SEARCH BAR */
-        .search-box {
-            width: 100%; max-width: 600px;
-            background: #fff; display: flex; 
-            padding: 5px; border-radius: 50px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-        }
-        .search-box input { flex: 1; border: none; padding: 15px 25px; outline: none; border-radius: 50px; font-size: 16px; color: #000; }
-        .search-box button { background: #0ea5e9; color: white; border: none; padding: 0 30px; border-radius: 50px; font-weight: bold; cursor: pointer; }
+    body {
+      background: #020817;
+      color: #ffffff;
+      line-height: 1.6;
+    }
 
-        /* PRODUCTS & FORM SECTIONS */
-        .container { max-width: 1200px; margin: auto; padding: 60px 20px; }
-        .section-title { text-align: center; font-size: 32px; margin-bottom: 40px; color: #38bdf8; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .card { background: #0f172a; border: 1px solid #1e293b; padding: 30px; border-radius: 20px; text-align: center; }
-        .card h3 { color: #38bdf8; margin-bottom: 15px; }
+    a {
+      text-decoration: none;
+    }
 
-        /* ENQUIRY FORM */
-        .contact-section { background: #0f172a; padding: 40px; border-radius: 20px; border: 1px solid #334155; max-width: 800px; margin: 40px auto; }
-        input, textarea { width: 100%; padding: 15px; margin-bottom: 15px; background: #1e293b; border: 1px solid #334155; color: white; border-radius: 10px; outline: none; }
-        input:focus { border-color: #38bdf8; }
-        .submit-btn { width: 100%; padding: 15px; background: #38bdf8; border: none; font-weight: bold; font-size: 16px; border-radius: 10px; cursor: pointer; color: #000; transition: 0.3s; }
-        .submit-btn:hover { background: #0284c7; }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(15, 23, 42, 0.96);
+      border-bottom: 1px solid #1e293b;
+    }
 
-        footer { text-align: center; padding: 40px; background: #020617; border-top: 1px solid #1e293b; color: #64748b; }
-    </style>
+    .nav-wrap {
+      max-width: 1200px;
+      margin: auto;
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .header-logo {
+      height: 52px;
+      width: auto;
+      display: block;
+    }
+
+    nav {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 15px;
+    }
+
+    nav a:hover {
+      color: #38bdf8;
+    }
+
+    .hero {
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 20px;
+      background:
+        linear-gradient(rgba(2, 8, 23, 0.72), rgba(2, 8, 23, 0.82)),
+        url("logo1.png?v=5") center center / cover no-repeat;
+      border-bottom: 3px solid #38bdf8;
+    }
+
+    .hero-content {
+      max-width: 980px;
+      width: 100%;
+    }
+
+    .hero-logo {
+      max-width: 440px;
+      width: 90%;
+      display: block;
+      margin: 0 auto 24px;
+      filter: drop-shadow(0 0 18px rgba(56, 189, 248, 0.35));
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      color: #38bdf8;
+      margin-bottom: 14px;
+      letter-spacing: 1px;
+    }
+
+    .hero p {
+      max-width: 850px;
+      margin: 0 auto 28px;
+      font-size: 18px;
+      color: #dbeafe;
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: #38bdf8;
+      color: #001018;
+    }
+
+    .btn-primary:hover {
+      background: #0ea5e9;
+      color: #ffffff;
+    }
+
+    .btn-secondary {
+      border: 1px solid #38bdf8;
+      color: #ffffff;
+      background: rgba(15, 23, 42, 0.45);
+    }
+
+    .btn-secondary:hover {
+      background: #38bdf8;
+      color: #001018;
+    }
+
+    .search-box {
+      max-width: 720px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 999px;
+      display: flex;
+      padding: 6px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    }
+
+    .search-box input {
+      flex: 1;
+      border: none;
+      outline: none;
+      padding: 16px 22px;
+      font-size: 16px;
+      color: #111827;
+    }
+
+    .search-box button {
+      border: none;
+      background: #1d4ed8;
+      color: #ffffff;
+      padding: 0 28px;
+      border-radius: 999px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 70px 20px;
+    }
+
+    .section h2 {
+      text-align: center;
+      color: #38bdf8;
+      font-size: 34px;
+      margin-bottom: 18px;
+    }
+
+    .section-subtext {
+      text-align: center;
+      max-width: 850px;
+      margin: 0 auto 40px;
+      color: #cbd5e1;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 22px;
+    }
+
+    .card {
+      background: #0f172a;
+      border: 1px solid #243041;
+      border-radius: 16px;
+      padding: 24px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: #38bdf8;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+    }
+
+    .card h3 {
+      color: #38bdf8;
+      margin-bottom: 10px;
+    }
+
+    .stats .card {
+      text-align: center;
+    }
+
+    .stats .card h3 {
+      font-size: 30px;
+    }
+
+    .contact-box {
+      background: #0f172a;
+      border: 1px solid #243041;
+      border-radius: 18px;
+      padding: 30px;
+      margin-bottom: 30px;
+    }
+
+    .contact-box p {
+      margin-bottom: 10px;
+      color: #e2e8f0;
+    }
+
+    .contact-box a {
+      color: #7dd3fc;
+    }
+
+    .form-wrap {
+      background: #0f172a;
+      border: 1px solid #243041;
+      border-radius: 18px;
+      padding: 30px;
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    .form-wrap h3 {
+      text-align: center;
+      color: #38bdf8;
+      margin-bottom: 24px;
+      font-size: 28px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 14px 16px;
+      margin: 10px 0;
+      border-radius: 10px;
+      border: 1px solid #334155;
+      background: #162133;
+      color: #ffffff;
+      outline: none;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: #38bdf8;
+    }
+
+    button.submit-btn {
+      width: 100%;
+      margin-top: 10px;
+      border: none;
+      background: #38bdf8;
+      color: #001018;
+      font-weight: bold;
+      padding: 15px 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button.submit-btn:hover {
+      background: #0ea5e9;
+      color: #ffffff;
+    }
+
+    footer {
+      background: #020617;
+      border-top: 1px solid #1e293b;
+      text-align: center;
+      padding: 28px 20px;
+      color: #94a3b8;
+    }
+
+    .whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: #25d366;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    @media (max-width: 768px) {
+      .nav-wrap {
+        flex-direction: column;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .search-box {
+        flex-direction: column;
+        border-radius: 18px;
+      }
+
+      .search-box input {
+        width: 100%;
+      }
+
+      .search-box button {
+        margin-top: 6px;
+        padding: 14px;
+        border-radius: 14px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <!-- Corner Logo -->
-        <img src="logo1.png" alt="One Tek Logo" class="corner-logo">
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#products">Products</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+  <header>
+    <div class="nav-wrap">
+      <img src="logo.png?v=5" alt="One Tek Solution Logo" class="header-logo">
 
-    <section class="hero" id="home">
-        <!-- Main Logo in Banner -->
-        <img src="logo1.png" alt="One Tek Solution" class="center-logo">
-        <h2 style="margin-bottom: 25px; color: #94a3b8;">Expert Global Sourcing Solutions</h2>
-        
-        <div class="search-box">
-            <input type="text" placeholder="Enter Part Number (e.g. STM32, NXP, TI...)">
-            <button>Search</button>
-        </div>
-    </section>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="#manufacturers">Manufacturers</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-    <div class="container" id="products">
-        <h2 class="section-title">Product Solutions</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Semiconductors</h3>
-                <p>Industrial components, processors, and memory devices.</p>
-            </div>
-            <div class="card">
-                <h3>RF Components</h3>
-                <p>Wireless modules and high-frequency electronics.</p>
-            </div>
-            <div class="card">
-                <h3>Global Supply</h3>
-                <p>Procurement for hard-to-find electronic parts.</p>
-            </div>
-        </div>
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <img src="logo.png?v=5" alt="One Tek Solution" class="hero-logo">
+
+      <h1>Electronics & Semiconductor Solutions</h1>
+      <p>
+        Microcontrollers, RF Components, Industrial Electronics and Global Semiconductor Sourcing
+        for OEMs, manufacturers and engineering teams.
+      </p>
+
+      <div class="hero-buttons">
+        <a class="btn btn-primary" href="[wa.me](https://wa.me/918505807245)">WhatsApp Us</a>
+        <a class="btn btn-secondary" href="#contact">Get Quote</a>
+      </div>
+
+      <div class="search-box">
+        <input type="text" placeholder="Search Part Number (e.g. STM32, NXP, TI...)" />
+        <button type="button">Search</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <h2>About One Tek Solution</h2>
+    <p class="section-subtext">
+      One Tek Solution is a supplier of semiconductor components, microcontrollers, RF devices,
+      industrial electronics and sourcing solutions. We support OEMs, manufacturers, system
+      integrators and engineering teams with genuine components and responsive technical support.
+    </p>
+  </section>
+
+  <section class="section stats">
+    <h2>Our Strength</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>5000+</h3>
+        <p>Components</p>
+      </div>
+      <div class="card">
+        <h3>100+</h3>
+        <p>Global Suppliers</p>
+      </div>
+      <div class="card">
+        <h3>24/7</h3>
+        <p>Support</p>
+      </div>
+      <div class="card">
+        <h3>Pan India</h3>
+        <p>Delivery Network</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="products">
+    <h2>Products & Solutions</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Microcontrollers</h3>
+        <p>Industrial and automotive grade MCU solutions.</p>
+      </div>
+      <div class="card">
+        <h3>RF Components</h3>
+        <p>Wireless and communication components.</p>
+      </div>
+      <div class="card">
+        <h3>Semiconductors</h3>
+        <p>ICs, processors, memory and power devices.</p>
+      </div>
+      <div class="card">
+        <h3>Industrial Electronics</h3>
+        <p>Reliable components for automation systems.</p>
+      </div>
+      <div class="card">
+        <h3>Sensors</h3>
+        <p>Industrial and embedded sensing solutions.</p>
+      </div>
+      <div class="card">
+        <h3>Automotive Flashers</h3>
+        <p>Electronic flasher and control products.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="manufacturers">
+    <h2>Major Semiconductor Manufacturers</h2>
+    <div class="cards">
+      <div class="card"><h3>NXP</h3><p>Connectivity and Automotive Solutions</p></div>
+      <div class="card"><h3>Texas Instruments</h3><p>Analog and Embedded Processing</p></div>
+      <div class="card"><h3>Infineon</h3><p>Power and Automotive Electronics</p></div>
+      <div class="card"><h3>Renesas</h3><p>MCUs and Embedded Systems</p></div>
+      <div class="card"><h3>Microchip</h3><p>Controllers and Analog Devices</p></div>
+      <div class="card"><h3>Analog Devices</h3><p>High Performance Signal Processing</p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Why Choose Us</h2>
+    <div class="cards">
+      <div class="card"><h3>Genuine Components</h3><p>Authentic products from trusted sources.</p></div>
+      <div class="card"><h3>Global Procurement</h3><p>Worldwide sourcing network.</p></div>
+      <div class="card"><h3>Competitive Pricing</h3><p>Cost-effective procurement support.</p></div>
+      <div class="card"><h3>Technical Assistance</h3><p>Support for selection and sourcing.</p></div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>Contact Us</h2>
+
+    <div class="contact-box">
+      <p><strong>Proprietor:</strong> K. Chaudhary</p>
+      <p><strong>GST:</strong> 07AIOPC4519Q1ZR</p>
+      <p><strong>Email:</strong> <a href="mailto:support@oneteksolution.com">support@oneteksolution.com</a></p>
+      <p><strong>Phone:</strong> <a href="tel:+919717753193">+91 9717753193</a></p>
+      <p><strong>WhatsApp:</strong> <a href="[wa.me](https://wa.me/918505807245)">+91 8505807245</a></p>
+      <p><strong>Address:</strong> 218/1, E1, 5th Floor, Rajpur Khurd Extension, New Delhi - 110068</p>
     </div>
 
-    <section class="container" id="contact">
-        <div class="contact-section">
-            <h2 style="text-align: center; margin-bottom: 30px; color: #38bdf8;">Send Quick Enquiry</h2>
-            <form action="[formsubmit.co](https://formsubmit.co/ARVINDO2308@gmail.com)" method="POST">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="text" name="name" placeholder="Full Name" required>
-                <input type="email" name="email" placeholder="Business Email" required>
-                <input type="tel" name="phone" placeholder="Phone / WhatsApp Number" required>
-                <textarea name="message" rows="5" placeholder="List Part Numbers and Quantity..." required></textarea>
-                <button type="submit" class="submit-btn" style="font-weight: 800;">SUBMIT REQUIREMENT</button>
-            </form>
-        </div>
-    </section>
+    <div class="form-wrap">
+      <h3>Send Enquiry</h3>
+      <form action="[formsubmit.co](https://formsubmit.co/ARVINDO2308@gmail.com)" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="tel" name="mobile" placeholder="Mobile Number" required>
+        <textarea name="message" rows="5" placeholder="Your Requirement" required></textarea>
+        <button type="submit" class="submit-btn">Send Enquiry</button>
+      </form>
+    </div>
+  </section>
 
-    <footer>
-        <p>© 2026 One Tek Solution | GST: 07AIOPC4519Q1ZR</p>
-        <p style="font-size: 13px; margin-top: 8px;">218/1, E1, 5th Floor, Rajpur Khurd Extension, New Delhi - 110068</p>
-    </footer>
+  <footer>
+    <p>© 2026 One Tek Solution. All Rights Reserved.</p>
+    <p>Global Semiconductor Sourcing & Electronics Solutions</p>
+  </footer>
+
+  <a class="whatsapp" href="[wa.me](https://wa.me/918505807245)">💬</a>
 
 </body>
 </html>

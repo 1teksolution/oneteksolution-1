@@ -30,38 +30,44 @@
     }
 
     img {
-      max-width: 100%;
       display: block;
+      max-width: 100%;
     }
 
     header {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(15, 23, 42, 0.96);
-      border-bottom: 1px solid #243041;
-      backdrop-filter: blur(8px);
+      background: rgba(17, 24, 39, 0.97);
+      border-bottom: 1px solid #334155;
     }
 
     .nav-wrap {
       max-width: 1200px;
       margin: auto;
-      padding: 14px 20px;
+      padding: 12px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       gap: 20px;
     }
 
+    .brand {
+      display: flex;
+      align-items: center;
+      min-width: 220px;
+    }
+
     .header-logo {
-      height: 72px;
+      height: 62px;
       width: auto;
+      object-fit: contain;
     }
 
     nav {
       display: flex;
       align-items: center;
-      gap: 26px;
+      gap: 28px;
       flex-wrap: wrap;
     }
 
@@ -82,17 +88,17 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 140px 20px 70px;
+      padding: 150px 20px 70px;
       background:
         linear-gradient(rgba(8, 17, 31, 0.72), rgba(8, 17, 31, 0.84)),
-        url("logo1.png") center center / cover no-repeat;
+        url('logo1.png') center center / cover no-repeat;
       border-bottom: 3px solid #38bdf8;
     }
 
     .hero-content {
       max-width: 1000px;
       width: 100%;
-      margin-top: 70px;
+      margin-top: 40px;
     }
 
     .hero h1 {
@@ -329,28 +335,33 @@
       .hero p {
         font-size: 18px;
       }
-
-      .hero-content {
-        margin-top: 40px;
-      }
     }
 
     @media (max-width: 768px) {
       .nav-wrap {
         flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .brand {
+        min-width: auto;
       }
 
       nav {
-        justify-content: center;
+        justify-content: flex-start;
         gap: 16px;
       }
 
       .header-logo {
-        height: 58px;
+        height: 54px;
       }
 
       .hero {
-        padding: 120px 20px 60px;
+        padding: 130px 20px 60px;
+      }
+
+      .hero-content {
+        margin-top: 10px;
       }
 
       .hero h1 {
@@ -382,7 +393,9 @@
 
   <header>
     <div class="nav-wrap">
-      <img src="logo.png" alt="One Tek Solution Logo" class="header-logo">
+      <div class="brand">
+        <img src="logo.png?v=2" alt="One Tek Solution Logo" class="header-logo">
+      </div>
 
       <nav>
         <a href="#home">Home</a>
@@ -426,104 +439,44 @@
   <section class="section stats">
     <h2>Our Strength</h2>
     <div class="cards">
-      <div class="card">
-        <h3>5000+</h3>
-        <p>Components</p>
-      </div>
-      <div class="card">
-        <h3>100+</h3>
-        <p>Global Suppliers</p>
-      </div>
-      <div class="card">
-        <h3>24/7</h3>
-        <p>Support</p>
-      </div>
-      <div class="card">
-        <h3>Pan India</h3>
-        <p>Delivery Network</p>
-      </div>
+      <div class="card"><h3>5000+</h3><p>Components</p></div>
+      <div class="card"><h3>100+</h3><p>Global Suppliers</p></div>
+      <div class="card"><h3>24/7</h3><p>Support</p></div>
+      <div class="card"><h3>Pan India</h3><p>Delivery Network</p></div>
     </div>
   </section>
 
   <section class="section" id="products">
     <h2>Products & Solutions</h2>
     <div class="cards">
-      <div class="card">
-        <h3>Microcontrollers</h3>
-        <p>Industrial and automotive grade MCU solutions.</p>
-      </div>
-      <div class="card">
-        <h3>RF Components</h3>
-        <p>Wireless and communication components.</p>
-      </div>
-      <div class="card">
-        <h3>Semiconductors</h3>
-        <p>ICs, processors, memory and power devices.</p>
-      </div>
-      <div class="card">
-        <h3>Industrial Electronics</h3>
-        <p>Reliable components for automation systems.</p>
-      </div>
-      <div class="card">
-        <h3>Sensors</h3>
-        <p>Industrial and embedded sensing solutions.</p>
-      </div>
-      <div class="card">
-        <h3>Automotive Flashers</h3>
-        <p>Electronic flasher and control products.</p>
-      </div>
+      <div class="card"><h3>Microcontrollers</h3><p>Industrial and automotive grade MCU solutions.</p></div>
+      <div class="card"><h3>RF Components</h3><p>Wireless and communication components.</p></div>
+      <div class="card"><h3>Semiconductors</h3><p>ICs, processors, memory and power devices.</p></div>
+      <div class="card"><h3>Industrial Electronics</h3><p>Reliable components for automation systems.</p></div>
+      <div class="card"><h3>Sensors</h3><p>Industrial and embedded sensing solutions.</p></div>
+      <div class="card"><h3>Automotive Flashers</h3><p>Electronic flasher and control products.</p></div>
     </div>
   </section>
 
   <section class="section" id="manufacturers">
     <h2>Major Semiconductor Manufacturers</h2>
     <div class="cards">
-      <div class="card">
-        <h3>NXP</h3>
-        <p>Connectivity and Automotive Solutions</p>
-      </div>
-      <div class="card">
-        <h3>Texas Instruments</h3>
-        <p>Analog and Embedded Processing</p>
-      </div>
-      <div class="card">
-        <h3>Infineon</h3>
-        <p>Power and Automotive Electronics</p>
-      </div>
-      <div class="card">
-        <h3>Renesas</h3>
-        <p>MCUs and Embedded Systems</p>
-      </div>
-      <div class="card">
-        <h3>Microchip</h3>
-        <p>Controllers and Analog Devices</p>
-      </div>
-      <div class="card">
-        <h3>Analog Devices</h3>
-        <p>High Performance Signal Processing</p>
-      </div>
+      <div class="card"><h3>NXP</h3><p>Connectivity and Automotive Solutions</p></div>
+      <div class="card"><h3>Texas Instruments</h3><p>Analog and Embedded Processing</p></div>
+      <div class="card"><h3>Infineon</h3><p>Power and Automotive Electronics</p></div>
+      <div class="card"><h3>Renesas</h3><p>MCUs and Embedded Systems</p></div>
+      <div class="card"><h3>Microchip</h3><p>Controllers and Analog Devices</p></div>
+      <div class="card"><h3>Analog Devices</h3><p>High Performance Signal Processing</p></div>
     </div>
   </section>
 
   <section class="section">
     <h2>Why Choose Us</h2>
     <div class="cards">
-      <div class="card">
-        <h3>Genuine Components</h3>
-        <p>Authentic products from trusted sources.</p>
-      </div>
-      <div class="card">
-        <h3>Global Procurement</h3>
-        <p>Worldwide sourcing network.</p>
-      </div>
-      <div class="card">
-        <h3>Competitive Pricing</h3>
-        <p>Cost-effective procurement support.</p>
-      </div>
-      <div class="card">
-        <h3>Technical Assistance</h3>
-        <p>Support for selection and sourcing.</p>
-      </div>
+      <div class="card"><h3>Genuine Components</h3><p>Authentic products from trusted sources.</p></div>
+      <div class="card"><h3>Global Procurement</h3><p>Worldwide sourcing network.</p></div>
+      <div class="card"><h3>Competitive Pricing</h3><p>Cost-effective procurement support.</p></div>
+      <div class="card"><h3>Technical Assistance</h3><p>Support for selection and sourcing.</p></div>
     </div>
   </section>
 

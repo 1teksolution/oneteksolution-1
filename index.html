@@ -8,10 +8,10 @@
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
         body { background-color: #020617; color: #f8fafc; line-height: 1.6; }
 
-        /* UPDATED HEADER: OFFICE PIC REMOVED, NEW LOGO ADDED */
+        /* HEADER */
         header {
-            background: rgba(15, 23, 42, 0.95);
-            padding: 12px 5%;
+            background: #0f172a;
+            padding: 10px 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -21,72 +21,60 @@
             z-index: 1000;
         }
 
-        .header-logo { 
-            height: 50px; /* Logo size in the corner */
+        /* YAHAN LOGO KI SETTING HAI */
+        .corner-logo { 
+            height: 50px; 
             width: auto;
-            /* Filter to ensure the professional look on dark background */
-            filter: drop-shadow(0 0 5px rgba(56, 189, 248, 0.3));
+            display: block;
         }
 
-        nav a { color: #fff; text-decoration: none; margin-left: 20px; font-weight: 600; font-size: 14px; transition: 0.3s; }
+        nav a { color: #fff; text-decoration: none; margin-left: 20px; font-weight: 600; font-size: 14px; }
         nav a:hover { color: #38bdf8; }
 
-        /* HERO BANNER SECTION */
+        /* HERO BANNER */
         .full-banner {
             width: 100%;
-            min-height: 550px;
+            min-height: 500px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            background: linear-gradient(rgba(2, 6, 23, 0.8), rgba(2, 6, 23, 0.95)), 
-                        url('[images.unsplash.com](https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80)');
-            background-size: cover;
-            background-position: center;
+            background: radial-gradient(circle, #1e293b 0%, #020617 100%);
             padding: 40px 20px;
             border-bottom: 3px solid #0ea5e9;
         }
 
-        .main-hero-logo {
-            max-width: 500px;
-            width: 90%;
+        .center-logo {
+            max-width: 450px;
+            width: 85%;
             margin-bottom: 30px;
-            filter: drop-shadow(0 0 20px rgba(56, 189, 248, 0.5));
         }
-
-        .full-banner h1 { font-size: 32px; color: #38bdf8; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 25px; font-weight: 800; }
 
         .search-box {
             width: 100%;
-            max-width: 650px;
+            max-width: 600px;
             background: #fff;
             display: flex;
             padding: 5px;
             border-radius: 50px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
         }
         .search-box input { flex: 1; border: none; padding: 15px 25px; outline: none; border-radius: 50px; font-size: 16px; color: #333; }
-        .search-box button { background: #0ea5e9; color: white; border: none; padding: 0 35px; border-radius: 50px; font-weight: bold; cursor: pointer; }
+        .search-box button { background: #0ea5e9; color: white; border: none; padding: 0 30px; border-radius: 50px; font-weight: bold; cursor: pointer; }
 
-        .container { max-width: 1200px; margin: auto; padding: 80px 20px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .card { background: #0f172a; border: 1px solid #1e293b; padding: 40px; border-radius: 20px; transition: 0.3s; text-align: center; }
-        .card:hover { transform: translateY(-10px); border-color: #38bdf8; }
-        .card h3 { color: #38bdf8; margin-bottom: 15px; }
-
-        .contact-form { background: #0f172a; padding: 40px; border-radius: 20px; max-width: 850px; margin: auto; border: 1px solid #1e293b; }
-        input, textarea { width: 100%; padding: 15px; margin-bottom: 15px; background: #1e293b; border: 1px solid #334155; color: white; border-radius: 10px; }
-        .submit-btn { width: 100%; padding: 16px; background: #38bdf8; border: none; font-weight: bold; border-radius: 10px; cursor: pointer; color: #000; font-size: 16px; }
-
-        footer { text-align: center; padding: 60px; background: #010413; border-top: 1px solid #1e293b; color: #64748b; font-size: 14px; }
+        .container { max-width: 1200px; margin: auto; padding: 60px 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        .card { background: #0f172a; border: 1px solid #1e293b; padding: 30px; border-radius: 15px; text-align: center; }
+        
+        footer { text-align: center; padding: 40px; border-top: 1px solid #1e293b; color: #64748b; }
     </style>
 </head>
 <body>
 
     <header>
-        <!-- Corner Logo: Replace logo1.png with your new logo file -->
-        <img src="logo1.png" alt="One Tek Solution Header Logo" class="header-logo">
+        <!-- Corner me ab office ki jagah ye logo dikhega -->
+        <img src="logo1.png?v=2" alt="One Tek Solution Logo" class="corner-logo">
         <nav>
             <a href="#home">Home</a>
             <a href="#products">Products</a>
@@ -95,51 +83,25 @@
     </header>
 
     <section class="full-banner" id="home">
-        <!-- Main Banner Logo -->
-        <img src="logo1.png" alt="One Tek Solution Main Logo" class="main-hero-logo">
-        
-        <h1>Expert Global Sourcing Solutions</h1>
+        <!-- Main Banner area -->
+        <img src="logo1.png?v=2" alt="One Tek Solution" class="center-logo">
         
         <div class="search-box">
-            <input type="text" placeholder="Search Part Number (Ex: STM32, NXP, TI...)">
+            <input type="text" placeholder="Search Part Number...">
             <button>Search</button>
         </div>
     </section>
 
     <div class="container" id="products">
-        <h2 style="text-align:center; font-size:36px; margin-bottom:50px; color:#38bdf8;">Product Expertise</h2>
         <div class="grid">
-            <div class="card">
-                <h3>Semiconductors</h3>
-                <p>Industrial & Automotive Grade ICs and Memory devices.</p>
-            </div>
-            <div class="card">
-                <h3>RF Components</h3>
-                <p>Advanced Wireless Modules and High-Frequency Parts.</p>
-            </div>
-            <div class="card">
-                <h3>Custom Sourcing</h3>
-                <p>Global procurement for hard-to-find electronic components.</p>
-            </div>
+            <div class="card"><h3>Semiconductors</h3><p>Genuine sourcing from global networks.</p></div>
+            <div class="card"><h3>RF Components</h3><p>High-quality wireless modules.</p></div>
+            <div class="card"><h3>Industrial Parts</h3><p>Critical automation spares.</p></div>
         </div>
     </div>
 
-    <section class="container" id="contact">
-        <div class="contact-form">
-            <h2 style="text-align: center; margin-bottom: 30px; font-size: 30px; color: #38bdf8;">Request a Quote</h2>
-            <form action="[formsubmit.co](https://formsubmit.co/ARVINDO2308@gmail.com)" method="POST">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="text" name="name" placeholder="Contact Name" required>
-                <input type="email" name="email" placeholder="Business Email" required>
-                <textarea name="message" rows="5" placeholder="List Part Numbers and Quantities..." required></textarea>
-                <button type="submit" class="submit-btn" style="font-weight: 800;">SEND ENQUIRY</button>
-            </form>
-        </div>
-    </section>
-
     <footer>
-        <p>© 2026 One Tek Solution. All Rights Reserved.</p>
-        <p style="margin-top: 10px;">GST: 07AIOPC4519Q1ZR | Delhi, India</p>
+        <p>© 2026 One Tek Solution | GST: 07AIOPC4519Q1ZR</p>
     </footer>
 
 </body>

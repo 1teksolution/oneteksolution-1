@@ -407,25 +407,203 @@
     </div>
   </header>
 
-  <section class="hero" id="home">
-    <div class="hero-content">
-      <h1>Electronics & Semiconductor Solutions</h1>
-      <p>
-        Microcontrollers, RF Components, Industrial Electronics and Global Semiconductor Sourcing
-        for OEMs, manufacturers and engineering teams.
-      </p>
+  .hero {
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 150px 20px 70px;
+  background:
+    linear-gradient(rgba(8, 17, 31, 0.76), rgba(8, 17, 31, 0.86)),
+    url("logo1.png") center center / cover no-repeat;
+  border-bottom: 3px solid #38bdf8;
+}
 
-      <div class="hero-buttons">
-        <a class="btn btn-primary" href="[wa.me](https://wa.me/918505807245)">WhatsApp Us</a>
-        <a class="btn btn-secondary" href="#contact">Get Quote</a>
-      </div>
+.hero-content {
+  max-width: 1000px;
+  width: 100%;
+  margin-top: 50px;
+}
 
-      <div class="search-box">
-        <input type="text" placeholder="Search Part Number (e.g. STM32, NXP, TI...)">
-        <button type="button">Search</button>
-      </div>
-    </div>
-  </section>
+.hero-tag {
+  display: inline-block;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.45);
+  color: #7dd3fc;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.4px;
+  margin-bottom: 22px;
+}
+
+.hero h1 {
+  font-size: 54px;
+  line-height: 1.15;
+  color: #38bdf8;
+  margin-bottom: 18px;
+  letter-spacing: 0.8px;
+}
+
+.hero-subtext {
+  max-width: 900px;
+  margin: 0 auto 22px;
+  font-size: 21px;
+  color: #e2e8f0;
+}
+
+.hero-highlights {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.hero-highlights span {
+  background: rgba(15, 23, 42, 0.78);
+  border: 1px solid #334155;
+  color: #dbeafe;
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.hero-support-line {
+  color: #cbd5e1;
+  font-size: 15px;
+  margin-bottom: 28px;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-primary {
+  background: #38bdf8;
+  color: #001018;
+}
+
+.btn-primary:hover {
+  background: #0ea5e9;
+  color: #ffffff;
+}
+
+.btn-secondary {
+  background: rgba(15, 23, 42, 0.55);
+  color: #ffffff;
+  border: 1px solid #38bdf8;
+}
+
+.btn-secondary:hover {
+  background: #38bdf8;
+  color: #001018;
+}
+
+.btn-outline-light {
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid #64748b;
+}
+
+.btn-outline-light:hover {
+  border-color: #38bdf8;
+  background: rgba(56, 189, 248, 0.12);
+  color: #ffffff;
+}
+
+.search-box {
+  max-width: 760px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 999px;
+  display: flex;
+  padding: 6px;
+  overflow: hidden;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+}
+
+.search-box input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 17px 22px;
+  font-size: 16px;
+  color: #111827;
+}
+
+.search-box button {
+  border: none;
+  background: #1d9bf0;
+  color: #ffffff;
+  padding: 0 30px;
+  border-radius: 999px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero-subtext {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 130px 20px 60px;
+  }
+
+  .hero-content {
+    margin-top: 20px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero-subtext {
+    font-size: 16px;
+  }
+
+  .hero-support-line {
+    font-size: 14px;
+  }
+
+  .search-box {
+    flex-direction: column;
+    border-radius: 18px;
+  }
+
+  .search-box input {
+    width: 100%;
+  }
+
+  .search-box button {
+    margin-top: 6px;
+    padding: 14px;
+    border-radius: 14px;
+  }
+}
+
 
   <section class="section" id="about">
     <h2>About One Tek Solution</h2>

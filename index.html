@@ -58,10 +58,10 @@
       align-items: center;
     }
 
-    /* LOGO SIZE 50% REDUCED HERE (68px to 34px) */
+    /* PERFECT LOGO SIZE ADJUSTMENT */
     .header-logo {
-      height: 50px;
-      width: auto;
+      height: 48px !important;
+      width: auto !important;
       object-fit: contain;
     }
 
@@ -156,14 +156,6 @@
       margin-bottom: 28px;
     }
 
-    .hero-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin-bottom: 32px;
-    }
-
     .btn {
       display: inline-block;
       padding: 14px 28px;
@@ -172,37 +164,31 @@
       transition: 0.3s;
     }
 
-    .btn-primary {
-      background: #67d4ff;
-      color: #001018;
+    /* PREMIUM VERTICAL BUTTONS BOX CONTAINER */
+    .vertical-btn-box {
+      display: inline-flex; 
+      flex-direction: column; 
+      gap: 12px; 
+      padding: 20px; 
+      background: rgba(20, 32, 50, 0.6); 
+      border: 1px solid #3f5875; 
+      border-radius: 12px; 
+      margin: 0 auto 32px; 
+      max-width: 280px; 
+      width: 100%;
     }
 
-    .btn-primary:hover {
-      background: #2dbcf5;
-      color: #ffffff;
+    .vertical-btn-box .btn {
+      background: transparent !important; 
+      color: #ffffff !important; 
+      border: 1px solid #67d4ff !important; 
+      text-align: center; 
+      display: block;
     }
 
-    .btn-secondary {
-      background: rgba(18, 30, 48, 0.58);
-      color: #ffffff;
-      border: 1px solid #67d4ff;
-    }
-
-    .btn-secondary:hover {
-      background: #67d4ff;
-      color: #001018;
-    }
-
-    .btn-outline-light {
-      background: rgba(255, 255, 255, 0.06);
-      color: #ffffff;
-      border: 1px solid #8aa0ba;
-    }
-
-    .btn-outline-light:hover {
-      border-color: #67d4ff;
-      background: rgba(103, 212, 255, 0.14);
-      color: #ffffff;
+    .vertical-btn-box .btn:hover {
+      background: rgba(103, 212, 255, 0.14) !important;
+      color: #67d4ff !important;
     }
 
     .search-box {
@@ -248,6 +234,74 @@
       margin-bottom: 22px;
     }
 
+    /* NEW ABOUT SECTION STRUCTURAL CSS */
+    .section-about-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 100px 20px;
+    }
+
+    .about-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 50px;
+    }
+
+    .about-text-side {
+      flex: 1.2;
+      text-align: left;
+    }
+
+    .about-text-side h2 {
+      color: #67d4ff;
+      font-size: 40px;
+      margin-bottom: 24px;
+    }
+
+    .about-paragraph {
+      color: #d6e4f2;
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    .strength-grid-side {
+      flex: 0.8;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .strength-mini-card {
+      background: linear-gradient(135deg, #1e2f44 0%, #152538 100%);
+      border: 1px solid #3f5875;
+      padding: 30px 20px;
+      border-radius: 14px;
+      text-align: center;
+      transition: 0.3s ease;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+
+    .strength-mini-card:hover {
+      transform: translateY(-5px);
+      border-color: #67d4ff;
+      box-shadow: 0 15px 30px rgba(103, 212, 255, 0.1);
+    }
+
+    .strength-mini-card h3 {
+      color: #67d4ff;
+      font-size: 36px;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    .strength-mini-card p {
+      color: #b2c2d3;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
     .section-intro {
       max-width: 900px;
       margin: 0 auto 40px;
@@ -280,14 +334,6 @@
       color: #67d4ff;
       margin-bottom: 10px;
       font-size: 22px;
-    }
-
-    .stats .card {
-      text-align: center;
-    }
-
-    .stats .card h3 {
-      font-size: 32px;
     }
 
     .contact-box {
@@ -370,7 +416,7 @@
       width: 58px;
       height: 58px;
       border-radius: 50%;
-      background: transparent;
+      background: #25d366;
       color: #ffffff;
       display: flex;
       align-items: center;
@@ -386,6 +432,19 @@
 
       .hero-subtext {
         font-size: 18px;
+      }
+
+      .about-container {
+        flex-direction: column;
+        gap: 40px;
+      }
+
+      .about-text-side {
+        text-align: center;
+      }
+
+      .strength-grid-side {
+        width: 100%;
       }
     }
 
@@ -404,9 +463,8 @@
         gap: 16px;
       }
 
-      /* MOBILE LOGO ADJUSTMENT */
       .header-logo {
-        height: 28px;
+        height: 38px !important;
       }
 
       .hero {
@@ -445,6 +503,12 @@
         border-radius: 14px;
       }
     }
+
+    @media (max-width: 480px) {
+      .strength-grid-side {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
@@ -452,7 +516,7 @@
   <header>
     <div class="nav-wrap">
       <div class="brand">
-        <img src="logo2.png" alt="One Tek Solution Logo" class="header-logo" />
+        <img src="logo.png" alt="One Tek Solution Logo" class="header-logo" />
       </div>
 
       <nav>
@@ -486,22 +550,11 @@
         MOQ support | Bulk orders | BOM sourcing assistance for urgent and scheduled requirements
       </p>
 
-      <div class="hero-buttons">
-      <div style="
-        display: inline-flex;
-        flex-direction: column;
-        gap: 12px;
-        padding: 20px;
-        background: rgba(20, 32, 50 0.6);
-        border: 1px solid #3f5875;
-        border-radius: 12px;
-        margin: 0 auto 32px;
-        max-width: 280px;
-        width: 100%
-      ">   
-        <a class="btn" href="https://wa.me/918505807245)"style="background: transparent !important; color: #fffff !important;border: 1px solid #67d4ff !impotant;">WhatsApp Us</a>
-        <a class="btn" href="#contact" style="background: transparent !important; color: #fffff !important;border: 1px solid #67d4ff !impotant;">Get Quote</a>
-        <a class="btn" href="#contact" style="background: transparent !important; color: #fffff !important;border: 1px solid #67d4ff !impotant;">Upload BOM</a>
+      <!-- TRANSPARENT BUTTONS BOX CONTAINER -->
+      <div class="vertical-btn-box">
+        <a class="btn" href="https://wa.me/918505807245">WhatsApp Us</a>
+        <a class="btn" href="#contact">Get Quote</a>
+        <a class="btn" href="#contact">Upload BOM</a>
       </div>
 
       <div class="search-box">
@@ -511,34 +564,49 @@
     </div>
   </section>
 
-  <section class="section" id="about">
-    <h2>About One Tek Solution</h2>
-    <p class="section-intro">
-      One Tek Solution is a supplier of semiconductor components, microcontrollers, RF devices,
-      industrial electronics and sourcing solutions. We support OEMs, manufacturers, system
-      integrators and engineering teams with genuine components and responsive technical support.
-    </p>
-  </section>
+  <!-- 15-20 LINES EXTENDED PROFESSIONAL ABOUT SECTION -->
+  <section class="section-about-wrap" id="about">
+    <div class="about-container">
+      
+      <div class="about-text-side">
+        <h2>About One Tek Solution</h2>
+        
+        <p class="about-paragraph">
+          One Tek Solution is a premier B2B global sourcing partner and strategic supplier specializing in high-grade semiconductor components, microcontrollers, embedded systems, RF devices, and industrial electronics. Established to bridge the gap in the fast-paced electronics manufacturing industry, we cater extensively to Original Equipment Manufacturers (OEMs), Electronic Manufacturing Services (EMS), system integrators, and independent engineering teams across the country. 
+        </p>
+        
+        <p class="about-paragraph">
+          In an era where component shortages and supply chain disruptions can halt production, One Tek Solution stands as a reliable pillar of procurement support. We leverage an extensive, deeply vetted international network of trusted manufacturers and authorized distributors to source not only high-volume standard components but also highly specialized, obsolete, allocation-phase, and hard-to-find active or passive semiconductor parts. 
+        </p>
 
-  <section class="section stats">
-    <h2>Our Strength</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>5000+</h3>
-        <p>Components</p>
+        <p class="about-paragraph">
+          Our core product portfolio spans across automotive-grade MCUs, advanced sensors, wireless communication modules, power management ICs, and custom electronic flashers. Driven by a commitment to uncompromising quality, every component supplied by us undergoes rigorous source-verification to ensure 100% authenticity and compliance with global industrial standards, effectively eliminating the risk of counterfeit parts.
+        </p>
+
+        <p class="about-paragraph">
+          Beyond hardware distribution, we take pride in our agility and customer-centric technical assistance. Whether our clients require flexible Minimum Order Quantity (MOQ) support for initial prototyping, complete Bill of Materials (BOM) kitting assistance for large-scale production, or scheduled buffer-stock management for just-in-time delivery, our dedicated team ensures a seamless, transparent, and cost-effective procurement experience from inquiry to final delivery.
+        </p>
       </div>
-      <div class="card">
-        <h3>100+</h3>
-        <p>Global Suppliers</p>
+
+      <div class="strength-grid-side">
+        <div class="strength-mini-card">
+          <h3>5000+</h3>
+          <p>Genuine Components</p>
+        </div>
+        <div class="strength-mini-card">
+          <h3>100+</h3>
+          <p>Global Suppliers</p>
+        </div>
+        <div class="strength-mini-card">
+          <h3>24/7</h3>
+          <p>Dedicated Support</p>
+        </div>
+        <div class="strength-mini-card">
+          <h3>PAN India</h3>
+          <p>Delivery Network</p>
+        </div>
       </div>
-      <div class="card">
-        <h3>24/7</h3>
-        <p>Support</p>
-      </div>
-      <div class="card">
-        <h3>Pan India</h3>
-        <p>Delivery Network</p>
-      </div>
+
     </div>
   </section>
 

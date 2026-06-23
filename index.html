@@ -8,9 +8,10 @@
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
         body { background-color: #020617; color: #f8fafc; line-height: 1.6; }
 
+        /* UPDATED HEADER */
         header {
             background: rgba(15, 23, 42, 0.95);
-            padding: 10px 5%;
+            padding: 12px 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -19,10 +20,18 @@
             top: 0;
             z-index: 1000;
         }
-        .header-logo { height: 40px; }
-        nav a { color: #fff; text-decoration: none; margin-left: 20px; font-weight: 600; font-size: 14px; }
 
-        /* FULL BANNER WITH YOUR LOGO */
+        /* Yahan apka naya professional logo bypass hoga */
+        .header-logo { 
+            height: 55px; /* Size adjusted for better visibility */
+            width: auto;
+            filter: drop-shadow(0 0 5px rgba(56, 189, 248, 0.3));
+        }
+
+        nav a { color: #fff; text-decoration: none; margin-left: 20px; font-weight: 600; font-size: 14px; transition: 0.3s; }
+        nav a:hover { color: #38bdf8; }
+
+        /* HERO BANNER */
         .full-banner {
             width: 100%;
             min-height: 550px;
@@ -43,11 +52,10 @@
             max-width: 500px;
             width: 90%;
             margin-bottom: 30px;
-            /* Logo par shadow aur glow effect */
-            filter: drop-shadow(0 0 15px rgba(56, 189, 248, 0.4));
+            filter: drop-shadow(0 0 15px rgba(56, 189, 248, 0.5));
         }
 
-        .full-banner h1 { font-size: 28px; color: #38bdf8; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 25px; }
+        .full-banner h1 { font-size: 32px; color: #38bdf8; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 25px; font-weight: 800; }
 
         .search-box {
             width: 100%;
@@ -59,7 +67,8 @@
             box-shadow: 0 15px 35px rgba(0,0,0,0.4);
         }
         .search-box input { flex: 1; border: none; padding: 15px 25px; outline: none; border-radius: 50px; font-size: 16px; color: #333; }
-        .search-box button { background: #0ea5e9; color: white; border: none; padding: 0 35px; border-radius: 50px; font-weight: bold; cursor: pointer; }
+        .search-box button { background: #0ea5e9; color: white; border: none; padding: 0 35px; border-radius: 50px; font-weight: bold; cursor: pointer; transition: 0.3s; }
+        .search-box button:hover { background: #0284c7; }
 
         .container { max-width: 1200px; margin: auto; padding: 80px 20px; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
@@ -69,7 +78,7 @@
 
         .contact-form { background: #0f172a; padding: 40px; border-radius: 20px; max-width: 850px; margin: auto; border: 1px solid #1e293b; }
         input, textarea { width: 100%; padding: 15px; margin-bottom: 15px; background: #1e293b; border: 1px solid #334155; color: white; border-radius: 10px; }
-        .submit-btn { width: 100%; padding: 16px; background: #38bdf8; border: none; font-weight: bold; border-radius: 10px; cursor: pointer; font-size: 16px; }
+        .submit-btn { width: 100%; padding: 16px; background: #38bdf8; border: none; font-weight: bold; border-radius: 10px; cursor: pointer; font-size: 16px; color: #000; }
 
         footer { text-align: center; padding: 60px; background: #010413; border-top: 1px solid #1e293b; color: #64748b; font-size: 14px; }
     </style>
@@ -77,7 +86,8 @@
 <body>
 
     <header>
-        <img src="logo1.png" alt="One Tek Header Logo" class="header-logo">
+        <!-- Header me ab apka naya professional logo dikhega -->
+        <img src="logo1.png" alt="One Tek Solution Logo" class="header-logo">
         <nav>
             <a href="#home">Home</a>
             <a href="#products">Products</a>
@@ -86,8 +96,8 @@
     </header>
 
     <section class="full-banner" id="home">
-        <!-- New Logo Placeholder - Replace logo1.png with your final high-res logo file -->
-        <img src="logo1.png" alt="One Tek Solution Main Logo" class="main-hero-logo">
+        <!-- Main Banner me bhi wahi logo center me hai -->
+        <img src="logo1.png" alt="One Tek Solution Banner" class="main-hero-logo">
         
         <h1>Expert Global Sourcing Solutions</h1>
         
@@ -119,16 +129,17 @@
         <div class="contact-form">
             <h2 style="text-align: center; margin-bottom: 30px; font-size: 30px; color: #38bdf8;">Request a Quote</h2>
             <form action="[formsubmit.co](https://formsubmit.co/ARVINDO2308@gmail.com)" method="POST">
+                <input type="hidden" name="_captcha" value="false">
                 <input type="text" name="name" placeholder="Contact Name" required>
                 <input type="email" name="email" placeholder="Business Email" required>
                 <textarea name="message" rows="5" placeholder="Enter Part Numbers and Quantity Required" required></textarea>
-                <button type="submit" class="submit-btn">SEND BOM / ENQUIRY</button>
+                <button type="submit" class="submit-btn" style="font-weight: 800;">SEND ENQUIRY</button>
             </form>
         </div>
     </section>
 
     <footer>
-        <p>© 2024 One Tek Solution. All Rights Reserved.</p>
+        <p>© 2026 One Tek Solution. All Rights Reserved.</p>
         <p style="margin-top: 10px;">GST: 07AIOPC4519Q1ZR | New Delhi, India</p>
     </footer>
 

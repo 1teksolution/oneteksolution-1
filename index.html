@@ -8,7 +8,6 @@
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
         body { background-color: #020617; color: #f8fafc; line-height: 1.6; }
 
-        /* HEADER */
         header {
             background: rgba(15, 23, 42, 0.95);
             padding: 10px 5%;
@@ -20,128 +19,117 @@
             top: 0;
             z-index: 1000;
         }
-        .logo-box img { height: 40px; }
-        nav a { color: #fff; text-decoration: none; margin-left: 20px; font-weight: 600; font-size: 14px; transition: 0.3s; }
-        nav a:hover { color: #38bdf8; }
+        .header-logo { height: 40px; }
+        nav a { color: #fff; text-decoration: none; margin-left: 20px; font-weight: 600; font-size: 14px; }
 
-        /* FULL BANNER HERO SECTION */
-        .hero-banner {
+        /* FULL BANNER WITH YOUR LOGO */
+        .full-banner {
             width: 100%;
-            min-height: 500px;
+            min-height: 550px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            /* Update the URL below with your actual banner image or keep this pro tech background */
-            background: linear-gradient(rgba(2, 6, 23, 0.7), rgba(2, 6, 23, 0.9)), 
-                        url('[images.unsplash.com](https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80)');
+            background: linear-gradient(rgba(2, 6, 23, 0.75), rgba(2, 6, 23, 0.9)), 
+                        url('[images.unsplash.com](https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80)');
             background-size: cover;
             background-position: center;
-            padding: 60px 20px;
-            border-bottom: 4px solid #38bdf8;
+            padding: 40px 20px;
+            border-bottom: 3px solid #0ea5e9;
         }
 
-        .hero-banner .main-logo {
-            max-width: 350px;
+        .main-hero-logo {
+            max-width: 500px;
             width: 90%;
-            margin-bottom: 20px;
-            filter: drop-shadow(0px 0px 20px rgba(56, 189, 248, 0.5));
+            margin-bottom: 30px;
+            /* Logo par shadow aur glow effect */
+            filter: drop-shadow(0 0 15px rgba(56, 189, 248, 0.4));
         }
 
-        .hero-banner h1 { font-size: 42px; color: #fff; margin-bottom: 15px; letter-spacing: 1px; }
-        .hero-banner p { font-size: 18px; color: #cbd5e1; max-width: 800px; margin-bottom: 30px; }
+        .full-banner h1 { font-size: 28px; color: #38bdf8; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 25px; }
 
-        /* SEARCH BAR */
         .search-box {
             width: 100%;
-            max-width: 600px;
+            max-width: 650px;
             background: #fff;
             display: flex;
             padding: 5px;
             border-radius: 50px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
         }
         .search-box input { flex: 1; border: none; padding: 15px 25px; outline: none; border-radius: 50px; font-size: 16px; color: #333; }
-        .search-box button { background: #0ea5e9; color: white; border: none; padding: 0 30px; border-radius: 50px; font-weight: bold; cursor: pointer; transition: 0.3s; }
-        .search-box button:hover { background: #0284c7; }
+        .search-box button { background: #0ea5e9; color: white; border: none; padding: 0 35px; border-radius: 50px; font-weight: bold; cursor: pointer; }
 
-        /* GRID CONTENT */
-        .container { max-width: 1200px; margin: auto; padding: 60px 20px; }
+        .container { max-width: 1200px; margin: auto; padding: 80px 20px; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .card { background: #0f172a; border: 1px solid #1e293b; padding: 30px; border-radius: 20px; text-align: center; transition: 0.3s; }
-        .card:hover { transform: translateY(-5px); border-color: #38bdf8; box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
+        .card { background: #0f172a; border: 1px solid #1e293b; padding: 40px; border-radius: 20px; transition: 0.3s; text-align: center; }
+        .card:hover { transform: translateY(-10px); border-color: #38bdf8; }
         .card h3 { color: #38bdf8; margin-bottom: 15px; }
 
-        /* CONTACT FORM */
-        .contact-section { background: #0f172a; border-radius: 25px; padding: 40px; border: 1px solid #1e293b; }
-        input, textarea { width: 100%; padding: 15px; margin-bottom: 15px; background: #1e293b; border: 1px solid #334155; color: white; border-radius: 10px; outline: none; }
-        input:focus { border-color: #38bdf8; }
-        .submit-btn { width: 100%; padding: 15px; background: #38bdf8; border: none; font-weight: bold; font-size: 16px; border-radius: 10px; cursor: pointer; color: #000; }
+        .contact-form { background: #0f172a; padding: 40px; border-radius: 20px; max-width: 850px; margin: auto; border: 1px solid #1e293b; }
+        input, textarea { width: 100%; padding: 15px; margin-bottom: 15px; background: #1e293b; border: 1px solid #334155; color: white; border-radius: 10px; }
+        .submit-btn { width: 100%; padding: 16px; background: #38bdf8; border: none; font-weight: bold; border-radius: 10px; cursor: pointer; font-size: 16px; }
 
-        footer { text-align: center; padding: 40px; background: #020617; border-top: 1px solid #1e293b; color: #64748b; font-size: 14px; }
+        footer { text-align: center; padding: 60px; background: #010413; border-top: 1px solid #1e293b; color: #64748b; font-size: 14px; }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo-box">
-            <img src="logo1.png" alt="One Tek Solution">
-        </div>
+        <img src="logo1.png" alt="One Tek Header Logo" class="header-logo">
         <nav>
-            <a href="#about">About</a>
+            <a href="#home">Home</a>
             <a href="#products">Products</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
 
-    <!-- FULL TOP BANNER -->
-    <section class="hero-banner">
-        <!-- Your decent logo here -->
-        <img src="logo1.png" alt="One Tek Solution Logo" class="main-logo">
+    <section class="full-banner" id="home">
+        <!-- New Logo Placeholder - Replace logo1.png with your final high-res logo file -->
+        <img src="logo1.png" alt="One Tek Solution Main Logo" class="main-hero-logo">
         
-        <h1>Global Electronics Sourcing</h1>
-        <p>Expert procurement for Semiconductors, Microcontrollers, and RF Components. Ensuring chain-of-custody and 100% genuine parts.</p>
+        <h1>Expert Global Sourcing Solutions</h1>
         
         <div class="search-box">
-            <input type="text" placeholder="Search Part Number (Ex: STM32, ESP32, NXP...)">
+            <input type="text" placeholder="Search Part Number (Ex: STM32, NXP, TI...)">
             <button>Search</button>
         </div>
     </section>
 
     <div class="container" id="products">
-        <h2 style="text-align:center; font-size:32px; margin-bottom:40px; color:#38bdf8;">Our Expertise</h2>
+        <h2 style="text-align:center; font-size:36px; margin-bottom:50px; color:#38bdf8;">Product Expertise</h2>
         <div class="grid">
             <div class="card">
                 <h3>Semiconductors</h3>
-                <p>Wide range of ICs, Discrete components, and Memory devices.</p>
+                <p>Industrial & Automotive Grade ICs and Memory devices.</p>
             </div>
             <div class="card">
-                <h3>Industrial Support</h3>
-                <p>Specialized automation spare parts and electronic modules.</p>
+                <h3>RF Components</h3>
+                <p>Advanced Wireless Modules and High-Frequency Parts.</p>
             </div>
             <div class="card">
-                <h3>Global Pricing</h3>
-                <p>Highly competitive rates with pan-India fast shipping.</p>
+                <h3>Custom Sourcing</h3>
+                <p>Global procurement for hard-to-find electronic components.</p>
             </div>
         </div>
     </div>
 
     <section class="container" id="contact">
-        <div class="contact-section">
-            <h2 style="text-align: center; margin-bottom: 30px; font-size: 28px;">Instant Enquiry</h2>
+        <div class="contact-form">
+            <h2 style="text-align: center; margin-bottom: 30px; font-size: 30px; color: #38bdf8;">Request a Quote</h2>
             <form action="[formsubmit.co](https://formsubmit.co/ARVINDO2308@gmail.com)" method="POST">
-                <input type="text" name="name" placeholder="Full Name" required>
-                <input type="email" name="email" placeholder="Work Email" required>
-                <textarea name="message" rows="4" placeholder="Mention Part Numbers and Quantities..." required></textarea>
-                <button type="submit" class="submit-btn">SEND QUOTE REQUEST</button>
+                <input type="text" name="name" placeholder="Contact Name" required>
+                <input type="email" name="email" placeholder="Business Email" required>
+                <textarea name="message" rows="5" placeholder="Enter Part Numbers and Quantity Required" required></textarea>
+                <button type="submit" class="submit-btn">SEND BOM / ENQUIRY</button>
             </form>
         </div>
     </section>
 
     <footer>
         <p>© 2024 One Tek Solution. All Rights Reserved.</p>
-        <p style="margin-top: 8px;">GST: 07AIOPC4519Q1ZR</p>
+        <p style="margin-top: 10px;">GST: 07AIOPC4519Q1ZR | New Delhi, India</p>
     </footer>
 
 </body>

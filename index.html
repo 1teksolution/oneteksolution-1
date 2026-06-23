@@ -1,142 +1,205 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>One Tek Solution | Global Semiconductor Sourcing & Electronics Solutions</title>
-<meta name="description" content="One Tek Solution provides semiconductor components, microcontrollers, RF devices, industrial electronics and global sourcing solutions.">
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
-body{background:#08111f;color:#fff;line-height:1.6}
-header{background:linear-gradient(135deg,#0ea5e9,#0f172a);padding:40px 20px;text-align:center}
-.logo{max-width:320px;width:90%;margin-bottom:15px}
-nav{position:sticky;top:0;background:#111827;padding:14px;text-align:center;z-index:1000}
-nav a{color:#fff;text-decoration:none;margin:0 12px;font-weight:bold}
-nav a:hover{color:#38bdf8}
-.hero{padding:90px 20px;text-align:center}
-.hero h1{font-size:54px;color:#38bdf8}
-.hero p{max-width:900px;margin:15px auto}
-.btn{display:inline-block;background:#38bdf8;color:#000;padding:14px 28px;border-radius:8px;text-decoration:none;font-weight:bold;margin:8px}
-.section{max-width:1200px;margin:auto;padding:70px 20px}
-.section h2{text-align:center;color:#38bdf8;margin-bottom:30px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
-.card{background:#111827;border:1px solid #334155;padding:22px;border-radius:12px}
-.card h3{color:#38bdf8;margin-bottom:10px}
-.contact{background:#111827;padding:25px;border-radius:12px}
-input,textarea{width:100%;padding:12px;margin:10px 0;border:none;border-radius:8px}
-button{background:#38bdf8;border:none;padding:14px 28px;border-radius:8px;font-weight:bold;cursor:pointer}
-footer{background:#020617;padding:25px;text-align:center}
-.whatsapp{position:fixed;right:20px;bottom:20px;background:#25D366;color:#fff;text-decoration:none;
-padding:16px;border-radius:50%;font-size:24px}
-.stats .card{text-align:center}
-a{color:#7dd3fc}
-@media(max-width:768px){.hero h1{font-size:36px}}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Tek Solution | Global Semiconductor Sourcing</title>
+    <meta name="description" content="One Tek Solution - Trusted partner for semiconductors, MCUs, and electronic components.">
+    <!-- Tailwind CSS for Professional Styling -->
+    <script src="[cdn.tailwindcss.com](https://cdn.tailwindcss.com)"></script>
+    <!-- Google Fonts -->
+    <link href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap)" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #020617; }
+        .glass-nav { background: rgba(15, 23, 42, 0.9); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(51, 65, 85, 0.5); }
+        .hero-gradient { background: radial-gradient(circle at top right, #0ea5e922, transparent), radial-gradient(circle at bottom left, #1e293b, #020617); }
+        .product-card:hover { border-color: #0ea5e9; transform: translateY(-4px); }
+    </style>
 </head>
-<body>
+<body class="text-slate-200">
 
-<header>
-<img src="logo1.png" alt="One Tek Solution Logo" class="logo">
-<h2>ONE TEK SOLUTION</h2>
-<p>Your Trusted Semiconductor & Electronics Partner</p>
-</header>
+    <!-- Top Info Bar -->
+    <div class="bg-sky-600 text-white text-center py-2 text-xs font-semibold tracking-wide">
+        GLOBAL SEMICONDUCTOR SOURCING • PAN INDIA DELIVERY • GENUINE COMPONENTS ONLY
+    </div>
 
-<nav>
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#products">Products</a>
-<a href="#manufacturers">Manufacturers</a>
-<a href="#contact">Contact</a>
-</nav>
+    <!-- Header & Navigation -->
+    <header class="glass-nav sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 flex justify-between items-center py-4">
+            <div class="flex items-center gap-3">
+                <img src="logo1.png" alt="Logo" class="h-10 w-auto">
+                <div>
+                    <h1 class="text-lg font-bold text-white leading-none">ONE TEK</h1>
+                    <span class="text-[10px] text-sky-400 tracking-widest uppercase">Solution</span>
+                </div>
+            </div>
+            <nav class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#home" class="hover:text-sky-400 transition">Home</a>
+                <a href="#products" class="hover:text-sky-400 transition">Products</a>
+                <a href="#manufacturers" class="hover:text-sky-400 transition">Manufacturers</a>
+                <a href="#contact" class="hover:text-sky-400 transition">Contact</a>
+            </nav>
+            <a href="[wa.me](https://wa.me/918505807245)" class="bg-sky-500 hover:bg-sky-600 px-5 py-2 rounded-full text-sm font-bold text-white transition shadow-lg shadow-sky-500/20">
+                Quick Quote
+            </a>
+        </div>
+    </header>
 
-<section class="hero" id="home">
-<h1>Electronics & Semiconductor Solutions</h1>
-<p>Microcontrollers • RF Components • Industrial Electronics • Global Semiconductor Sourcing</p>
-<a class="btn" href="https://wa.me/918505807245">WhatsApp Us</a>
-<a class="btn" href="#contact">Get Quote</a>
-</section>
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient relative overflow-hidden py-24 px-6 text-center">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl md:text-6xl font-extrabold text-white mb-6 uppercase tracking-tight">
+                Precision <span class="text-sky-500">Component</span> Sourcing
+            </h2>
+            <p class="text-lg text-slate-400 mb-10 leading-relaxed">
+                Your global supply chain partner for Microcontrollers, RF Components, and Industrial Electronics. 
+                Supporting OEMs and engineering teams with 100% genuine parts.
+            </p>
+            
+            <!-- E-commerce Search Bar -->
+            <div class="max-w-2xl mx-auto bg-slate-800 p-1.5 rounded-2xl border border-slate-700 flex shadow-2xl">
+                <input type="text" id="partSearch" placeholder="Enter Part Number (e.g. STM32G0...)" 
+                       class="bg-transparent w-full px-5 py-3 outline-none text-white">
+                <button onclick="alert('Search feature integrated')" class="bg-sky-500 hover:bg-sky-600 px-8 py-3 rounded-xl font-bold transition">
+                    Search
+                </button>
+            </div>
+        </div>
+    </section>
 
-<section class="section" id="about">
-<h2>About One Tek Solution</h2>
-<p style="text-align:center;max-width:900px;margin:auto;">
-One Tek Solution is a supplier of semiconductor components, microcontrollers, RF devices,
-industrial electronics and sourcing solutions. We support OEMs, manufacturers, system integrators
-and engineering teams with genuine components and responsive technical support.
-</p>
-</section>
+    <!-- Stats Bar -->
+    <section class="max-w-7xl mx-auto px-6 -mt-12 relative z-10">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl text-center shadow-xl">
+                <p class="text-3xl font-bold text-sky-500">5000+</p>
+                <p class="text-xs text-slate-500 uppercase mt-1">Components</p>
+            </div>
+            <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl text-center shadow-xl">
+                <p class="text-3xl font-bold text-sky-500">100+</p>
+                <p class="text-xs text-slate-500 uppercase mt-1">Suppliers</p>
+            </div>
+            <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl text-center shadow-xl">
+                <p class="text-3xl font-bold text-sky-500">24/7</p>
+                <p class="text-xs text-slate-500 uppercase mt-1">Support</p>
+            </div>
+            <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl text-center shadow-xl">
+                <p class="text-3xl font-bold text-sky-500">ISO</p>
+                <p class="text-xs text-slate-500 uppercase mt-1">Genuine Only</p>
+            </div>
+        </div>
+    </section>
 
-<section class="section stats">
-<h2>Our Strength</h2>
-<div class="cards">
-<div class="card"><h3>5000+</h3><p>Components</p></div>
-<div class="card"><h3>100+</h3><p>Global Suppliers</p></div>
-<div class="card"><h3>24/7</h3><p>Support</p></div>
-<div class="card"><h3>Pan India</h3><p>Delivery Network</p></div>
-</div>
-</section>
+    <!-- Product Grid Section -->
+    <section id="products" class="max-w-7xl mx-auto py-24 px-6">
+        <div class="flex justify-between items-end mb-12">
+            <div>
+                <h2 class="text-3xl font-bold text-white mb-2 underline decoration-sky-500 decoration-4 underline-offset-8">Featured Categories</h2>
+                <p class="text-slate-400">High-reliability parts for critical systems.</p>
+            </div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Product Card -->
+            <div class="product-card group border border-slate-800 bg-slate-900/50 p-6 rounded-3xl transition duration-300">
+                <div class="h-40 bg-slate-800 rounded-2xl mb-6 flex items-center justify-center overflow-hidden">
+                    <span class="text-slate-600 font-bold tracking-widest uppercase text-xs group-hover:scale-110 transition">MCU Solutions</span>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">Microcontrollers</h3>
+                <p class="text-sm text-slate-400 mb-6">Industrial and automotive grade ICs from NXP, TI, and ST.</p>
+                <a href="#contact" class="block text-center border border-sky-500 text-sky-500 font-bold py-3 rounded-xl hover:bg-sky-500 hover:text-white transition">Get Quote</a>
+            </div>
 
-<section class="section" id="products">
-<h2>Products & Solutions</h2>
-<div class="cards">
-<div class="card"><h3>Microcontrollers</h3><p>Industrial and automotive grade MCU solutions.</p></div>
-<div class="card"><h3>RF Components</h3><p>Wireless and communication components.</p></div>
-<div class="card"><h3>Semiconductors</h3><p>ICs, processors, memory and power devices.</p></div>
-<div class="card"><h3>Industrial Electronics</h3><p>Reliable components for automation systems.</p></div>
-<div class="card"><h3>Sensors</h3><p>Industrial and embedded sensing solutions.</p></div>
-<div class="card"><h3>Automotive Flashers</h3><p>Electronic flasher and control products.</p></div>
-</div>
-</section>
+            <div class="product-card group border border-slate-800 bg-slate-900/50 p-6 rounded-3xl transition duration-300">
+                <div class="h-40 bg-slate-800 rounded-2xl mb-6 flex items-center justify-center overflow-hidden">
+                    <span class="text-slate-600 font-bold tracking-widest uppercase text-xs group-hover:scale-110 transition">Wireless RF</span>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">RF Components</h3>
+                <p class="text-sm text-slate-400 mb-6">High-frequency communication modules and antenna solutions.</p>
+                <a href="#contact" class="block text-center border border-sky-500 text-sky-500 font-bold py-3 rounded-xl hover:bg-sky-500 hover:text-white transition">Get Quote</a>
+            </div>
 
-<section class="section" id="manufacturers">
-<h2>Major Semiconductor Manufacturers</h2>
-<div class="cards">
-<div class="card"><h3>NXP</h3><p>Connectivity and Automotive Solutions</p></div>
-<div class="card"><h3>Texas Instruments</h3><p>Analog and Embedded Processing</p></div>
-<div class="card"><h3>Infineon</h3><p>Power and Automotive Electronics</p></div>
-<div class="card"><h3>Renesas</h3><p>MCUs and Embedded Systems</p></div>
-<div class="card"><h3>Microchip</h3><p>Controllers and Analog Devices</p></div>
-<div class="card"><h3>Analog Devices</h3><p>High Performance Signal Processing</p></div>
-</div>
-</section>
+            <div class="product-card group border border-slate-800 bg-slate-900/50 p-6 rounded-3xl transition duration-300">
+                <div class="h-40 bg-slate-800 rounded-2xl mb-6 flex items-center justify-center overflow-hidden">
+                    <span class="text-slate-600 font-bold tracking-widest uppercase text-xs group-hover:scale-110 transition">Sensors & Power</span>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">Industrial Sensors</h3>
+                <p class="text-sm text-slate-400 mb-6">Precision automation sensors and power management units.</p>
+                <a href="#contact" class="block text-center border border-sky-500 text-sky-500 font-bold py-3 rounded-xl hover:bg-sky-500 hover:text-white transition">Get Quote</a>
+            </div>
+        </div>
+    </section>
 
-<section class="section">
-<h2>Why Choose Us</h2>
-<div class="cards">
-<div class="card"><h3>Genuine Components</h3><p>Authentic products from trusted sources.</p></div>
-<div class="card"><h3>Global Procurement</h3><p>Worldwide sourcing network.</p></div>
-<div class="card"><h3>Competitive Pricing</h3><p>Cost-effective procurement support.</p></div>
-<div class="card"><h3>Technical Assistance</h3><p>Support for selection and sourcing.</p></div>
-</div>
-</section>
+    <!-- Manufacturers (Logo Cloud Alternative) -->
+    <section id="manufacturers" class="bg-slate-900/30 py-20 px-6 border-y border-slate-800">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-sm font-bold text-sky-400 uppercase tracking-[0.2em] mb-12">Authorized Supply Partners</h2>
+            <div class="flex flex-wrap justify-center gap-10 opacity-60">
+                <span class="text-2xl font-bold grayscale hover:grayscale-0 transition">NXP</span>
+                <span class="text-2xl font-bold grayscale hover:grayscale-0 transition">ST MICRO</span>
+                <span class="text-2xl font-bold grayscale hover:grayscale-0 transition">TEXAS INSTRUMENTS</span>
+                <span class="text-2xl font-bold grayscale hover:grayscale-0 transition">INFINEON</span>
+                <span class="text-2xl font-bold grayscale hover:grayscale-0 transition">ANALOG DEVICES</span>
+            </div>
+        </div>
+    </section>
 
-<section class="section" id="contact">
-<h2>Contact Us</h2>
-<div class="contact">
-<p><strong>Proprietor:</strong> K. Chaudhary</p>
-<p><strong>GST:</strong> 07AIOPC4519Q1ZR</p>
-<p><strong>Email:</strong> <a href="mailto:support@oneteksolution.com">support@oneteksolution.com</a></p>
-<p><strong>Phone:</strong> <a href="tel:+919717753193">+91 9717753193</a></p>
-<p><strong>WhatsApp:</strong> <a href="https://wa.me/918505807245">+91 8505807245</a></p>
-<p><strong>Address:</strong> 218/1, E1, 5th Floor, Rajpur Khurd Extension, New Delhi - 110068</p>
-</div>
+    <!-- Contact & Enquiry Section -->
+    <section id="contact" class="max-w-7xl mx-auto py-24 px-6 grid md:grid-cols-2 gap-16">
+        <div>
+            <h2 class="text-4xl font-bold mb-6">Have a <span class="text-sky-500">Requirement?</span></h2>
+            <p class="text-lg text-slate-400 mb-8">Ready to support your BOM (Bill of Materials). We provide global logistics and technical support for rapid procurement.</p>
+            
+            <div class="space-y-6">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-sky-500/10 flex items-center justify-center rounded-lg text-sky-500 text-xl">📧</div>
+                    <div><p class="text-xs text-slate-500 uppercase">Email</p><a href="mailto:support@oneteksolution.com" class="font-bold">support@oneteksolution.com</a></div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-green-500/10 flex items-center justify-center rounded-lg text-green-500 text-xl">📱</div>
+                    <div><p class="text-xs text-slate-500 uppercase">WhatsApp</p><a href="[wa.me](https://wa.me/918505807245)" class="font-bold">+91 8505807245</a></div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-slate-500/10 flex items-center justify-center rounded-lg text-slate-300 text-xl">📍</div>
+                    <div><p class="text-xs text-slate-500 uppercase">HQ Address</p><p class="text-sm font-bold">New Delhi, India - 110068</p></div>
+                </div>
+            </div>
+        </div>
 
-<h3 style="margin-top:25px;">Send Enquiry</h3>
-<form action="https://formsubmit.co/ARVINDO2308@gmail.com" method="POST">
-<input type="hidden" name="_captcha" value="false">
-<input type="text" name="name" placeholder="Your Name" required>
-<input type="email" name="email" placeholder="Your Email" required>
-<input type="tel" name="mobile" placeholder="Mobile Number" required>
-<textarea name="message" rows="5" placeholder="Your Requirement" required></textarea>
-<button type="submit">Send Enquiry</button>
-</form>
-</section>
+        <div class="bg-slate-900 border border-slate-800 p-8 rounded-3xl shadow-2xl">
+            <form action="[formsubmit.co](https://formsubmit.co/ARVINDO2308@gmail.com)" method="POST" class="space-y-4">
+                <input type="hidden" name="_captcha" value="false">
+                <div class="grid grid-cols-2 gap-4">
+                    <input type="text" name="name" placeholder="Full Name" required class="bg-slate-800 border border-slate-700 p-3 rounded-xl w-full focus:border-sky-500 outline-none transition">
+                    <input type="tel" name="mobile" placeholder="Mobile Number" required class="bg-slate-800 border border-slate-700 p-3 rounded-xl w-full focus:border-sky-500 outline-none transition">
+                </div>
+                <input type="email" name="email" placeholder="Business Email" required class="bg-slate-800 border border-slate-700 p-3 rounded-xl w-full focus:border-sky-500 outline-none transition">
+                <textarea name="message" rows="4" placeholder="List Part Numbers or Requirements..." required class="bg-slate-800 border border-slate-700 p-3 rounded-xl w-full focus:border-sky-500 outline-none transition"></textarea>
+                <button type="submit" class="w-full bg-sky-500 py-4 rounded-xl font-bold uppercase tracking-widest hover:bg-sky-600 transition shadow-lg shadow-sky-500/20">Send Quick Enquiry</button>
+            </form>
+        </div>
+    </section>
 
-<footer>
-<p>© 2026 One Tek Solution. All Rights Reserved.</p>
-<p>Global Semiconductor Sourcing & Electronics Solutions</p>
-</footer>
+    <!-- Footer -->
+    <footer class="bg-slate-950 py-12 px-6 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <p class="text-white font-bold">ONE TEK SOLUTION</p>
+                <p class="text-xs text-slate-500 mt-1">GST: 07AIOPC4519Q1ZR</p>
+            </div>
+            <p class="text-sm text-slate-500">© 2024 One Tek Solution. All Rights Reserved.</p>
+            <div class="flex space-x-6 text-sm text-slate-400 font-medium">
+                <a href="#about" class="hover:text-white">Privacy Policy</a>
+                <a href="#about" class="hover:text-white">Terms</a>
+            </div>
+        </div>
+    </footer>
 
-<a class="whatsapp" href="https://wa.me/918505807245">💬</a>
+    <!-- Floating WhatsApp -->
+    <a href="[wa.me](https://wa.me/918505807245)" class="fixed bottom-8 right-8 bg-[#25D366] hover:scale-110 transition p-4 rounded-2xl shadow-2xl z-[100]">
+       <svg xmlns="[w3.org](http://www.w3.org/2000/svg)" width="30" height="30" fill="white" viewBox="0 0 16 16">
+          <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93a7.898 7.898 0 0 0-2.327-5.594l.001-.005zm-5.607 11.048c-1.185 0-2.34-.32-3.345-.927l-.24-.144-2.486.651.663-2.42-.157-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+       </svg>
+    </a>
 
 </body>
 </html>

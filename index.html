@@ -8,7 +8,7 @@
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
         body { background-color: #020617; color: #f8fafc; line-height: 1.6; }
 
-        /* HEADER */
+        /* HEADER SECTION */
         header {
             background: #0f172a;
             padding: 10px 5%;
@@ -21,9 +21,9 @@
             z-index: 1000;
         }
 
-        /* YAHAN LOGO KI SETTING HAI */
+        /* CORNER LOGO SETTINGS */
         .corner-logo { 
-            height: 50px; 
+            height: 50px; /* Small size for the corner */
             width: auto;
             display: block;
         }
@@ -31,7 +31,7 @@
         nav a { color: #fff; text-decoration: none; margin-left: 20px; font-weight: 600; font-size: 14px; }
         nav a:hover { color: #38bdf8; }
 
-        /* HERO BANNER */
+        /* HERO BANNER SECTION */
         .full-banner {
             width: 100%;
             min-height: 500px;
@@ -40,15 +40,18 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            background: radial-gradient(circle, #1e293b 0%, #020617 100%);
+            /* Professional Dark Gradient Background */
+            background: radial-gradient(circle at center, #1e293b 0%, #020617 100%);
             padding: 40px 20px;
             border-bottom: 3px solid #0ea5e9;
         }
 
+        /* CENTER LOGO SETTINGS */
         .center-logo {
             max-width: 450px;
             width: 85%;
             margin-bottom: 30px;
+            filter: drop-shadow(0 0 15px rgba(56, 189, 248, 0.4));
         }
 
         .search-box {
@@ -73,8 +76,8 @@
 <body>
 
     <header>
-        <!-- Corner me ab office ki jagah ye logo dikhega -->
-        <img src="logo1.png?v=2" alt="One Tek Solution Logo" class="corner-logo">
+        <!-- Corner me ab purani office pic ki jagah logo1.png dikhega -->
+        <img src="logo1.png" alt="One Tek Solution Logo" class="corner-logo">
         <nav>
             <a href="#home">Home</a>
             <a href="#products">Products</a>
@@ -83,8 +86,8 @@
     </header>
 
     <section class="full-banner" id="home">
-        <!-- Main Banner area -->
-        <img src="logo1.png?v=2" alt="One Tek Solution" class="center-logo">
+        <!-- Main Banner area me bhi logo1.png set kar diya hai -->
+        <img src="logo1.png" alt="One Tek Solution" class="center-logo">
         
         <div class="search-box">
             <input type="text" placeholder="Search Part Number...">
@@ -100,8 +103,8 @@
         </div>
     </div>
 
-    <footer>
-        <p>© 2026 One Tek Solution | GST: 07AIOPC4519Q1ZR</p>
+    <footer style="margin-top: 50px;">
+        <p>© 2024 One Tek Solution | GST: 07AIOPC4519Q1ZR</p>
     </footer>
 
 </body>

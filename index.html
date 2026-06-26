@@ -1,14 +1,17 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>One Tek Solution | Global Semiconductor Sourcing & Electronics Solutions</title>
-  <meta name="description" content="One Tek Solution provides semiconductor components, microcontrollers, RF devices, industrial electronics and global sourcing solutions." />
+  <meta
+    name="description"
+    content="One Tek Solution provides semiconductor components, microcontrollers, RF devices, industrial electronics and global sourcing solutions."
+  />
 
   <style>
     * {
-      margin: 0; 
+      margin: 0;
       padding: 0;
       box-sizing: border-box;
       font-family: Arial, sans-serif;
@@ -26,7 +29,6 @@
 
     a {
       text-decoration: none;
-      color: #8ed8ff;
     }
 
     img {
@@ -38,9 +40,8 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(24, 40, 64, 0.96);
-      border-bottom: 1px solid #3f5875;
-      backdrop-filter: blur(8px);
+      background: #172842;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
     }
 
     .nav-wrap {
@@ -48,34 +49,31 @@
       margin: auto;
       padding: 12px 20px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       gap: 20px;
     }
 
     .brand {
       display: flex;
       align-items: center;
+      min-width: 180px;
     }
 
-    /* PERFECT LOGO SIZE ADJUSTMENT */
     .header-logo {
-      height: 70px !important;
-      width: auto !important;
-      object-fit: contain;
+      height: 68px;
+      width: auto;
     }
 
     nav {
       display: flex;
-      align-items: center;
-      gap: 28px;
       flex-wrap: wrap;
+      gap: 28px;
     }
 
     nav a {
       color: #ffffff;
-      font-weight: bold;
-      font-size: 15px;
+      font-weight: 600;
       transition: 0.3s;
     }
 
@@ -84,43 +82,49 @@
     }
 
     .hero {
-      min-height: 85vh;
+      position: relative;
+      min-height: 92vh;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: center;
       text-align: center;
       padding: 120px 20px 80px;
       background:
         linear-gradient(rgba(70, 110, 150, 0.28), rgba(12, 24, 40, 0.48)),
-        url("logo1.png") center top / contain no-repeat;
+        url("logo1.png") center center / cover no-repeat;
       border-bottom: 3px solid #67d4ff;
+      overflow: hidden;
     }
 
     .hero-content {
+      position: relative;
       max-width: 1020px;
       width: 100%;
       margin-top: 0;
       padding-top: 0;
+      z-index: 2;
     }
 
     .hero-tag {
       display: inline-block;
       background: rgba(103, 212, 255, 0.16);
-      border: 1px solid rgba(103, 212, 255, 0.50);
+      border: 1px solid rgba(103, 212, 255, 0.5);
       color: #f0fbff;
       padding: 9px 18px;
       border-radius: 999px;
-      font-size: 15px;
+      font-size: 14px;
       font-weight: bold;
       letter-spacing: 0.4px;
-      margin-bottom: 18px;
+      margin-bottom: 12px;
+      position: relative;
+      top: -16px;
     }
 
     .hero h1 {
       font-size: 56px;
-      line-height: 1.08;
+      line-height: 1.12;
       color: #67d4ff;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
       letter-spacing: 0.8px;
       text-shadow: 0 0 18px rgba(103, 212, 255, 0.22);
     }
@@ -156,39 +160,59 @@
       margin-bottom: 28px;
     }
 
+    .hero-buttons {
+      position: absolute;
+      left: 40px;
+      top: 58%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 14px;
+      z-index: 4;
+    }
+
     .btn {
       display: inline-block;
-      padding: 14px 28px;
-      border-radius: 10px;
+      width: 220px;
+      padding: 15px 20px;
+      border-radius: 12px;
       font-weight: bold;
+      text-align: center;
       transition: 0.3s;
     }
 
-    /* PREMIUM VERTICAL BUTTONS BOX CONTAINER */
-    .vertical-btn-box {
-      display: inline-flex;
-      flex-direction: column;
-      gap: 12px;
-      padding: 20px;
-      background: rgba(20, 32, 50, 0.6);
-      border: 1px solid #3f5875;
-      border-radius: 12px;
-      margin: 30px auto 30px;
-      max-width: 280px;
-      width: 100%;
+    .btn-primary {
+      background: #67d4ff;
+      color: #001018;
     }
 
-    .vertical-btn-box .btn {
-      background: transparent !important; 
-      color: #ffffff !important; 
-      border: 1px solid #67d4ff !important; 
-      text-align: center; 
-      display: block;
+    .btn-primary:hover {
+      background: #2dbcf5;
+      color: #ffffff;
     }
 
-    .vertical-btn-box .btn:hover {
-      background: rgba(103, 212, 255, 0.14) !important;
-      color: #67d4ff !important;
+    .btn-secondary {
+      background: rgba(18, 30, 48, 0.72);
+      color: #ffffff;
+      border: 1px solid #67d4ff;
+    }
+
+    .btn-secondary:hover {
+      background: #67d4ff;
+      color: #001018;
+    }
+
+    .btn-outline-light {
+      background: rgba(255, 255, 255, 0.06);
+      color: #ffffff;
+      border: 1px solid #8aa0ba;
+    }
+
+    .btn-outline-light:hover {
+      border-color: #67d4ff;
+      background: rgba(103, 212, 255, 0.14);
+      color: #ffffff;
     }
 
     .search-box {
@@ -199,7 +223,7 @@
       display: flex;
       padding: 6px;
       overflow: hidden;
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.30);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
     }
 
     .search-box input {
@@ -234,74 +258,6 @@
       margin-bottom: 22px;
     }
 
-    /* NEW ABOUT SECTION STRUCTURAL CSS */
-    .section-about-wrap {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 100px 20px;
-    }
-
-    .about-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 50px;
-    }
-
-    .about-text-side {
-      flex: 1.2;
-      text-align: left;
-    }
-
-    .about-text-side h2 {
-      color: #67d4ff;
-      font-size: 40px;
-      margin-bottom: 24px;
-    }
-
-    .about-paragraph {
-      color: #d6e4f2;
-      font-size: 16px;
-      line-height: 1.7;
-      margin-bottom: 16px;
-    }
-
-    .strength-grid-side {
-      flex: 0.8;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
-
-    .strength-mini-card {
-      background: linear-gradient(135deg, #1e2f44 0%, #152538 100%);
-      border: 1px solid #3f5875;
-      padding: 30px 20px;
-      border-radius: 14px;
-      text-align: center;
-      transition: 0.3s ease;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-    }
-
-    .strength-mini-card:hover {
-      transform: translateY(-5px);
-      border-color: #67d4ff;
-      box-shadow: 0 15px 30px rgba(103, 212, 255, 0.1);
-    }
-
-    .strength-mini-card h3 {
-      color: #67d4ff;
-      font-size: 36px;
-      margin-bottom: 8px;
-      font-weight: bold;
-    }
-
-    .strength-mini-card p {
-      color: #b2c2d3;
-      font-size: 14px;
-      font-weight: 500;
-    }
-
     .section-intro {
       max-width: 900px;
       margin: 0 auto 40px;
@@ -334,6 +290,14 @@
       color: #67d4ff;
       margin-bottom: 10px;
       font-size: 22px;
+    }
+
+    .stats .card {
+      text-align: center;
+    }
+
+    .stats .card h3 {
+      font-size: 32px;
     }
 
     .contact-box {
@@ -422,7 +386,18 @@
       align-items: center;
       justify-content: center;
       font-size: 28px;
-      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.30);
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.3);
+      z-index: 1001;
+    }
+
+    @media (max-width: 1100px) {
+      .hero-buttons {
+        left: 20px;
+      }
+
+      .btn {
+        width: 200px;
+      }
     }
 
     @media (max-width: 900px) {
@@ -434,17 +409,11 @@
         font-size: 18px;
       }
 
-      .about-container {
-        flex-direction: column;
-        gap: 40px;
-      }
-
-      .about-text-side {
-        text-align: center;
-      }
-
-      .strength-grid-side {
-        width: 100%;
+      .hero-buttons {
+        position: static;
+        transform: none;
+        margin: 28px auto 0;
+        align-items: center;
       }
     }
 
@@ -464,7 +433,7 @@
       }
 
       .header-logo {
-        height: 65px !important;
+        height: 56px;
       }
 
       .hero {
@@ -472,8 +441,12 @@
       }
 
       .hero-content {
-        margin-top: 0;
         padding-top: 0;
+      }
+
+      .hero-tag {
+        top: -8px;
+        margin-bottom: 10px;
       }
 
       .hero h1 {
@@ -486,6 +459,11 @@
 
       .hero-support-line {
         font-size: 14px;
+      }
+
+      .btn {
+        width: 100%;
+        max-width: 260px;
       }
 
       .search-box {
@@ -501,12 +479,6 @@
         margin-top: 6px;
         padding: 14px;
         border-radius: 14px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .strength-grid-side {
-        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -533,7 +505,7 @@
     <div class="hero-content">
       <p class="hero-tag">Trusted B2B Semiconductor Sourcing Partner</p>
 
-      <h1>Global Semiconductor Sourcing & Electronic Components Distribution</h1>
+      <h1>Global Semiconductor Sourcing for OEMs & Industrial Buyers</h1>
 
       <p class="hero-subtext">
         Reliable sourcing support for Microcontrollers, RF Components, Sensors, Industrial Electronics
@@ -550,149 +522,88 @@
         MOQ support | Bulk orders | BOM sourcing assistance for urgent and scheduled requirements
       </p>
 
-      <!-- TRANSPARENT BUTTONS BOX CONTAINER -->
-      <div class="vertical-btn-box">
-        <a class="btn" href="https://wa.me/918505807245">WhatsApp Us</a>
-        <a class="btn" href="#contact">Get Quote</a>
-        <a class="btn" href="#contact">Upload BOM</a>
+      <div class="hero-buttons">
+        <a class="btn btn-primary" href="[wa.me](https://wa.me/918505807245)" target="_blank">WhatsApp Us</a>
+        <a class="btn btn-secondary" href="#contact">Get Quote</a>
+        <a class="btn btn-outline-light" href="#contact">Upload BOM</a>
       </div>
 
+      <div class="search-box">
+        <input type="text" placeholder="Search Part Number (e.g. STM32, NXP, TI...)" />
+        <button type="button">Search</button>
+      </div>
     </div>
   </section>
 
-  <section class="section" style="padding-top:40px; padding-bottom:40px;">
-    <h2 style="margin-bottom:25px;">Search Components</h2>
-    <div class="search-box">
-      <input type="text" placeholder="Search Part Number (STM32, NXP, TI, Infineon...)" />
-      <button type="button">Search</button>
-    </div>
+  <section class="section" id="about">
+    <h2>About One Tek Solution</h2>
+    <p class="section-intro">
+      One Tek Solution is a supplier of semiconductor components, microcontrollers, RF devices,
+      industrial electronics and sourcing solutions. We support OEMs, manufacturers, system
+      integrators and engineering teams with genuine components and responsive technical support.
+    </p>
   </section>
 
-  <!-- 15-20 LINES EXTENDED PROFESSIONAL ABOUT SECTION -->
-  <section class="section-about-wrap" id="about">
-    <div class="about-container">
-      
-      <div class="about-text-side">
-        <h2>About One Tek Solution</h2>
-        
-        <p class="about-paragraph">
-          One Tek Solution is a premier B2B global sourcing partner and strategic supplier specializing in high-grade semiconductor components, microcontrollers, embedded systems, RF devices, and industrial electronics. Established to bridge the gap in the fast-paced electronics manufacturing industry, we cater extensively to Original Equipment Manufacturers (OEMs), Electronic Manufacturing Services (EMS), system integrators, and independent engineering teams across the country. 
-        </p>
-        
-        <p class="about-paragraph">
-          In an era where component shortages and supply chain disruptions can halt production, One Tek Solution stands as a reliable pillar of procurement support. We leverage an extensive, deeply vetted international network of trusted manufacturers and authorized distributors to source not only high-volume standard components but also highly specialized, obsolete, allocation-phase, and hard-to-find active or passive semiconductor parts. 
-        </p>
-
-        <p class="about-paragraph">
-          Our core product portfolio spans across automotive-grade MCUs, advanced sensors, wireless communication modules, power management ICs, and custom electronic flashers. Driven by a commitment to uncompromising quality, every component supplied by us undergoes rigorous source-verification to ensure 100% authenticity and compliance with global industrial standards, effectively eliminating the risk of counterfeit parts.
-        </p>
-
-        <p class="about-paragraph">
-          Beyond hardware distribution, we take pride in our agility and customer-centric technical assistance. Whether our clients require flexible Minimum Order Quantity (MOQ) support for initial prototyping, complete Bill of Materials (BOM) kitting assistance for large-scale production, or scheduled buffer-stock management for just-in-time delivery, our dedicated team ensures a seamless, transparent, and cost-effective procurement experience from inquiry to final delivery.
-        </p>
+  <section class="section stats">
+    <h2>Our Strength</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>5000+</h3>
+        <p>Components</p>
       </div>
-
-      <div class="strength-grid-side">
-        <div class="strength-mini-card">
-          <h3>5000+</h3>
-          <p>Genuine Components</p>
-        </div>
-        <div class="strength-mini-card">
-          <h3>100+</h3>
-          <p>Global Suppliers</p>
-        </div>
-        <div class="strength-mini-card">
-          <h3>24/7</h3>
-          <p>Dedicated Support</p>
-        </div>
-        <div class="strength-mini-card">
-          <h3>PAN India</h3>
-          <p>Delivery Network</p>
-        </div>
+      <div class="card">
+        <h3>100+</h3>
+        <p>Global Suppliers</p>
       </div>
-
+      <div class="card">
+        <h3>24/7</h3>
+        <p>Customer Support</p>
+      </div>
+      <div class="card">
+        <h3>Fast</h3>
+        <p>Global Delivery Coordination</p>
+      </div>
     </div>
   </section>
 
   <section class="section" id="products">
-    <h2>Products & Solutions</h2>
+    <h2>Products We Source</h2>
+    <p class="section-intro">
+      We help customers source active, passive and hard-to-find components for industrial,
+      automation, telecom, embedded and OEM applications.
+    </p>
+
     <div class="cards">
       <div class="card">
         <h3>Microcontrollers</h3>
-        <p>Industrial and automotive grade MCU solutions.</p>
+        <p>High-performance MCUs for embedded systems, automation and industrial control projects.</p>
       </div>
       <div class="card">
         <h3>RF Components</h3>
-        <p>Wireless and communication components.</p>
-      </div>
-      <div class="card">
-        <h3>Semiconductors</h3>
-        <p>ICs, processors, memory and power devices.</p>
-      </div>
-      <div class="card">
-        <h3>Industrial Electronics</h3>
-        <p>Reliable components for automation systems.</p>
+        <p>Reliable RF modules and devices for communication, wireless and signal applications.</p>
       </div>
       <div class="card">
         <h3>Sensors</h3>
-        <p>Industrial and embedded sensing solutions.</p>
+        <p>Industrial and smart sensing solutions for monitoring, control and precision electronics.</p>
       </div>
       <div class="card">
-        <h3>Automotive Flashers</h3>
-        <p>Electronic flasher and control products.</p>
+        <h3>Industrial Electronics</h3>
+        <p>Essential electronic parts and devices for robust manufacturing and industrial systems.</p>
       </div>
     </div>
   </section>
 
   <section class="section" id="manufacturers">
-    <h2>Major Semiconductor Manufacturers</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>NXP</h3>
-        <p>Connectivity and Automotive Solutions</p>
-      </div>
-      <div class="card">
-        <h3>Texas Instruments</h3>
-        <p>Analog and Embedded Processing</p>
-      </div>
-      <div class="card">
-        <h3>Infineon</h3>
-        <p>Power and Automotive Electronics</p>
-      </div>
-      <div class="card">
-        <h3>Renesas</h3>
-        <p>MCUs and Embedded Systems</p>
-      </div>
-      <div class="card">
-        <h3>Microchip</h3>
-        <p>Controllers and Analog Devices</p>
-      </div>
-      <div class="card">
-        <h3>Analog Devices</h3>
-        <p>High Performance Signal Processing</p>
-      </div>
-    </div>
-  </section>
+    <h2>Manufacturers</h2>
+    <p class="section-intro">
+      We support sourcing requirements across globally recognized semiconductor and electronics brands.
+    </p>
 
-  <section class="section">
-    <h2>Why Choose Us</h2>
     <div class="cards">
-      <div class="card">
-        <h3>Genuine Components</h3>
-        <p>Authentic products from trusted sources.</p>
-      </div>
-      <div class="card">
-        <h3>Global Procurement</h3>
-        <p>Worldwide sourcing network.</p>
-      </div>
-      <div class="card">
-        <h3>Competitive Pricing</h3>
-        <p>Cost-effective procurement support.</p>
-      </div>
-      <div class="card">
-        <h3>Technical Assistance</h3>
-        <p>Support for selection and sourcing.</p>
-      </div>
+      <div class="card"><h3>Texas Instruments</h3><p>Analog, embedded and power management solutions.</p></div>
+      <div class="card"><h3>NXP</h3><p>Automotive, secure connectivity and embedded processing devices.</p></div>
+      <div class="card"><h3>STMicroelectronics</h3><p>MCUs, sensors, analog and power components.</p></div>
+      <div class="card"><h3>Infineon</h3><p>Power semiconductors, automotive and industrial electronics.</p></div>
     </div>
   </section>
 
@@ -700,33 +611,31 @@
     <h2>Contact Us</h2>
 
     <div class="contact-box">
-      <p><strong>Proprietor:</strong> K. Chaudhary</p>
-      <p><strong>GST:</strong> 07AIOPC4519Q1ZR</p>
-      <p><strong>Email:</strong> <a href="mailto:support@oneteksolution.com">support@oneteksolution.com</a></p>
-      <p><strong>Phone:</strong> <a href="tel:+919717753193">+91 9717753193</a></p>
-      <p><strong>WhatsApp:</strong> <a href="https://wa.me/918505807245">+91 8505807245</a></p>
-      <p><strong>Address:</strong> 218/1, E1, 5th Floor, Rajpur Khurd Extension, New Delhi - 110068</p>
+      <p><strong>Company:</strong> One Tek Solution</p>
+      <p><strong>Email:</strong> info@oneteksolution.com</p>
+      <p><strong>Phone:</strong> +91 85058 07245</p>
+      <p><strong>Support:</strong> BOM sourcing, component search, urgent requirements and scheduled procurement</p>
     </div>
 
     <div class="form-wrap">
-      <h3>Send Enquiry</h3>
-      <form action="https://formsubmit.co/ARVINDO2308@gmail.com" method="POST">
-        <input type="hidden" name="_captcha" value="false" />
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <input type="tel" name="mobile" placeholder="Mobile Number" required />
-        <textarea name="message" rows="5" placeholder="Your Requirement" required></textarea>
-        <button type="submit" class="submit-btn">Send Enquiry</button>
+      <h3>Send Your Requirement</h3>
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <input type="text" placeholder="Company Name" />
+        <textarea rows="6" placeholder="Enter your BOM / requirement details" required></textarea>
+        <button type="submit" class="submit-btn">Submit Requirement</button>
       </form>
     </div>
   </section>
 
   <footer>
-    <p>© 2026 One Tek Solution. All Rights Reserved.</p>
-    <p>Global Semiconductor Sourcing & Electronics Solutions</p>
+    <p>&copy; 2026 One Tek Solution. All rights reserved.</p>
   </footer>
 
-  <a class="whatsapp" href="https://wa.me/918505807245">💬</a>
+  <a class="whatsapp" href="[wa.me](https://wa.me/918505807245)" target="_blank" aria-label="Chat on WhatsApp">
+    💬
+  </a>
 
 </body>
 </html>

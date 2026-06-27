@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -8,7 +8,7 @@
 
   <style>
     * {
-      margin: 0; 
+      margin: 0;
       padding: 0;
       box-sizing: border-box;
       font-family: Arial, sans-serif;
@@ -34,6 +34,8 @@
       max-width: 100%;
     }
 
+    /* HEADER / NAVBAR */
+
     header {
       position: sticky;
       top: 0;
@@ -58,7 +60,6 @@
       align-items: center;
     }
 
-    /* PERFECT LOGO SIZE ADJUSTMENT */
     .header-logo {
       height: 70px !important;
       width: auto !important;
@@ -83,6 +84,8 @@
       color: #67d4ff;
     }
 
+    /* HERO SECTION */
+
     .hero {
       min-height: 85vh;
       display: flex;
@@ -99,7 +102,7 @@
     .hero-content {
       max-width: 1020px;
       width: 100%;
-      margin-top: 0;
+      margin-top: 70px; /* SHIFT TEXT DOWN */
       padding-top: 0;
     }
 
@@ -164,7 +167,6 @@
       transition: 0.3s;
     }
 
-    /* PREMIUM VERTICAL BUTTONS BOX CONTAINER */
     .vertical-btn-box {
       display: inline-flex;
       flex-direction: column;
@@ -179,16 +181,42 @@
     }
 
     .vertical-btn-box .btn {
-      background: transparent !important; 
-      color: #ffffff !important; 
-      border: 1px solid #67d4ff !important; 
-      text-align: center; 
+      background: transparent !important;
+      color: #ffffff !important;
+      border: 1px solid #67d4ff !important;
+      text-align: center;
       display: block;
     }
 
     .vertical-btn-box .btn:hover {
       background: rgba(103, 212, 255, 0.14) !important;
       color: #67d4ff !important;
+    }
+
+    /* GENERIC SECTION */
+
+    .section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 75px 20px;
+    }
+
+    .section h2 {
+      text-align: center;
+      color: #67d4ff;
+      font-size: 36px;
+      margin-bottom: 22px;
+    }
+
+    /* SEARCH SECTION */
+
+    .section-search {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+
+    .section-search h2 {
+      margin-bottom: 25px;
     }
 
     .search-box {
@@ -221,20 +249,8 @@
       cursor: pointer;
     }
 
-    .section {
-      max-width: 1200px;
-      margin: auto;
-      padding: 75px 20px;
-    }
+    /* ABOUT SECTION */
 
-    .section h2 {
-      text-align: center;
-      color: #67d4ff;
-      font-size: 36px;
-      margin-bottom: 22px;
-    }
-
-    /* NEW ABOUT SECTION STRUCTURAL CSS */
     .section-about-wrap {
       max-width: 1200px;
       margin: 0 auto;
@@ -302,13 +318,7 @@
       font-weight: 500;
     }
 
-    .section-intro {
-      max-width: 900px;
-      margin: 0 auto 40px;
-      text-align: center;
-      color: #d6e4f2;
-      font-size: 17px;
-    }
+    /* CARDS (PRODUCTS / WHY / MANUFACTURERS) */
 
     .cards {
       display: grid;
@@ -335,6 +345,8 @@
       margin-bottom: 10px;
       font-size: 22px;
     }
+
+    /* CONTACT SECTION */
 
     .contact-box {
       background: #22344a;
@@ -401,6 +413,8 @@
       color: #ffffff;
     }
 
+    /* FOOTER */
+
     footer {
       background: #0c1827;
       border-top: 1px solid #31465e;
@@ -408,6 +422,8 @@
       padding: 28px 20px;
       color: #b2c2d3;
     }
+
+    /* WHATSAPP FLOAT BUTTON (OPTIONAL – NOT USED IN BODY YET) */
 
     .whatsapp {
       position: fixed;
@@ -424,6 +440,8 @@
       font-size: 28px;
       box-shadow: 0 10px 22px rgba(0, 0, 0, 0.30);
     }
+
+    /* RESPONSIVE */
 
     @media (max-width: 900px) {
       .hero h1 {
@@ -454,10 +472,6 @@
         align-items: flex-start;
       }
 
-      .brand {
-        min-width: auto;
-      }
-
       nav {
         justify-content: flex-start;
         gap: 16px;
@@ -472,8 +486,7 @@
       }
 
       .hero-content {
-        margin-top: 0;
-        padding-top: 0;
+        margin-top: 40px; /* less gap on mobile */
       }
 
       .hero h1 {
@@ -550,37 +563,34 @@
         MOQ support | Bulk orders | BOM sourcing assistance for urgent and scheduled requirements
       </p>
 
-      <!-- TRANSPARENT BUTTONS BOX CONTAINER -->
       <div class="vertical-btn-box">
         <a class="btn" href="https://wa.me/918505807245">WhatsApp Us</a>
         <a class="btn" href="#contact">Get Quote</a>
         <a class="btn" href="#contact">Upload BOM</a>
       </div>
-
     </div>
   </section>
 
-  <section class="section" style="padding-top:40px; padding-bottom:40px;">
-    <h2 style="margin-bottom:25px;">Search Components</h2>
+  <section class="section section-search">
+    <h2>Search Components</h2>
     <div class="search-box">
       <input type="text" placeholder="Search Part Number (STM32, NXP, TI, Infineon...)" />
       <button type="button">Search</button>
     </div>
   </section>
 
-  <!-- 15-20 LINES EXTENDED PROFESSIONAL ABOUT SECTION -->
   <section class="section-about-wrap" id="about">
     <div class="about-container">
-      
+
       <div class="about-text-side">
         <h2>About One Tek Solution</h2>
-        
+
         <p class="about-paragraph">
-          One Tek Solution is a premier B2B global sourcing partner and strategic supplier specializing in high-grade semiconductor components, microcontrollers, embedded systems, RF devices, and industrial electronics. Established to bridge the gap in the fast-paced electronics manufacturing industry, we cater extensively to Original Equipment Manufacturers (OEMs), Electronic Manufacturing Services (EMS), system integrators, and independent engineering teams across the country. 
+          One Tek Solution is a premier B2B global sourcing partner and strategic supplier specializing in high-grade semiconductor components, microcontrollers, embedded systems, RF devices, and industrial electronics. Established to bridge the gap in the fast-paced electronics manufacturing industry, we cater extensively to Original Equipment Manufacturers (OEMs), Electronic Manufacturing Services (EMS), system integrators, and independent engineering teams across the country.
         </p>
-        
+
         <p class="about-paragraph">
-          In an era where component shortages and supply chain disruptions can halt production, One Tek Solution stands as a reliable pillar of procurement support. We leverage an extensive, deeply vetted international network of trusted manufacturers and authorized distributors to source not only high-volume standard components but also highly specialized, obsolete, allocation-phase, and hard-to-find active or passive semiconductor parts. 
+          In an era where component shortages and supply chain disruptions can halt production, One Tek Solution stands as a reliable pillar of procurement support. We leverage an extensive, deeply vetted international network of trusted manufacturers and authorized distributors to source not only high-volume standard components but also highly specialized, obsolete, allocation-phase, and hard-to-find active or passive semiconductor parts.
         </p>
 
         <p class="about-paragraph">
@@ -725,8 +735,5 @@
     <p>© 2026 One Tek Solution. All Rights Reserved.</p>
     <p>Global Semiconductor Sourcing & Electronics Solutions</p>
   </footer>
-
-  <a class="whatsapp" href="https://wa.me/918505807245">💬</a>
-
 </body>
 </html>

@@ -6,7 +6,7 @@
   <title>One Tek Solution | Global Semiconductor Sourcing & Electronics Solutions</title>
   <meta name="description" content="One Tek Solution provides semiconductor components, microcontrollers, RF devices, industrial electronics and global sourcing solutions." />
 
-  <style> 
+  <style>
     * {
       margin: 0; 
       padding: 0;
@@ -60,7 +60,7 @@
 
     /* PERFECT LOGO SIZE ADJUSTMENT */
     .header-logo {
-      height: 45px !important;
+      height: 70px !important;
       width: auto !important;
       object-fit: contain;
     }
@@ -92,7 +92,7 @@
       padding: 120px 20px 80px;
       background:
         linear-gradient(rgba(70, 110, 150, 0.28), rgba(12, 24, 40, 0.48)),
-       
+        url("logo1.png") center top / contain no-repeat;
       border-bottom: 3px solid #67d4ff;
     }
 
@@ -164,15 +164,7 @@
       transition: 0.3s;
     }
 
-    /* PREMIUM VERTICAL BUTTONS BOX CONTAINER - LEFT ALIGNED */
-    .btn-left-wrapper {
-      display: flex;
-      justify-content: flex-start;
-      width: 100%;
- 
-      top: -80px;
-    }
-
+    /* PREMIUM VERTICAL BUTTONS BOX CONTAINER */
     .vertical-btn-box {
       display: inline-flex;
       flex-direction: column;
@@ -181,7 +173,7 @@
       background: rgba(20, 32, 50, 0.6);
       border: 1px solid #3f5875;
       border-radius: 12px;
-      margin: 30px 0 30px;
+      margin: 30px auto 30px;
       max-width: 280px;
       width: 100%;
     }
@@ -510,10 +502,6 @@
         padding: 14px;
         border-radius: 14px;
       }
-
-      .btn-left-wrapper {
-        justify-content: center;
-      }
     }
 
     @media (max-width: 480px) {
@@ -525,36 +513,21 @@
 </head>
 <body>
 
+  <header>
+    <div class="nav-wrap">
+      <div class="brand">
+        <img src="logo.png" alt="One Tek Solution Logo" class="header-logo" />
+      </div>
 
-   <header class="header">
-
-    <div class="top-bar">
-
-        <div class="logo">
-            <img src="logo2.png" alt="One Tek Solution">
-         
-        </div>
-
-        <div class="search-area">
-            <input type="text" placeholder="Search by Part Number, Manufacturer or Keyword">
-            <button>Search</button>
-        </div>
-
-        <div class="header-buttons">
-            <a href="https://wa.me/918505807245" class="whatsapp-btn">WhatsApp</a>
-            <a href="#contact" class="quote-btn">Get Quote</a>
-      
-    </div>
-
-    <nav class="menu">
+      <nav>
         <a href="#home">Home</a>
+        <a href="#about">About</a>
         <a href="#products">Products</a>
         <a href="#manufacturers">Manufacturers</a>
-        <a href="#about">About Us</a>
         <a href="#contact">Contact</a>
-    </nav>
-
-</header>
+      </nav>
+    </div>
+  </header>
 
   <section class="hero" id="home">
     <div class="hero-content">
@@ -577,13 +550,11 @@
         MOQ support | Bulk orders | BOM sourcing assistance for urgent and scheduled requirements
       </p>
 
-      <!-- TRANSPARENT BUTTONS BOX CONTAINER - LEFT ALIGNED -->
-      <div class="btn-left-wrapper">
-        <div class="vertical-btn-box">
-          <a class="btn" href="https://wa.me/918505807245">WhatsApp Us</a>
-          <a class="btn" href="#contact">Get Quote</a>
-          <a class="btn" href="#contact">Upload BOM</a>
-        </div>
+      <!-- TRANSPARENT BUTTONS BOX CONTAINER -->
+      <div class="vertical-btn-box">
+        <a class="btn" href="https://wa.me/918505807245">WhatsApp Us</a>
+        <a class="btn" href="#contact">Get Quote</a>
+        <a class="btn" href="#contact">Upload BOM</a>
       </div>
 
     </div>
@@ -733,7 +704,7 @@
       <p><strong>GST:</strong> 07AIOPC4519Q1ZR</p>
       <p><strong>Email:</strong> <a href="mailto:support@oneteksolution.com">support@oneteksolution.com</a></p>
       <p><strong>Phone:</strong> <a href="tel:+919717753193">+91 9717753193</a></p>
-      <p><strong>WhatsApp:</strong> <a href="[wa.me](https://wa.me/918505807245)">+91 8505807245</a></p>
+      <p><strong>WhatsApp:</strong> <a href="https://wa.me/918505807245">+91 8505807245</a></p>
       <p><strong>Address:</strong> 218/1, E1, 5th Floor, Rajpur Khurd Extension, New Delhi - 110068</p>
     </div>
 
@@ -755,7 +726,7 @@
     <p>Global Semiconductor Sourcing & Electronics Solutions</p>
   </footer>
 
-  <a class="whatsapp" href="[wa.me](https://wa.me/918505807245)">💬</a>
+  <a class="whatsapp" href="https://wa.me/918505807245">💬</a>
 
 </body>
 </html>

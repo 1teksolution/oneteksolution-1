@@ -1,420 +1,487 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>One Tek Solution | Global Semiconductor Sourcing</title>
-  <meta name="description" content="One Tek Solution provides semiconductor components, microcontrollers, RF devices, industrial electronics and global sourcing solutions." />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Office Transformation Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; background: #f5f0e8; color: #1a1a1a; }
 
-  <style>
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', Arial, sans-serif; background: #070f1a; color: #e2eaf4; line-height: 1.6; }
-    a { text-decoration: none; color: inherit; }
+  /* HERO */
+  .hero {
+    background: #1a1a2e;
+    color: #fff;
+    padding: 80px 40px 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 30% 50%, rgba(212,175,55,0.15) 0%, transparent 60%),
+                radial-gradient(ellipse at 70% 50%, rgba(74,144,226,0.1) 0%, transparent 60%);
+  }
+  .hero-label {
+    display: inline-block;
+    font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase;
+    color: #d4af37; border: 1px solid rgba(212,175,55,0.4);
+    padding: 6px 16px; border-radius: 999px; margin-bottom: 24px;
+    position: relative;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 6vw, 72px); font-weight: 900;
+    line-height: 1.05; letter-spacing: -1px;
+    position: relative; margin-bottom: 18px;
+  }
+  .hero h1 em { color: #d4af37; font-style: normal; }
+  .hero p {
+    font-size: 17px; color: #a0a8b8; max-width: 520px;
+    margin: 0 auto; position: relative;
+  }
 
-    /* ── HEADER ── */
-    header {
-      position: sticky; top: 0; z-index: 999;
-      background: rgba(7, 15, 26, 0.92);
-      border-bottom: 1px solid #1e3048;
-      backdrop-filter: blur(10px);
-    }
-    .nav-inner {
-      max-width: 1200px; margin: auto;
-      padding: 14px 28px;
-      display: flex; align-items: center; justify-content: space-between;
-    }
-    .header-logo { height: 60px; width: auto; object-fit: contain; }
-    nav { display: flex; gap: 32px; }
-    nav a { color: #a0b4c8; font-size: 14px; font-weight: 600; letter-spacing: 0.3px; transition: color 0.2s; }
-    nav a:hover { color: #5bbfef; }
+  /* NAV DOTS */
+  .nav-dots {
+    display: flex; justify-content: center; gap: 8px;
+    padding: 24px; background: #1a1a2e; position: relative;
+  }
+  .nav-dots a {
+    width: 10px; height: 10px; border-radius: 50%;
+    background: rgba(212,175,55,0.3); display: block; transition: 0.2s;
+  }
+  .nav-dots a:hover { background: #d4af37; }
 
-    /* ── HERO ── */
-    .hero {
-      min-height: 88vh;
-      display: flex; align-items: center;
-      padding: 80px 28px 60px;
-      background:
-        linear-gradient(135deg, rgba(5,18,35,0.88) 0%, rgba(10,30,55,0.75) 100%),
-        url("logo1.png") center / cover no-repeat;
-      border-bottom: 1px solid #1e3048;
-    }
-    .hero-inner {
-      max-width: 1200px; margin: auto; width: 100%;
-      display: flex; align-items: center; justify-content: space-between;
-      gap: 60px;
-    }
+  /* MAIN LAYOUT */
+  .page { max-width: 1100px; margin: 0 auto; padding: 60px 28px 100px; }
 
-    /* Left: features column */
-    .hero-left {
-      display: flex; flex-direction: column; gap: 14px;
-      flex-shrink: 0; width: 220px;
-    }
-    .feature-pill {
-      display: flex; align-items: center; gap: 10px;
-      background: rgba(91, 191, 239, 0.07);
-      border: 1px solid rgba(91, 191, 239, 0.25);
-      padding: 14px 18px; border-radius: 10px;
-      font-size: 14px; font-weight: 600; color: #c8e6f8;
-      transition: background 0.2s, border-color 0.2s;
-    }
-    .feature-pill:hover { background: rgba(91,191,239,0.14); border-color: #5bbfef; }
-    .feature-pill .icon { font-size: 20px; }
+  /* SECTION */
+  .sec { margin-bottom: 72px; }
+  .sec-header {
+    display: flex; align-items: baseline; gap: 16px;
+    margin-bottom: 32px; border-bottom: 2px solid #1a1a2e;
+    padding-bottom: 14px;
+  }
+  .sec-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px; font-weight: 900; color: #d4af37;
+    line-height: 1; opacity: 0.6;
+  }
+  .sec-title { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; color: #1a1a2e; }
+  .sec-sub { font-size: 14px; color: #888; margin-top: 2px; }
 
-    /* Center: main content */
-    .hero-center { flex: 1; text-align: center; }
+  /* CARDS GRID */
+  .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+  .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 20px; }
 
-    .hero-badge {
-      display: inline-block;
-      background: rgba(91, 191, 239, 0.1);
-      border: 1px solid rgba(91, 191, 239, 0.4);
-      color: #5bbfef;
-      padding: 7px 18px; border-radius: 999px;
-      font-size: 13px; font-weight: 600; letter-spacing: 0.5px;
-      margin-bottom: 22px;
-    }
+  .card {
+    background: #fff; border-radius: 16px;
+    padding: 28px; border: 1px solid #e8e0d0;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.08); }
+  .card-icon { font-size: 36px; margin-bottom: 14px; }
+  .card h3 { font-size: 17px; font-weight: 700; color: #1a1a2e; margin-bottom: 8px; }
+  .card p { font-size: 14px; color: #666; line-height: 1.6; }
+  .card .tag {
+    display: inline-block; margin-top: 14px;
+    font-size: 11px; font-weight: 600; letter-spacing: 0.5px;
+    padding: 4px 10px; border-radius: 6px;
+  }
+  .tag-gold { background: #fef9e7; color: #b8860b; }
+  .tag-green { background: #e8f5e9; color: #2e7d32; }
+  .tag-blue { background: #e3f2fd; color: #1565c0; }
+  .card .price { font-size: 13px; font-weight: 600; color: #d4af37; margin-top: 10px; }
 
-    .hero-title {
-      font-size: 48px; font-weight: 800; line-height: 1.1;
-      color: #ffffff;
-      letter-spacing: -0.5px;
-      margin-bottom: 18px;
-    }
-    .hero-title span { color: #5bbfef; }
+  /* HIGHLIGHT CARD */
+  .card-dark {
+    background: #1a1a2e; color: #fff;
+    border-radius: 16px; padding: 32px;
+  }
+  .card-dark h3 { color: #d4af37; font-size: 18px; margin-bottom: 10px; }
+  .card-dark p { color: #a0a8b8; font-size: 14px; line-height: 1.7; }
 
-    .hero-sub {
-      font-size: 17px; color: #8fafc9; max-width: 580px;
-      margin: 0 auto 28px;
-    }
+  /* CHECKLIST */
+  .checklist { list-style: none; }
+  .checklist li {
+    display: flex; align-items: flex-start; gap: 12px;
+    padding: 14px 0; border-bottom: 1px solid #eee;
+    font-size: 15px; color: #333;
+  }
+  .checklist li:last-child { border-bottom: none; }
+  .checklist li::before { content: '✦'; color: #d4af37; font-size: 12px; margin-top: 3px; flex-shrink: 0; }
+  .checklist strong { display: block; font-weight: 600; color: #1a1a2e; }
+  .checklist span { font-size: 13px; color: #888; }
 
-    .hero-support {
-      font-size: 13px; color: #607a8f; margin-bottom: 32px;
-      letter-spacing: 0.2px;
-    }
+  /* TIMELINE */
+  .timeline { position: relative; padding-left: 32px; }
+  .timeline::before {
+    content: ''; position: absolute; left: 10px; top: 0; bottom: 0;
+    width: 2px; background: linear-gradient(to bottom, #d4af37, #1a1a2e);
+  }
+  .tl-item { position: relative; margin-bottom: 28px; }
+  .tl-dot {
+    position: absolute; left: -28px; top: 4px;
+    width: 14px; height: 14px; border-radius: 50%;
+    background: #d4af37; border: 2px solid #f5f0e8;
+  }
+  .tl-item h4 { font-size: 15px; font-weight: 700; color: #1a1a2e; margin-bottom: 4px; }
+  .tl-item p { font-size: 13px; color: #777; line-height: 1.5; }
+  .tl-time { font-size: 11px; font-weight: 600; color: #d4af37; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
 
-    .hero-cta { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-    .btn-primary {
-      padding: 13px 28px; border-radius: 8px;
-      background: #5bbfef; color: #030d18;
-      font-weight: 700; font-size: 15px; transition: 0.2s;
-    }
-    .btn-primary:hover { background: #3aadd8; }
-    .btn-outline {
-      padding: 13px 28px; border-radius: 8px;
-      border: 1px solid #2a4a65; color: #a0b4c8;
-      font-weight: 600; font-size: 15px; transition: 0.2s;
-    }
-    .btn-outline:hover { border-color: #5bbfef; color: #5bbfef; }
+  /* BANNER */
+  .banner {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    border-radius: 20px; padding: 48px 40px;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 24px; flex-wrap: wrap;
+  }
+  .banner h2 { font-family: 'Playfair Display', serif; font-size: 32px; color: #fff; }
+  .banner h2 em { color: #d4af37; font-style: normal; }
+  .banner p { color: #a0a8b8; font-size: 15px; margin-top: 8px; max-width: 480px; }
+  .banner-stat { text-align: center; }
+  .banner-stat .num { font-family: 'Playfair Display', serif; font-size: 40px; font-weight: 900; color: #d4af37; }
+  .banner-stat p { font-size: 12px; color: #a0a8b8; margin-top: 4px; }
 
-    /* Right: stats */
-    .hero-right {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 14px;
-      flex-shrink: 0; width: 230px;
-    }
-    .stat-card {
-      background: rgba(15,28,46,0.8);
-      border: 1px solid #1e3048;
-      padding: 22px 16px; border-radius: 12px;
-      text-align: center;
-    }
-    .stat-card h3 { font-size: 26px; font-weight: 800; color: #5bbfef; }
-    .stat-card p { font-size: 12px; color: #607a8f; margin-top: 4px; font-weight: 500; }
+  /* FOOTER */
+  footer {
+    background: #1a1a2e; color: #a0a8b8;
+    text-align: center; padding: 32px;
+    font-size: 14px;
+  }
+  footer em { color: #d4af37; font-style: normal; }
 
-    /* ── SEARCH ── */
-    .search-section {
-      background: #0b1826; border-bottom: 1px solid #1e3048;
-      padding: 28px;
-    }
-    .search-inner { max-width: 760px; margin: auto; }
-    .search-inner p { text-align:center; font-size:13px; color:#607a8f; margin-bottom:14px; font-weight:600; letter-spacing:0.5px; text-transform:uppercase; }
-    .search-box {
-      display: flex; background: #0f1f33;
-      border: 1px solid #2a4a65; border-radius: 10px; overflow: hidden;
-    }
-    .search-box input {
-      flex: 1; border: none; outline: none;
-      padding: 16px 20px; font-size: 15px;
-      background: transparent; color: #e2eaf4;
-    }
-    .search-box button {
-      padding: 0 26px; background: #5bbfef; color: #030d18;
-      border: none; font-weight: 700; font-size: 15px; cursor: pointer; transition: 0.2s;
-    }
-    .search-box button:hover { background: #3aadd8; }
-
-    /* ── SECTIONS ── */
-    .section { max-width: 1200px; margin: auto; padding: 72px 28px; }
-    .section-label {
-      display: inline-block; font-size: 12px; font-weight: 700;
-      letter-spacing: 1.2px; text-transform: uppercase;
-      color: #5bbfef; margin-bottom: 12px;
-    }
-    .section h2 {
-      font-size: 34px; font-weight: 800; color: #ffffff;
-      margin-bottom: 10px; letter-spacing: -0.3px;
-    }
-    .section-desc { color: #607a8f; font-size: 16px; margin-bottom: 42px; }
-
-    .divider { border: none; border-top: 1px solid #1e3048; }
-
-    /* ── CARDS ── */
-    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; }
-    .card {
-      background: #0d1d2e; border: 1px solid #1e3048;
-      padding: 26px 22px; border-radius: 12px;
-      transition: border-color 0.2s, transform 0.2s;
-    }
-    .card:hover { border-color: #2a4a65; transform: translateY(-4px); }
-    .card-icon { font-size: 28px; margin-bottom: 14px; }
-    .card h3 { font-size: 16px; font-weight: 700; color: #c8e6f8; margin-bottom: 8px; }
-    .card p { font-size: 14px; color: #607a8f; line-height: 1.5; }
-
-    /* ── ABOUT ── */
-    .about-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 50px; align-items: start; }
-    .about-text p { color: #8fafc9; font-size: 15px; line-height: 1.8; margin-bottom: 16px; }
-    .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-    .stat-big {
-      background: #0d1d2e; border: 1px solid #1e3048;
-      padding: 28px 20px; border-radius: 12px; text-align: center;
-    }
-    .stat-big h3 { font-size: 32px; font-weight: 800; color: #5bbfef; }
-    .stat-big p { font-size: 13px; color: #607a8f; margin-top: 6px; }
-
-    /* ── CONTACT ── */
-    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
-    .contact-info {
-      background: #0d1d2e; border: 1px solid #1e3048;
-      padding: 32px; border-radius: 14px;
-    }
-    .contact-info h3 { color: #5bbfef; font-size: 18px; margin-bottom: 20px; font-weight: 700; }
-    .contact-info p { font-size: 15px; color: #8fafc9; margin-bottom: 12px; }
-    .contact-info a { color: #5bbfef; }
-    .form-card {
-      background: #0d1d2e; border: 1px solid #1e3048;
-      padding: 32px; border-radius: 14px;
-    }
-    .form-card h3 { color: #ffffff; font-size: 18px; margin-bottom: 20px; font-weight: 700; }
-    .form-card input, .form-card textarea {
-      width: 100%; padding: 12px 14px; margin-bottom: 12px;
-      border: 1px solid #1e3048; border-radius: 8px;
-      background: #070f1a; color: #e2eaf4; font-size: 14px; outline: none;
-      font-family: inherit;
-    }
-    .form-card input:focus, .form-card textarea:focus { border-color: #5bbfef; }
-    .form-card textarea { resize: vertical; }
-    .submit-btn {
-      width: 100%; padding: 14px; background: #5bbfef; color: #030d18;
-      border: none; border-radius: 8px; font-weight: 700; font-size: 15px;
-      cursor: pointer; transition: 0.2s;
-    }
-    .submit-btn:hover { background: #3aadd8; }
-
-    /* ── FOOTER ── */
-    footer {
-      background: #050d18; border-top: 1px solid #1e3048;
-      text-align: center; padding: 28px 20px;
-      color: #3a5168; font-size: 14px;
-    }
-
-    /* ── WHATSAPP FLOAT ── */
-    .wa-float {
-      position: fixed; right: 22px; bottom: 22px;
-      width: 54px; height: 54px; border-radius: 50%;
-      background: #25d366; color: #fff;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 26px;
-      box-shadow: 0 6px 20px rgba(37,211,102,0.35);
-      z-index: 999; transition: transform 0.2s;
-    }
-    .wa-float:hover { transform: scale(1.1); }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 960px) {
-      .hero-inner { flex-direction: column; text-align: center; }
-      .hero-left { flex-direction: row; width: 100%; justify-content: center; flex-wrap: wrap; }
-      .hero-right { width: 100%; justify-content: center; }
-      .hero-title { font-size: 36px; }
-      .about-grid { grid-template-columns: 1fr; }
-      .contact-grid { grid-template-columns: 1fr; }
-    }
-    @media (max-width: 600px) {
-      nav { gap: 18px; }
-      .hero-title { font-size: 28px; }
-      .section h2 { font-size: 26px; }
-    }
-  </style>
+  @media (max-width: 600px) {
+    .hero { padding: 60px 20px 40px; }
+    .page { padding: 40px 18px 60px; }
+    .banner { flex-direction: column; text-align: center; }
+  }
+</style>
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <div class="nav-inner">
-      <img src="logo.png" alt="One Tek Solution" class="header-logo" />
-      <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#products">Products</a>
-        <a href="#manufacturers">Manufacturers</a>
-        <a href="#contact">Contact</a>
-      </nav>
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-label">Corporate Office Transformation</div>
+  <h1>Turn Your Dull Office Into a<br><em>Power Space</em></h1>
+  <p>A complete premium guide — furniture, lighting, décor, scent, sound, and mindset upgrades.</p>
+</div>
+<div class="nav-dots">
+  <a href="#lighting" title="Lighting"></a>
+  <a href="#furniture" title="Furniture"></a>
+  <a href="#greenery" title="Greenery"></a>
+  <a href="#decor" title="Décor"></a>
+  <a href="#sound" title="Sound"></a>
+  <a href="#scent" title="Scent"></a>
+  <a href="#tech" title="Tech"></a>
+  <a href="#schedule" title="Schedule"></a>
+</div>
+
+<div class="page">
+
+  <!-- 1. LIGHTING -->
+  <div class="sec" id="lighting">
+    <div class="sec-header">
+      <div class="sec-num">01</div>
+      <div>
+        <div class="sec-title">Lighting — The #1 Game Changer</div>
+        <div class="sec-sub">Bad lighting kills energy. Right lighting boosts productivity by 20%.</div>
+      </div>
     </div>
-  </header>
-
-  <!-- HERO -->
-  <section class="hero" id="home">
-    <div class="hero-inner">
-
-      <!-- Left: Feature Pills -->
-      <div class="hero-left">
-        <div class="feature-pill"><span class="icon">✅</span> Genuine Components</div>
-        <div class="feature-pill"><span class="icon">🌐</span> Global Sourcing</div>
-        <div class="feature-pill"><span class="icon">⚡</span> Fast Response</div>
+    <div class="grid-3">
+      <div class="card">
+        <div class="card-icon">🌅</div>
+        <h3>Circadian Lighting System</h3>
+        <p>Smart bulbs jo din ke time ke saath color temperature change karein — subah cool white, shaam warm amber. Body ko natural rhythm milti hai.</p>
+        <span class="tag tag-gold">Philips Hue / Yeelight</span>
+        <div class="price">₹8,000 – ₹25,000</div>
       </div>
-
-      <!-- Center: Main Content -->
-      <div class="hero-center">
-        <div class="hero-badge">Trusted B2B Semiconductor Sourcing Partner</div>
-        <h1 class="hero-title">Global Semiconductor Sourcing &amp;<br><span>Electronic Components</span> Distribution</h1>
-        <p class="hero-sub">Reliable sourcing for Microcontrollers, RF Components, Sensors, Industrial Electronics and hard-to-find semiconductor parts.</p>
-        <p class="hero-support">MOQ support · Bulk orders · BOM sourcing assistance</p>
-        <div class="hero-cta">
-          <a href="https://wa.me/918505807245" class="btn-primary">💬 WhatsApp Us</a>
-          <a href="#contact" class="btn-outline">Get a Quote</a>
-        </div>
+      <div class="card">
+        <div class="card-icon">🔆</div>
+        <h3>Bias Lighting Behind Screens</h3>
+        <p>Monitor ke peeche LED strip lagao. Eye strain 50% kam hota hai aur space premium lagne lagta hai.</p>
+        <span class="tag tag-green">Easy DIY install</span>
+        <div class="price">₹1,500 – ₹4,000</div>
       </div>
-
-      <!-- Right: Stats -->
-      <div class="hero-right">
-        <div class="stat-card"><h3>5K+</h3><p>Components</p></div>
-        <div class="stat-card"><h3>100+</h3><p>Suppliers</p></div>
-        <div class="stat-card"><h3>24/7</h3><p>Support</p></div>
-        <div class="stat-card"><h3>PAN<br>India</h3><p>Delivery</p></div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- SEARCH -->
-  <div class="search-section">
-    <div class="search-inner">
-      <p>Search by Part Number</p>
-      <div class="search-box">
-        <input type="text" placeholder="e.g. STM32, NXP, TI, Infineon..." />
-        <button type="button">Search</button>
+      <div class="card">
+        <div class="card-icon">🏮</div>
+        <h3>Statement Floor Lamp</h3>
+        <p>Ek beautiful arc floor lamp corner mein — plain office ko instantly lounge feel deta hai. Architect lamp best choice hai desk ke liye.</p>
+        <span class="tag tag-blue">Décor + Function</span>
+        <div class="price">₹5,000 – ₹20,000</div>
       </div>
     </div>
   </div>
 
-  <hr class="divider" />
-
-  <!-- ABOUT -->
-  <section class="section" id="about">
-    <div class="section-label">Who We Are</div>
-    <h2>About One Tek Solution</h2>
-    <p class="section-desc">A premier B2B global sourcing partner for the electronics industry.</p>
-    <div class="about-grid">
-      <div class="about-text">
-        <p>One Tek Solution is a premier B2B global sourcing partner specializing in high-grade semiconductor components, microcontrollers, embedded systems, RF devices, and industrial electronics. We cater to OEMs, EMS providers, system integrators, and engineering teams across India.</p>
-        <p>We leverage an extensive, vetted international network to source standard, obsolete, and hard-to-find semiconductor parts. Every component undergoes rigorous source-verification to ensure 100% authenticity and compliance, eliminating the risk of counterfeit parts.</p>
-        <p>Whether you need flexible MOQ support for prototyping, complete BOM kitting for large-scale production, or scheduled buffer-stock management — our dedicated team ensures a seamless, transparent, and cost-effective procurement experience.</p>
-      </div>
-      <div class="stats-grid">
-        <div class="stat-big"><h3>5000+</h3><p>Genuine Components</p></div>
-        <div class="stat-big"><h3>100+</h3><p>Global Suppliers</p></div>
-        <div class="stat-big"><h3>24/7</h3><p>Support</p></div>
-        <div class="stat-big"><h3>PAN India</h3><p>Delivery Network</p></div>
+  <!-- 2. FURNITURE -->
+  <div class="sec" id="furniture">
+    <div class="sec-header">
+      <div class="sec-num">02</div>
+      <div>
+        <div class="sec-title">Furniture — Comfort = Performance</div>
+        <div class="sec-sub">8 ghante baithe ho — furniture mein invest karna zaroori hai.</div>
       </div>
     </div>
-  </section>
-
-  <hr class="divider" />
-
-  <!-- PRODUCTS -->
-  <section class="section" id="products">
-    <div class="section-label">What We Supply</div>
-    <h2>Products & Solutions</h2>
-    <p class="section-desc">Broad portfolio covering every tier of the electronics supply chain.</p>
-    <div class="cards">
-      <div class="card"><div class="card-icon">🔲</div><h3>Microcontrollers</h3><p>Industrial and automotive grade MCU solutions.</p></div>
-      <div class="card"><div class="card-icon">📡</div><h3>RF Components</h3><p>Wireless and communication components.</p></div>
-      <div class="card"><div class="card-icon">💾</div><h3>Semiconductors</h3><p>ICs, processors, memory and power devices.</p></div>
-      <div class="card"><div class="card-icon">⚙️</div><h3>Industrial Electronics</h3><p>Reliable components for automation systems.</p></div>
-      <div class="card"><div class="card-icon">🔬</div><h3>Sensors</h3><p>Industrial and embedded sensing solutions.</p></div>
-      <div class="card"><div class="card-icon">💡</div><h3>Automotive Flashers</h3><p>Electronic flasher and control products.</p></div>
-    </div>
-  </section>
-
-  <hr class="divider" />
-
-  <!-- MANUFACTURERS -->
-  <section class="section" id="manufacturers">
-    <div class="section-label">Our Partners</div>
-    <h2>Major Semiconductor Manufacturers</h2>
-    <p class="section-desc">We source from the world's most trusted names in semiconductors.</p>
-    <div class="cards">
-      <div class="card"><h3>NXP</h3><p>Connectivity and Automotive Solutions</p></div>
-      <div class="card"><h3>Texas Instruments</h3><p>Analog and Embedded Processing</p></div>
-      <div class="card"><h3>Infineon</h3><p>Power and Automotive Electronics</p></div>
-      <div class="card"><h3>Renesas</h3><p>MCUs and Embedded Systems</p></div>
-      <div class="card"><h3>Microchip</h3><p>Controllers and Analog Devices</p></div>
-      <div class="card"><h3>Analog Devices</h3><p>High Performance Signal Processing</p></div>
-    </div>
-  </section>
-
-  <hr class="divider" />
-
-  <!-- WHY US -->
-  <section class="section">
-    <div class="section-label">Why One Tek</div>
-    <h2>Why Choose Us</h2>
-    <p class="section-desc">Built around trust, speed, and quality at every step.</p>
-    <div class="cards">
-      <div class="card"><div class="card-icon">✅</div><h3>Genuine Components</h3><p>Authentic products from trusted, verified sources.</p></div>
-      <div class="card"><div class="card-icon">🌐</div><h3>Global Procurement</h3><p>Worldwide sourcing network for any part number.</p></div>
-      <div class="card"><div class="card-icon">💰</div><h3>Competitive Pricing</h3><p>Cost-effective procurement with bulk support.</p></div>
-      <div class="card"><div class="card-icon">🛠️</div><h3>Technical Assistance</h3><p>Expert support for component selection and BOM.</p></div>
-    </div>
-  </section>
-
-  <hr class="divider" />
-
-  <!-- CONTACT -->
-  <section class="section" id="contact">
-    <div class="section-label">Get In Touch</div>
-    <h2>Contact Us</h2>
-    <p class="section-desc">Reach out for quotes, sourcing, or any enquiry.</p>
-    <div class="contact-grid">
-      <div class="contact-info">
-        <h3>Contact Details</h3>
-        <p><strong>Proprietor:</strong> K. Chaudhary</p>
-        <p><strong>GST:</strong> 07AIOPC4519Q1ZR</p>
-        <p><strong>Email:</strong> <a href="mailto:support@oneteksolution.com">support@oneteksolution.com</a></p>
-        <p><strong>Phone:</strong> <a href="tel:+919717753193">+91 9717753193</a></p>
-        <p><strong>WhatsApp:</strong> <a href="https://wa.me/918505807245">+91 8505807245</a></p>
-        <p><strong>Address:</strong> 218/1, E1, 5th Floor, Rajpur Khurd Extension, New Delhi - 110068</p>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-icon">🪑</div>
+        <h3>Ergonomic Chair (Must Have)</h3>
+        <p>Back pain se productivity aur mood dono kharab hote hain. Herman Miller ya Green Soul Executive series best investment hai.</p>
+        <ul class="checklist" style="margin-top:14px;">
+          <li><strong>Lumbar support adjustable honi chahiye</strong><span>Spine ka natural curve maintain kare</span></li>
+          <li><strong>Armrest 4D adjustable</strong><span>Shoulder tension khatam</span></li>
+          <li><strong>Seat depth adjust ho</strong><span>Thigh pressure na pade</span></li>
+        </ul>
+        <div class="price">₹25,000 – ₹80,000</div>
       </div>
-      <div class="form-card">
-        <h3>Send Enquiry</h3>
-        <form action="https://formsubmit.co/ARVINDO2308@gmail.com" method="POST">
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="text" name="name" placeholder="Your Name" required />
-          <input type="email" name="email" placeholder="Your Email" required />
-          <input type="tel" name="mobile" placeholder="Mobile Number" required />
-          <textarea name="message" rows="4" placeholder="Your Requirement" required></textarea>
-          <button type="submit" class="submit-btn">Send Enquiry</button>
-        </form>
+      <div class="card">
+        <div class="card-icon">📐</div>
+        <h3>Standing Desk (Electric)</h3>
+        <p>Sit-stand desk se blood circulation better hota hai. Din mein 2-3 baar khade hokar kaam karo — energy level amazing rehta hai.</p>
+        <ul class="checklist" style="margin-top:14px;">
+          <li><strong>Memory presets</strong><span>Height ek click mein set ho</span></li>
+          <li><strong>Cable management tray</strong><span>Wire clutter khatam</span></li>
+          <li><strong>Anti-fatigue mat saath lo</strong><span>Khade rehne mein comfort</span></li>
+        </ul>
+        <div class="price">₹30,000 – ₹60,000</div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2026 One Tek Solution. All Rights Reserved.</p>
-    <p style="margin-top:6px;">Global Semiconductor Sourcing & Electronics Solutions · New Delhi</p>
-  </footer>
+  <!-- 3. GREENERY -->
+  <div class="sec" id="greenery">
+    <div class="sec-header">
+      <div class="sec-num">03</div>
+      <div>
+        <div class="sec-title">Greenery — Nature Inside</div>
+        <div class="sec-sub">Plants se anxiety 37% aur fatigue 38% kam hoti hai (NASA study).</div>
+      </div>
+    </div>
+    <div class="grid-3">
+      <div class="card">
+        <div class="card-icon">🌿</div>
+        <h3>Snake Plant (Sansevieria)</h3>
+        <p>Low maintenance, air purifier, aur raat ko bhi oxygen deta hai. Corner mein bada pot rakho — instant premium look.</p>
+        <span class="tag tag-green">Near zero care</span>
+        <div class="price">₹400 – ₹1,500</div>
+      </div>
+      <div class="card">
+        <div class="card-icon">🪴</div>
+        <h3>Desk Plant — Pothos / ZZ Plant</h3>
+        <p>Monitor ke side mein ek chota succulent ya Pothos. Har baar screen se nazar hategi to green milega — stress release hoti hai.</p>
+        <span class="tag tag-green">Thrives in AC rooms</span>
+        <div class="price">₹200 – ₹800</div>
+      </div>
+      <div class="card">
+        <div class="card-icon">🌳</div>
+        <h3>Large Statement Plant</h3>
+        <p>Fiddle Leaf Fig ya Bird of Paradise — office ke entrance ya window ke paas. Visitors pe instant wow impression.</p>
+        <span class="tag tag-gold">Luxury look</span>
+        <div class="price">₹2,000 – ₹8,000</div>
+      </div>
+    </div>
+  </div>
 
-  <a class="wa-float" href="https://wa.me/918505807245">💬</a>
+  <!-- 4. DECOR -->
+  <div class="sec" id="decor">
+    <div class="sec-header">
+      <div class="sec-num">04</div>
+      <div>
+        <div class="sec-title">Décor — Identity & Inspiration</div>
+        <div class="sec-sub">Office ka décor aapki personality aur ambition reflect kare.</div>
+      </div>
+    </div>
+    <div class="grid-3">
+      <div class="card">
+        <div class="card-icon">🖼️</div>
+        <h3>Statement Wall Art</h3>
+        <p>Ek badi framed artwork ya printed motivational quote (minimal, elegant). Blank walls sabse bada "dull" factor hain.</p>
+        <span class="tag tag-blue">Instant transformation</span>
+        <div class="price">₹3,000 – ₹15,000</div>
+      </div>
+      <div class="card">
+        <div class="card-icon">🕯️</div>
+        <h3>Wooden / Marble Accessories</h3>
+        <p>Desk pe marble pen holder, wooden tray, aur brass bookends. Plastic accessories hata do — premium materials hi raho.</p>
+        <span class="tag tag-gold">Texture contrast</span>
+        <div class="price">₹2,000 – ₹8,000</div>
+      </div>
+      <div class="card">
+        <div class="card-icon">🪞</div>
+        <h3>Full-Length Mirror</h3>
+        <p>Space bada dikhta hai, light reflect hoti hai, aur confidence boost hota hai — especially meeting se pehle.</p>
+        <span class="tag tag-blue">Space hack</span>
+        <div class="price">₹5,000 – ₹15,000</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. SOUND -->
+  <div class="sec" id="sound">
+    <div class="sec-header">
+      <div class="sec-num">05</div>
+      <div>
+        <div class="sec-title">Sound — Focus Environment</div>
+        <div class="sec-sub">Right sound environment concentration 40% badhata hai.</div>
+      </div>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-icon">🎵</div>
+        <h3>Premium Bluetooth Speaker</h3>
+        <p>Bose SoundLink ya Sony XB series — soft lo-fi beats ya nature sounds background mein. Colleagues ko bhi pasand aayega.</p>
+        <p style="margin-top:10px; font-size:13px; color:#888;">Best playlists: Spotify "Deep Focus", "Lo-Fi Beats", "Nature Sounds"</p>
+        <div class="price">₹8,000 – ₹30,000</div>
+      </div>
+      <div class="card">
+        <div class="card-icon">🎧</div>
+        <h3>Noise-Cancelling Headphones</h3>
+        <p>Deep work ke liye Sony WH-1000XM5 ya Bose QC45 — office ka shor completely band. Focus mode ON.</p>
+        <p style="margin-top:10px; font-size:13px; color:#888;">Deep work: Classical, Binaural beats, Brown noise</p>
+        <div class="price">₹25,000 – ₹35,000</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. SCENT -->
+  <div class="sec" id="scent">
+    <div class="sec-header">
+      <div class="sec-num">06</div>
+      <div>
+        <div class="sec-title">Scent — Hidden Mood Booster</div>
+        <div class="sec-sub">Aroma therapy office mein — 99% log ignore karte hain, yahi advantage hai.</div>
+      </div>
+    </div>
+    <div class="grid-3">
+      <div class="card">
+        <div class="card-icon">🫧</div>
+        <h3>Reed Diffuser</h3>
+        <p>Desk pe elegant glass diffuser — Sandalwood ya Eucalyptus scent. Subtle, long-lasting, aur premium look bhi deta hai.</p>
+        <span class="tag tag-gold">Subtle & elegant</span>
+        <div class="price">₹1,500 – ₹5,000</div>
+      </div>
+      <div class="card">
+        <div class="card-icon">🌬️</div>
+        <h3>Electric Aroma Diffuser</h3>
+        <p>Peppermint = alertness, Lavender = stress relief, Lemon = clarity. Time ke hisaab se scent change karo.</p>
+        <span class="tag tag-green">Scientifically proven</span>
+        <div class="price">₹1,200 – ₹3,000</div>
+      </div>
+      <div class="card">
+        <div class="card-icon">🕯️</div>
+        <h3>Luxury Soy Candle</h3>
+        <p>Meeting room ya office corner mein — agar allowed ho to ek high-quality candle space ka feel completely badal deti hai.</p>
+        <span class="tag tag-blue">Prestige factor</span>
+        <div class="price">₹800 – ₹3,000</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7. TECH -->
+  <div class="sec" id="tech">
+    <div class="sec-header">
+      <div class="sec-num">07</div>
+      <div>
+        <div class="sec-title">Tech Setup — Look & Feel</div>
+        <div class="sec-sub">Clean tech setup = clean mind. Wire management is non-negotiable.</div>
+      </div>
+    </div>
+    <div class="grid-3">
+      <div class="card">
+        <div class="card-icon">🖥️</div>
+        <h3>Dual Monitor / Ultrawide</h3>
+        <p>Single screen se dual ya ultrawide jaane par productivity aur office ka visual upgrade ek saath hota hai.</p>
+        <div class="price">₹20,000 – ₹60,000</div>
+      </div>
+      <div class="card">
+        <div class="card-icon">🔌</div>
+        <h3>Cable Management System</h3>
+        <p>Cable box, velcro ties, under-desk tray — wires chhupa do. Ye ek kaam se office 10x cleaner dikhta hai.</p>
+        <span class="tag tag-green">₹500 mein possible</span>
+        <div class="price">₹500 – ₹3,000</div>
+      </div>
+      <div class="card">
+        <div class="card-icon">⌨️</div>
+        <h3>Mechanical Keyboard + Mousepad</h3>
+        <p>Large premium desk mat aur mechanical keyboard — typing experience luxury feel deta hai. Small upgrade, big impact.</p>
+        <div class="price">₹3,000 – ₹12,000</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 8. SCHEDULE -->
+  <div class="sec" id="schedule">
+    <div class="sec-header">
+      <div class="sec-num">08</div>
+      <div>
+        <div class="sec-title">Daily Routine — Energy Management</div>
+        <div class="sec-sub">Space ke saath routine bhi upgrade karo.</div>
+      </div>
+    </div>
+    <div class="card" style="padding: 32px;">
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-time">9:00 AM</div>
+          <h4>Power Start</h4>
+          <p>Desk clean karo, pani ka glass rakho, 10 min planning karo. Screen mat kholna seedha.</p>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-time">9:10 – 11:00 AM</div>
+          <h4>Deep Work Block #1</h4>
+          <p>Sabse important kaam — headphones on, notifications off, peppermint diffuser on.</p>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-time">11:00 – 11:15 AM</div>
+          <h4>Break + Movement</h4>
+          <p>Standing desk par khade ho, thoda stretch, chai/paani piyo. Screen se door jao.</p>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-time">11:15 AM – 1:00 PM</div>
+          <h4>Meetings / Collaboration</h4>
+          <p>Lo-fi music off, focus on people. Meeting ke baad 5 min notes likho.</p>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-time">2:00 – 4:00 PM</div>
+          <h4>Deep Work Block #2</h4>
+          <p>Post-lunch slump se bachne ke liye — lemon ya eucalyptus diffuse karo, light badlao.</p>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-time">5:30 PM</div>
+          <h4>Shutdown Ritual</h4>
+          <p>Desk saaf karo, kal ki 3 priorities likho, tab band karo. "I'm done" mentally feel hota hai.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SUMMARY BANNER -->
+  <div class="banner">
+    <div>
+      <h2>Total <em>Transformation</em><br>Investment</h2>
+      <p>Yeh sab upgrades milake aapka office ek aisa space ban jayega jahan aana achha lage, kaam karna achha lage, aur log impress hon.</p>
+    </div>
+    <div style="display:flex; gap:32px; flex-wrap:wrap;">
+      <div class="banner-stat"><div class="num">₹1.2L</div><p>Estimated total<br>premium setup</p></div>
+      <div class="banner-stat"><div class="num">+40%</div><p>Productivity<br>increase</p></div>
+      <div class="banner-stat"><div class="num">Day 1</div><p>Start with<br>lighting + plants</p></div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>Start small — <em>Lighting + Plants + Cable management</em> — aur phir ek ek upgrade karo.<br>
+  Ek mahine mein office pehchana nahi jayega. 🚀</p>
+</footer>
 
 </body>
 </html>

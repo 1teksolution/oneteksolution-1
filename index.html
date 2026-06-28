@@ -587,6 +587,73 @@
     .wa-float:hover { transform: scale(1.1); }
 
     /* ══════════════════════════════
+       OFFICE SHOWCASE
+    ══════════════════════════════ */
+    .office-showcase {
+      display: grid; grid-template-columns: 1.4fr 1fr; gap: 40px; align-items: center;
+    }
+    .office-img-wrap {
+      position: relative; border-radius: 16px; overflow: hidden;
+      border: 1px solid var(--border); min-height: 280px;
+      background: var(--bg3);
+    }
+    .office-img { width: 100%; height: 320px; object-fit: cover; display: block; }
+    .office-overlay {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      background: linear-gradient(transparent, rgba(5,12,23,0.85));
+      padding: 20px 20px 16px;
+    }
+    .office-tag {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(0,200,255,0.15); border: 1px solid rgba(0,200,255,0.3);
+      color: var(--cyan); font-family: var(--font-d);
+      font-size: 12px; font-weight: 700; padding: 6px 14px; border-radius: 999px;
+    }
+    .office-loc-cards { display: flex; flex-direction: column; gap: 14px; margin-top: 8px; }
+    .office-loc {
+      background: var(--bg3); border: 1px solid var(--border);
+      border-radius: 12px; padding: 18px 20px;
+      display: flex; gap: 14px; align-items: flex-start;
+    }
+    .oloc-icon {
+      width: 40px; height: 40px; border-radius: 8px; flex-shrink: 0;
+      background: rgba(0,200,255,0.08); border: 1px solid rgba(0,200,255,0.2);
+      display: flex; align-items: center; justify-content: center; font-size: 18px;
+    }
+    .office-loc h4 { font-family: var(--font-d); font-size: 14px; font-weight: 700; color: var(--white); margin-bottom: 5px; }
+    .office-loc p { font-size: 13px; color: var(--muted); line-height: 1.55; }
+    .map-link { font-size: 12px; color: var(--cyan); font-weight: 600; margin-top: 6px; display: inline-block; }
+    .map-link:hover { text-decoration: underline; }
+
+    /* ══════════════════════════════
+       SUPPLIERS GRID
+    ══════════════════════════════ */
+    .suppliers-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+    }
+    .sup-card {
+      border-radius: 12px; padding: 20px 14px; text-align: center;
+      border: 1px solid var(--border);
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .sup-card:hover { transform: translateY(-4px); }
+    .sup-card.semi { background: rgba(0,200,255,0.04); }
+    .sup-card.semi:hover { border-color: rgba(0,200,255,0.4); }
+    .sup-card.disp { background: rgba(0,229,204,0.04); }
+    .sup-card.disp:hover { border-color: rgba(0,229,204,0.4); }
+    .sup-card.stor { background: rgba(120,100,255,0.04); }
+    .sup-card.stor:hover { border-color: rgba(120,100,255,0.4); }
+    .sup-card.proc { background: rgba(255,160,50,0.04); }
+    .sup-card.proc:hover { border-color: rgba(255,160,50,0.35); }
+    .sup-name {
+      font-family: var(--font-d); font-size: 15px; font-weight: 700;
+      color: var(--white); margin-bottom: 5px;
+    }
+    .sup-cat { font-size: 11px; color: var(--muted); line-height: 1.4; }
+
+    /* ══════════════════════════════
        RESPONSIVE
     ══════════════════════════════ */
     @media (max-width: 1020px) {
@@ -601,6 +668,7 @@
       .why-grid { grid-template-columns: 1fr 1fr; }
       .contact-grid { grid-template-columns: 1fr; }
       .footer-inner { grid-template-columns: 1fr 1fr; }
+      .suppliers-grid { grid-template-columns: repeat(3, 1fr); }
     }
     @media (max-width: 640px) {
       nav { display: none; flex-direction: column; position: absolute; top: 70px; left: 0; right: 0; background: rgba(5,12,23,0.97); border-bottom: 1px solid var(--border); padding: 20px 28px; gap: 20px; }
@@ -612,6 +680,7 @@
       .dept-inner { grid-template-columns: 1fr; }
       .why-grid { grid-template-columns: 1fr; }
       .footer-inner { grid-template-columns: 1fr; }
+      .suppliers-grid { grid-template-columns: repeat(2, 1fr); }
       .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
       h2.sec-title { font-size: 27px; }
     }
@@ -632,7 +701,9 @@
       <a href="#about">About</a>
       <a href="#products">Products</a>
       <a href="#manufacturing">Manufacturing</a>
+      <a href="catalogue.html">Catalogue</a>
       <a href="#import">Import</a>
+      <a href="#suppliers">Suppliers</a>
       <a href="#contact" class="nav-cta">Get Quote</a>
     </nav>
   </div>
@@ -733,6 +804,44 @@
     </div>
   </div>
 </div>
+
+<hr class="divider" />
+
+<!-- ══════ OFFICE PHOTO ══════ -->
+<section class="section-wrap" style="padding:60px 0;">
+  <div class="container">
+    <div class="office-showcase">
+      <div class="office-img-wrap">
+        <img src="office.jpg" alt="One Tek Solution Office - New Delhi" class="office-img" onerror="this.parentElement.style.background='linear-gradient(135deg,#091422,#0d1c30)';this.style.display='none'" />
+        <div class="office-overlay">
+          <div class="office-tag">🏢 Our Workspace · New Delhi</div>
+        </div>
+      </div>
+      <div class="office-info">
+        <div class="eyebrow">Our Offices</div>
+        <h2 class="sec-title" style="font-size:28px;">Two Strategic Locations<br>in New Delhi</h2>
+        <div class="office-loc-cards">
+          <div class="office-loc">
+            <div class="oloc-icon">🔬</div>
+            <div>
+              <h4>R&amp;D Office</h4>
+              <p>155, DSIIDC Okhla Phase-1<br>New Delhi – 110020</p>
+              <a href="https://maps.google.com/?q=DSIIDC+Okhla+Phase+1+Delhi" target="_blank" class="map-link">📍 View on Map</a>
+            </div>
+          </div>
+          <div class="office-loc">
+            <div class="oloc-icon">💼</div>
+            <div>
+              <h4>Sales Office</h4>
+              <p>218/1, E1, 5th Floor, Rajpur Khurd Extension<br>Chhattarpur, New Delhi – 110068</p>
+              <a href="https://maps.google.com/?q=Rajpur+Khurd+Extension+Chhattarpur+Delhi" target="_blank" class="map-link">📍 View on Map</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <hr class="divider" />
 
@@ -1178,8 +1287,126 @@
   </div>
 </footer>
 
-<!-- WhatsApp Float -->
-<a class="wa-float" href="https://wa.me/918505807245" aria-label="Chat on WhatsApp">💬</a>
+<!-- ══════ WHATSAPP CHATBOT WIDGET ══════ -->
+<style>
+  .wa-btn-wrap { position: fixed; right: 22px; bottom: 22px; z-index: 1000; }
+  .wa-btn {
+    width: 58px; height: 58px; border-radius: 50%;
+    background: #25d366; color: #fff; border: none; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 28px;
+    box-shadow: 0 6px 24px rgba(37,211,102,0.45);
+    transition: transform 0.2s; position: relative;
+  }
+  .wa-btn:hover { transform: scale(1.1); }
+  .wa-notify {
+    position: absolute; top: -4px; right: -4px;
+    width: 18px; height: 18px; border-radius: 50%;
+    background: #ff3b30; color: #fff; font-size: 11px;
+    font-weight: 700; display: none; align-items: center; justify-content: center;
+  }
+  .wa-chat-box {
+    position: fixed; right: 22px; bottom: 92px; z-index: 1000;
+    width: 320px; border-radius: 16px; overflow: hidden;
+    box-shadow: 0 16px 48px rgba(0,0,0,0.5);
+    display: none; flex-direction: column;
+    font-family: "Inter", sans-serif;
+  }
+  .wa-chat-box.open { display: flex; animation: slideUp 0.25s ease; }
+  @keyframes slideUp { from{opacity:0;transform:translateY(16px);} to{opacity:1;transform:translateY(0);} }
+  .wa-chat-header {
+    background: #075e54; padding: 16px 18px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .wa-avatar {
+    width: 42px; height: 42px; border-radius: 50%;
+    background: #25d366; display: flex; align-items: center;
+    justify-content: center; font-size: 20px; flex-shrink: 0;
+  }
+  .wa-chat-header h4 { color: #fff; font-size: 15px; font-weight: 700; margin-bottom: 2px; }
+  .wa-chat-header p { color: #a8d5a2; font-size: 12px; }
+  .wa-close-btn { margin-left: auto; background: none; border: none; color: #a8d5a2; font-size: 20px; cursor: pointer; }
+  .wa-chat-body { background: #ece5dd; padding: 16px; min-height: 140px; }
+  .wa-bubble {
+    background: #fff; border-radius: 0 10px 10px 10px;
+    padding: 12px 14px; font-size: 14px; color: #111;
+    line-height: 1.5; box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+    max-width: 90%; margin-bottom: 10px;
+  }
+  .wa-bubble span { display: block; font-size: 11px; color: #999; margin-top: 4px; text-align: right; }
+  .wa-quick-btns { display: flex; flex-direction: column; gap: 7px; margin-top: 4px; }
+  .wa-quick {
+    background: #fff; border: 1px solid #25d366; border-radius: 20px;
+    padding: 8px 14px; font-size: 13px; color: #075e54;
+    font-weight: 600; cursor: pointer; text-align: left; transition: background 0.15s;
+  }
+  .wa-quick:hover { background: #f0fef4; }
+  .wa-chat-footer { background: #f0f0f0; padding: 12px 14px; display: flex; gap: 8px; align-items: center; }
+  .wa-chat-footer input {
+    flex: 1; padding: 10px 14px; border-radius: 20px;
+    border: none; background: #fff; font-size: 13px; outline: none;
+  }
+  .wa-send {
+    width: 38px; height: 38px; border-radius: 50%;
+    background: #25d366; color: #fff; border: none;
+    cursor: pointer; font-size: 18px; display: flex;
+    align-items: center; justify-content: center;
+  }
+</style>
+
+<div class="wa-btn-wrap">
+  <div class="wa-chat-box" id="waChat">
+    <div class="wa-chat-header">
+      <div class="wa-avatar">🏭</div>
+      <div>
+        <h4>One Tek Solution</h4>
+        <p>🟢 Typically replies instantly</p>
+      </div>
+      <button class="wa-close-btn" onclick="toggleChat()">✕</button>
+    </div>
+    <div class="wa-chat-body">
+      <div class="wa-bubble">
+        👋 Hello! Welcome to <strong>One Tek Solution</strong>.<br><br>
+        How can we help you today?
+        <span>Just now</span>
+      </div>
+      <div class="wa-quick-btns">
+        <button class="wa-quick" onclick="sendWA('I need a component quote')">🔲 Component Quote</button>
+        <button class="wa-quick" onclick="sendWA('I want to check part availability')">🔍 Check Part Availability</button>
+        <button class="wa-quick" onclick="sendWA('Tell me about your manufacturing products')">🏭 Manufacturing Products</button>
+        <button class="wa-quick" onclick="sendWA('I need BOM kitting assistance')">📦 BOM Kitting</button>
+        <button class="wa-quick" onclick="sendWA('I have a bulk order enquiry')">💰 Bulk Order Enquiry</button>
+      </div>
+    </div>
+    <div class="wa-chat-footer">
+      <input type="text" id="waInput" placeholder="Type your message…" onkeydown="if(event.key==='Enter')sendCustomWA()" />
+      <button class="wa-send" onclick="sendCustomWA()">➤</button>
+    </div>
+  </div>
+  <button class="wa-btn" onclick="toggleChat()" aria-label="Chat on WhatsApp">
+    💬
+    <div class="wa-notify" id="waDot">1</div>
+  </button>
+</div>
+
+<script>
+  function toggleChat() {
+    document.getElementById("waChat").classList.toggle("open");
+    document.getElementById("waDot").style.display = "none";
+  }
+  function sendWA(msg) {
+    window.open("https://wa.me/918505807245?text=" + encodeURIComponent(msg), "_blank");
+  }
+  function sendCustomWA() {
+    var input = document.getElementById("waInput");
+    var msg = input.value.trim();
+    if (msg) { sendWA(msg); input.value = ""; }
+  }
+  setTimeout(function() {
+    var dot = document.getElementById("waDot");
+    dot.style.display = "flex";
+  }, 3000);
+<\/script>
 
 </body>
 </html>

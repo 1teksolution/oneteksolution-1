@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Catalogue | One Tek Solution — Semiconductor Components & Manufactured Products</title>
+  <meta name="description" content="Full product catalogue of One Tek Solution — MCUs, RF devices, sensors, ICs, SMPS, fire alarms, automobile flashers, inverters, stabilizers and more. New Delhi." />
+  <meta name="keywords" content="One Tek Solution catalogue, semiconductor components list, automobile flasher manufacturer Delhi, fire alarm system supplier, SMPS manufacturer, microcontroller distributor India" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    :root {
+      --bg: #050c17; --bg2: #091422; --bg3: #0d1c30;
+      --border: #162842; --border2: #1f3a5c;
+      --cyan: #00c8ff; --cyan2: #0096cc; --teal: #00e5cc;
+      --text: #d8eaf6; --muted: #6b8fad; --white: #ffffff;
+      --font-d: 'Space Grotesk', sans-serif; --font-b: 'Inter', sans-serif;
+    }
+    body { font-family: var(--font-b); background: var(--bg); color: var(--text); line-height: 1.65; }
+    a { text-decoration: none; color: inherit; }
+
+    /* HEADER */
+    header {
+      position: sticky; top: 0; z-index: 999;
+      background: rgba(5,12,23,0.95); border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(14px);
+    }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 12px 28px; max-width: 1180px; margin: auto;
+    }
+    .header-logo { height: 52px; width: auto; object-fit: contain; }
+    nav { display: flex; align-items: center; gap: 24px; }
+    nav a { color: var(--muted); font-size: 13.5px; font-weight: 600; font-family: var(--font-d); transition: color 0.2s; }
+    nav a:hover, nav a.active { color: var(--cyan); }
+    .nav-cta { padding: 9px 18px; border-radius: 6px; background: var(--cyan); color: #030c18 !important; font-weight: 700 !important; font-size: 13px !important; }
+    .nav-cta:hover { background: var(--cyan2) !important; }
+
+    /* HERO */
+    .cat-hero {
+      background: linear-gradient(135deg, rgba(0,200,255,0.08) 0%, transparent 60%),
+                  linear-gradient(180deg, #070f1d 0%, #050c17 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 64px 28px 52px;
+      text-align: center; position: relative; overflow: hidden;
+    }
+    .cat-hero::before {
+      content: ''; position: absolute; inset: 0;
+      background-image: linear-gradient(rgba(0,200,255,0.04) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(0,200,255,0.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    .cat-hero-inner { position: relative; z-index: 1; max-width: 700px; margin: auto; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: var(--font-d); font-size: 11px; font-weight: 700;
+      letter-spacing: 2px; text-transform: uppercase; color: var(--cyan); margin-bottom: 14px;
+    }
+    .eyebrow::before { content: ''; width: 20px; height: 2px; background: var(--cyan); border-radius: 2px; }
+    .cat-hero h1 { font-family: var(--font-d); font-size: 44px; font-weight: 700; color: var(--white); margin-bottom: 16px; letter-spacing: -0.5px; }
+    .cat-hero h1 span { color: var(--cyan); }
+    .cat-hero p { font-size: 16px; color: var(--muted); max-width: 560px; margin: 0 auto 32px; }
+    .hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn-p { padding: 13px 26px; border-radius: 8px; background: var(--cyan); color: #030c18; font-weight: 700; font-size: 14px; font-family: var(--font-d); transition: 0.2s; }
+    .btn-p:hover { background: var(--cyan2); }
+    .btn-g { padding: 13px 26px; border-radius: 8px; border: 1px solid var(--border2); color: var(--text); font-weight: 600; font-size: 14px; font-family: var(--font-d); transition: 0.2s; }
+    .btn-g:hover { border-color: var(--cyan); color: var(--cyan); }
+
+    /* FILTER TABS */
+    .filter-bar { background: var(--bg2); border-bottom: 1px solid var(--border); padding: 18px 28px; }
+    .filter-inner { max-width: 1180px; margin: auto; display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+    .filter-label { font-family: var(--font-d); font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); margin-right: 6px; }
+    .ftab {
+      padding: 7px 16px; border-radius: 20px; border: 1px solid var(--border);
+      background: transparent; color: var(--muted); font-size: 13px; font-weight: 600;
+      cursor: pointer; font-family: var(--font-d); transition: 0.2s;
+    }
+    .ftab:hover, .ftab.active { border-color: var(--cyan); color: var(--cyan); background: rgba(0,200,255,0.06); }
+
+    /* MAIN LAYOUT */
+    .main { max-width: 1180px; margin: auto; padding: 56px 28px; }
+
+    /* SECTION */
+    .cat-section { margin-bottom: 72px; }
+    .cat-section-header {
+      display: flex; align-items: center; gap: 16px;
+      margin-bottom: 28px; padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    .cat-section-icon {
+      width: 52px; height: 52px; border-radius: 12px; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center; font-size: 24px;
+    }
+    .icon-import { background: rgba(0,200,255,0.1); border: 1px solid rgba(0,200,255,0.25); }
+    .icon-mfg { background: rgba(0,229,204,0.1); border: 1px solid rgba(0,229,204,0.25); }
+    .cat-section-header h2 { font-family: var(--font-d); font-size: 24px; font-weight: 700; color: var(--white); }
+    .cat-section-header p { font-size: 14px; color: var(--muted); margin-top: 3px; }
+    .sec-badge {
+      margin-left: auto; font-family: var(--font-d); font-size: 11px; font-weight: 700;
+      letter-spacing: 1px; text-transform: uppercase; padding: 5px 12px;
+      border-radius: 999px; flex-shrink: 0;
+    }
+    .badge-import { background: rgba(0,200,255,0.08); color: var(--cyan); border: 1px solid rgba(0,200,255,0.25); }
+    .badge-mfg { background: rgba(0,229,204,0.08); color: var(--teal); border: 1px solid rgba(0,229,204,0.25); }
+
+    /* PRODUCT CARDS */
+    .prod-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .prod-card {
+      background: var(--bg3); border: 1px solid var(--border);
+      border-radius: 14px; padding: 24px 20px;
+      transition: border-color 0.2s, transform 0.2s;
+      position: relative; overflow: hidden;
+    }
+    .prod-card::after {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      opacity: 0; transition: opacity 0.3s;
+    }
+    .prod-card.import::after { background: linear-gradient(90deg, transparent, var(--cyan), transparent); }
+    .prod-card.mfg::after { background: linear-gradient(90deg, transparent, var(--teal), transparent); }
+    .prod-card:hover { transform: translateY(-4px); border-color: var(--border2); }
+    .prod-card:hover::after { opacity: 1; }
+
+    .prod-icon { font-size: 30px; margin-bottom: 14px; }
+    .prod-card h3 { font-family: var(--font-d); font-size: 16px; font-weight: 700; color: var(--white); margin-bottom: 8px; }
+    .prod-card p { font-size: 13.5px; color: var(--muted); line-height: 1.6; margin-bottom: 14px; }
+
+    .prod-specs { list-style: none; margin-bottom: 16px; }
+    .prod-specs li {
+      display: flex; align-items: flex-start; gap: 8px;
+      font-size: 12.5px; color: #8ab0cc; margin-bottom: 5px; line-height: 1.4;
+    }
+    .prod-specs li::before { content: '→'; color: var(--cyan); flex-shrink: 0; font-weight: 700; }
+
+    .prod-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 4px; }
+    .prod-type {
+      font-family: var(--font-d); font-size: 10.5px; font-weight: 700;
+      letter-spacing: 1px; text-transform: uppercase;
+      padding: 4px 10px; border-radius: 999px;
+    }
+    .prod-type.import { background: rgba(0,200,255,0.07); color: var(--cyan); border: 1px solid rgba(0,200,255,0.2); }
+    .prod-type.mfg { background: rgba(0,229,204,0.07); color: var(--teal); border: 1px solid rgba(0,229,204,0.2); }
+    .enquire-btn {
+      padding: 7px 14px; border-radius: 6px;
+      background: var(--cyan); color: #030c18;
+      font-weight: 700; font-size: 12px; font-family: var(--font-d);
+      border: none; cursor: pointer; transition: 0.2s;
+    }
+    .enquire-btn:hover { background: var(--cyan2); }
+    .enquire-btn.teal { background: var(--teal); color: #030c18; }
+    .enquire-btn.teal:hover { background: #00bfaa; }
+
+    /* CTA BANNER */
+    .cta-banner {
+      background: linear-gradient(135deg, rgba(0,200,255,0.08), rgba(0,229,204,0.05));
+      border: 1px solid var(--border2); border-radius: 16px;
+      padding: 48px 40px; text-align: center; margin-top: 20px;
+    }
+    .cta-banner h2 { font-family: var(--font-d); font-size: 28px; font-weight: 700; color: var(--white); margin-bottom: 12px; }
+    .cta-banner p { font-size: 15px; color: var(--muted); margin-bottom: 28px; }
+    .cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+    /* FOOTER */
+    footer { background: #030a14; border-top: 1px solid var(--border); padding: 28px; text-align: center; }
+    footer p { font-size: 13px; color: #3a5168; }
+    footer a { color: var(--cyan); }
+
+    /* WA FLOAT */
+    .wa-btn-wrap { position: fixed; right: 22px; bottom: 22px; z-index: 1000; }
+    .wa-btn {
+      width: 56px; height: 56px; border-radius: 50%;
+      background: #25d366; color: #fff; border: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: center; font-size: 28px;
+      box-shadow: 0 6px 24px rgba(37,211,102,0.4); transition: transform 0.2s;
+    }
+    .wa-btn:hover { transform: scale(1.1); }
+
+    /* RESPONSIVE */
+    @media (max-width: 960px) { .prod-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 600px) {
+      .prod-grid { grid-template-columns: 1fr; }
+      .cat-hero h1 { font-size: 30px; }
+      nav { gap: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="nav-inner">
+    <a href="index.html"><img src="logo4.png" alt="One Tek Solution" class="header-logo" /></a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="catalogue.html" class="active">Catalogue</a>
+      <a href="index.html#suppliers">Suppliers</a>
+      <a href="index.html#contact" class="nav-cta">Get Quote</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="cat-hero">
+  <div class="cat-hero-inner">
+    <div class="eyebrow">Full Product Range</div>
+    <h1>Product <span>Catalogue</span></h1>
+    <p>Browse our complete range of imported semiconductor components and in-house manufactured electronic products.</p>
+    <div class="hero-btns">
+      <a href="https://wa.me/918505807245?text=I%20need%20a%20product%20quote%20from%20catalogue" class="btn-p">💬 Request Quote on WhatsApp</a>
+      <a href="index.html#contact" class="btn-g">📋 Send Enquiry Form</a>
+    </div>
+  </div>
+</div>
+
+<!-- FILTER BAR -->
+<div class="filter-bar">
+  <div class="filter-inner">
+    <span class="filter-label">Filter:</span>
+    <button class="ftab active" onclick="filterCat('all', this)">All Products</button>
+    <button class="ftab" onclick="filterCat('import', this)">🔲 Import Division</button>
+    <button class="ftab" onclick="filterCat('mfg', this)">🏭 Manufacturing</button>
+  </div>
+</div>
+
+<!-- MAIN CATALOGUE -->
+<div class="main">
+
+  <!-- ═══ IMPORT DIVISION ═══ -->
+  <div class="cat-section" data-cat="import">
+    <div class="cat-section-header">
+      <div class="cat-section-icon icon-import">✈️</div>
+      <div>
+        <h2>Import Division</h2>
+        <p>Global procurement of active, passive, and specialty semiconductor components</p>
+      </div>
+      <span class="sec-badge badge-import">Import Division</span>
+    </div>
+
+    <div class="prod-grid">
+
+      <div class="prod-card import">
+        <div class="prod-icon">🔲</div>
+        <h3>Microcontrollers (MCUs)</h3>
+        <p>Industrial, automotive, and embedded grade MCUs from top global manufacturers.</p>
+        <ul class="prod-specs">
+          <li>ARM Cortex-M0 / M3 / M4 / M7 series</li>
+          <li>STM32, NXP LPC/iMX, PIC, AVR, RISC-V</li>
+          <li>Industrial & automotive grade</li>
+          <li>MOQ flexible — prototype to bulk</li>
+        </ul>
+        <div class="prod-footer">
+          <span class="prod-type import">Import</span>
+          <button class="enquire-btn" onclick="window.open('https://wa.me/918505807245?text=I%20need%20MCU%20quote','_blank')">Enquire</button>
+        </div>
+      </div>
+
+      <div class="prod-card import">
+        <div class="prod-icon">📡</div>
+        <h3>RF &amp; Wireless Components</h3>
+        <p>Communication modules, transceivers, and antenna solutions for wireless applications.</p>
+        <ul class="prod-specs">
+          <li>LoRa, Zigbee, Bluetooth, Wi-Fi modules</li>
+          <li>RF transceivers and amplifiers</li>
+          <li>Sub-GHz and 2.4 GHz devices</li>
+          <li>IoT and industrial wireless</li>
+        </ul>
+        <div class="prod-footer">
+          <span class="prod-type import">Import</span>
+          <button class="enquire-btn" onclick="window.open('https://wa.me/918505807245?text=I%20need%20RF%20components%20quote','_blank')">Enquire</button>
+        </div>
+      </div>
+
+      <div class="prod-card import">
+        <div class="prod-icon">💾</div>
+        <h3>ICs &amp; Semiconductors</h3>
+        <p>Full range of integrated circuits, logic devices, and power semiconductors.</p>
+        <ul class="prod-specs">
+          <li>Logic ICs, Op-Amps, Comparators</li>
+          <li>MOSFETs, IGBTs, Diodes</li>
+          <li>Power management ICs (PMICs)</li>
+          <li>Memory — Flash, EEPROM, SRAM</li>
+        </ul>
+        <div class="prod-footer">
+          <span class="prod-type import">Import</span>
+          <button class="enquire-btn" onclick="window.open('https://wa.me/918505807245?text=I%20need%20IC%20semiconductor%20quote','_blank')">Enquire</button>
+        </div>
+      </div>
+
+      <div class="prod-card import">
+        <div class="prod-icon">🔬</div>
+        <h3>Sensors</h3>
+        <p>Industrial and embedded sensing solutions for a wide range of applications.</p>
+        <ul class="prod-specs">
+          <li>Temperature &amp; humidity sensors</li>
+          <li>Pressure &amp; flow sensors</li>
+          <li>Proximity, ultrasonic, IR sensors</li>
+          <li>Gas, smoke, and motion detection</li>
+        </ul>
+        <div class="prod-footer">
+          <span class="prod-type import">Import</span>
+          <button class="enquire-btn" onclick="window.open('https://wa.me/918505807245?text=I%20need%20sensor%20quote','_blank')">Enquire</button>
+        </div>
+      </div>
+
+      <div class="prod-card import">
+        <div class="prod-icon">⚙️</div>
+        <h3>Passive Components</h3>
+        <p>High-quality passive components for any circuit design or production requirement.</p>
+        <ul class="prod-specs">
+          <li>Resistors — SMD, Through-hole</li>
+          <li>Capacitors — Ceramic, Electrolytic, Tantalum</li>
+          <li>Inductors, Transformers, Ferrites</li>
+          <li>Crystals, Oscillators, Filters</li>
+        </ul>
+        <div class="prod-footer">
+          <span class="prod-type import">Import</span>
+          <button class="enquire-btn" onclick="window.open('https://wa.me/918505807245?text=I%20need%20passive%20components%20quote','_blank')">Enquire</button>
+        </div>
+      </div>
+
+      <div class="prod-card import">
+        <div class="prod-icon">📦</div>
+        <h3>BOM Kitting &amp; Hard-to-Find</h3>
+        <p>Complete Bill of Materials sourcing — including obsolete and end-of-life parts.</p>
+        <ul class="prod-specs">
+          <li>Full BOM kitting for production runs</li>
+          <li>Obsolete &amp; EOL part tracing</li>
+          <li>Buffer stock management</li>
+          <li>Counterfeit-free, fully verified</li>
+        </ul>
+        <div class="prod-footer">
+          <span class="prod-type import">Import</span>
+          <button class="enquire-btn" onclick="window.open('https://wa.me/918505807245?text=I%20need%20BOM%20kitting%20service','_blank')">Enquire</button>
+        </div>
+      </div>
+
+      <div class="prod-card import">
+        <div class="prod-icon">🖥️</div>
+        <h3>Display &amp; Storage Modules</h3>
+        <p>Displays, memory modules, and storage solutions from verified global brands.</p>
+        <ul class="prod-specs">
+          <li>TFT, OLED, LCD display panels</li>
+          <li>DDR4/DDR5 RAM modules</li>
+          <li>NAND Flash, SSDs, eMMC</li>
+          <li>Brands: Samsung, Kingston, Crucial, WD</li>
+        </ul>
+        <div class="prod-footer">
+          <span class="prod-type import">Import</span>
+          <button class="enquire-btn" onclick="window.open('https://wa.me/918505807245?text=I%20need%20display%20or%20storage%20module%20quote','_blank')">Enquire</button>
+        </div>
+      </div>
+
+      <div class="prod-card import">
+        <div class="prod-icon">🔌</div>
+        <h3>Connectors &amp; Interface ICs</h3>
+        <p>Connectivity components for robust industrial and embedded system designs.</p>
+        <ul class="prod-specs">
+          <li>USB, HDMI, I2C, SPI, UART ICs</li>
+          <li>PCB connectors, headers, sockets</li>
+          <li>ESD protection devices</li>
+          <li>Industrial-grade interface modules</li>
+        </ul>
+        <div class="prod-footer">
+          <span class="prod-type import">Import</span>
+          <button class="enquire-btn" onclick="window.open('https://wa.me/918505807245?text=I%20need%20connector%20or%20interface%20IC%20quote','_blank')">Enquire</button>
+        </div>
+      </div>
+
+      <div class="prod-card import">
+        <div class="prod-icon">⚡</div>
+        <h3>Power Semiconductors</h3>
+        <p>High-efficiency power devices for converters, inverters, and motor drives.</p>
+        <ul class="prod-specs">
+          <li>SiC &amp; GaN power transistors</li>
+          <li>High-voltage MOSFETs &amp; IGBTs</li>
+          <li>Gate drivers and controllers</li>
+          <li>Schottky and fast-recovery diodes</li>
+        </ul>
+        <div class="prod-footer">
+          <span class="prod-type import">Import</span>
+          <button class="enquire-btn" onclick="window.open('https://wa.me/918505807245?text=I%20need%20power%20semiconductor%20quote','_blank')">Enquire</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══ MANUFACTURING DIVISION ═══ -->
+  <div class="cat-section" data-cat="mfg">
+    <div class="cat-section-header">
+      <div class="cat-section-icon icon-mfg">🏭</div>
+      <div>
+        <h2>Manufacturing Division</h2>
+        <p>In-house designed and manufactured certified electronic products</p>
+      </div>
+      <span class="sec-badge badge-mfg">Manufacturing</span>
+    </div>
+
+    <div class="prod-grid">
+
+      <div class="prod-card mfg">
+        <div class="prod-icon">🚗</div>
+        <h3>Automobile Flashers</h3>
+        <p>Electronic flasher and relay units manufactured for all major Indian automobile OEMs.</p>
+        <ul class="prod-specs">
+          <li>2-pin, 3-pin, 5-pin variants</li>
+          <li>Compatible with all major OEMs</li>
+          <li>Solid-state, relay-based designs</li>
+          <li>Custom specifications available</li>
+        </ul>
+        <div class="prod-footer">
+          <span class="prod-type mfg">Manufacturing</span>
+          <button class="enquire-btn teal" onclick="window.open('https://wa.me/918505807245?text=I%20need%20automobile%20flasher%20quote','_blank')">Enquire</button>
+        </div>
+      </div>
+
+      <div class="prod-card mfg">
+        <div class="prod-icon">🔥</div>
+        <h3>Fire Alarm Systems</h3>
+        <p>Certified fire alarm control panels for commercial, industrial, and residential applications.</p>
+        <ul class="prod-specs">
+          <li>Conventional &amp; addressable systems</li>
+          <li>Multi-zone control panels</li>
+          <li>BIS/UL-compliant designs</li>
+          <li>Suitable for factories, offices, housing</li>
+        </ul>
+        <div class="prod-footer">
+          <span class="prod-type mfg">Manufacturing</span>
+          <button class="enquire-btn teal" onclick="window.open('https://wa.me/918505807245?text=I%20need%20fire%20alarm%20system%20quote','_blank')">Enquire</button>
+        </div>
+      </div>
+
+      <div class="prod-card mfg">
+        <div class="prod-icon">💨</div>
+        <h3>Smoke Detectors</h3>
+        <p>Optical and ionisation smoke detectors for early-warning fire safety installations.</p>
+        <ul class="prod-specs">
+          <li>Optical (photoelectric) technology</li>
+          <li>Ionisation chamber detectors</li>
+          <li>Standalone and panel-connected</li>
+          <li>Battery + mains power options</li>
+        </ul>
+        <div class="prod-footer">
+          <span class="prod-type mfg">Manufacturing</span>
+          <button class="enquire-btn teal" onclick="window.open('https://wa.me/918505807245?text=I%20need%20smoke%20detector%20quote','_blank')">Enquire</button>
+        </div>
+      </div>
+
+      <div class="prod-card mfg">
+        <div class="prod-icon">⚡</div>
+        <h3>Mini Inverters</h3>
+        <p>Compact power inverters for backup and portable power in residential and automotive use.</p>
+        <ul class="prod-specs">
+          <li>12V DC to 220V AC output</li>
+          <li>100W–2000W range</li>
+          <li>Pure sine wave &amp; modified sine</li>
+          <li>Short circuit &amp; overload protection</li>
+        </ul>
+        <div class="prod-footer">
+          <span class="prod-type mfg">Manufacturing</span>
+          <button class="enquire-btn teal" onclick="window.open('https://wa.me/918505807245?text=I%20need%20mini%20inverter%20quote','_blank')">Enquire</button>
+        </div>
+      </div>
+
+      <div class="prod-card mfg">
+        <div class="prod-icon">🚌</div>
+        <h3>Bus Fire Security System</h3>
+        <p>Specialised fire detection and suppression control electronics for passenger buses.</p>
+        <ul class="prod-specs">
+          <li>Engine bay &amp; passenger area sensors</li>
+          <li>Automatic alert &amp; suppression trigger</li>
+          <li>Rugged design for vehicle vibration</li>
+          <li>Driver alert panel included</li>
+        </ul>
+        <div class="prod-footer">
+          <span class="prod-type mfg">Manufacturing</span>
+          <button class="enquire-btn teal" onclick="window.open('https://wa.me/918505807245?text=I%20need%20bus%20fire%20security%20system%20quote','_blank')">Enquire</button>
+        </div>
+      </div>
+
+      <div class="prod-card mfg">
+        <div class="prod-icon">🔌</div>
+        <h3>SMPS — Switch Mode Power Supply</h3>
+        <p>High-efficiency switched-mode power supplies for industrial, telecom, and embedded use.</p>
+        <ul class="prod-specs">
+          <li>5V, 12V, 24V, 48V output variants</li>
+          <li>Single &amp; multi-output designs</li>
+          <li>85–265V AC wide input range</li>
+          <li>High efficiency — up to 92%</li>
+        </ul>
+        <div class="prod-footer">
+          <span class="prod-type mfg">Manufacturing</span>
+          <button class="enquire-btn teal" onclick="window.open('https://wa.me/918505807245?text=I%20need%20SMPS%20quote','_blank')">Enquire</button>
+        </div>
+      </div>
+
+      <div class="prod-card mfg">
+        <div class="prod-icon">🔋</div>
+        <h3>Linear Power Supplies</h3>
+        <p>Precision linear regulated power supplies for lab, instrumentation, and R&amp;D use.</p>
+        <ul class="prod-specs">
+          <li>Low ripple and noise output</li>
+          <li>Fixed and variable output voltage</li>
+          <li>Short circuit protection</li>
+          <li>Ideal for sensitive electronics</li>
+        </ul>
+        <div class="prod-footer">
+          <span class="prod-type mfg">Manufacturing</span>
+          <button class="enquire-btn teal" onclick="window.open('https://wa.me/918505807245?text=I%20need%20linear%20power%20supply%20quote','_blank')">Enquire</button>
+        </div>
+      </div>
+
+      <div class="prod-card mfg">
+        <div class="prod-icon">❄️</div>
+        <h3>AC &amp; Refrigerator Stabilizers</h3>
+        <p>Automatic voltage stabilizers protecting ACs and refrigerators from power fluctuations.</p>
+        <ul class="prod-specs">
+          <li>1.5 Ton, 2 Ton, 3 Ton AC models</li>
+          <li>Refrigerator — single door to side-by-side</li>
+          <li>Servo &amp; relay-based technology</li>
+          <li>Time delay relay included</li>
+        </ul>
+        <div class="prod-footer">
+          <span class="prod-type mfg">Manufacturing</span>
+          <button class="enquire-btn teal" onclick="window.open('https://wa.me/918505807245?text=I%20need%20stabilizer%20quote','_blank')">Enquire</button>
+        </div>
+      </div>
+
+      <div class="prod-card mfg">
+        <div class="prod-icon">🛤️</div>
+        <h3>Antitheft System — Indian Railways</h3>
+        <p>Certified electronic antitheft and security devices for Indian Railways applications.</p>
+        <ul class="prod-specs">
+          <li>Designed for railway specifications</li>
+          <li>Tamper-proof enclosure</li>
+          <li>Alert and tracking integration</li>
+          <li>Custom solutions for RDSO requirements</li>
+        </ul>
+        <div class="prod-footer">
+          <span class="prod-type mfg">Manufacturing</span>
+          <button class="enquire-btn teal" onclick="window.open('https://wa.me/918505807245?text=I%20need%20railway%20antitheft%20system%20quote','_blank')">Enquire</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CTA BANNER -->
+  <div class="cta-banner">
+    <h2>Can't find what you need?</h2>
+    <p>We source any component globally. Send us a part number or BOM and we'll get back with a quote within hours.</p>
+    <div class="cta-btns">
+      <a href="https://wa.me/918505807245?text=I%20have%20a%20special%20requirement" class="btn-p">💬 WhatsApp Your Requirement</a>
+      <a href="index.html#contact" class="btn-g">📋 Send Detailed Enquiry</a>
+      <a href="mailto:support@oneteksolution.com" class="btn-g">📧 Email Us</a>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 One Tek Solution. All Rights Reserved. · GST: 07AIOPC4519Q1ZR</p>
+  <p style="margin-top:6px;"><a href="index.html">← Back to Home</a> · <a href="mailto:support@oneteksolution.com">support@oneteksolution.com</a> · <a href="tel:+919717753193">+91 9717753193</a></p>
+</footer>
+
+<!-- WA BUTTON -->
+<div class="wa-btn-wrap">
+  <button class="wa-btn" onclick="window.open('https://wa.me/918505807245','_blank')" aria-label="WhatsApp">💬</button>
+</div>
+
+<script>
+  function filterCat(type, btn) {
+    document.querySelectorAll('.ftab').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.cat-section').forEach(sec => {
+      if (type === 'all' || sec.dataset.cat === type) {
+        sec.style.display = '';
+      } else {
+        sec.style.display = 'none';
+      }
+    });
+  }
+</script>
+
+</body>
+</html>

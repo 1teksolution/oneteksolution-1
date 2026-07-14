@@ -145,6 +145,43 @@
     ::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 3px; }
 
     /* ══════════════════════════════
+       FACILITY GALLERY
+    ══════════════════════════════ */
+    .facility-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .facility-card {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: var(--bg2);
+    }
+    .facility-card img {
+      display: block;
+      width: 100%; height: auto;
+      object-fit: contain;
+      transition: transform 0.4s ease;
+    }
+    .facility-card:hover img { transform: scale(1.03); }
+    .facility-caption {
+      position: absolute; left: 0; right: 0; bottom: 0;
+      padding: 16px 16px 14px;
+      background: linear-gradient(to top, rgba(5,12,23,0.95), rgba(5,12,23,0));
+    }
+    .facility-caption h4 {
+      font-family: var(--font-d);
+      color: var(--white); font-size: 15px; font-weight: 700;
+      margin-bottom: 2px;
+    }
+    .facility-caption p { color: var(--cyan); font-size: 12px; font-weight: 600; letter-spacing: 0.3px; }
+    @media (max-width: 900px) {
+      .facility-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    /* ══════════════════════════════
        HEADER
     ══════════════════════════════ */
     header {
@@ -706,6 +743,7 @@
     <nav>
       <a href="#home">Home</a>
       <a href="#about">About</a>
+      <a href="#facility">Facility</a>
       <a href="#products">Products</a>
       <a href="#manufacturing">Manufacturing</a>
       <a href="catalogue.html">Catalogue</a>
@@ -934,6 +972,36 @@
     </div>
   </div>
 </div>
+
+<hr class="divider" />
+
+<!-- ══════ FACILITY GALLERY ══════ -->
+<section class="section-wrap" id="facility">
+  <div class="container">
+    <div class="eyebrow">Inside One Tek Solution</div>
+    <h2 class="sec-title">Our Facility</h2>
+    <p class="sec-desc">A glimpse into our office, reception, R&amp;D testing lab, and warehouse operations in New Delhi.</p>
+
+    <div class="facility-grid">
+      <div class="facility-card">
+        <img src="reception.jpg" alt="One Tek Solution Reception" loading="lazy" />
+        <div class="facility-caption"><h4>Reception</h4><p>Front Office</p></div>
+      </div>
+      <div class="facility-card">
+        <img src="office-team.jpg" alt="One Tek Solution Office" loading="lazy" />
+        <div class="facility-caption"><h4>Sales &amp; Operations</h4><p>Office Floor</p></div>
+      </div>
+      <div class="facility-card">
+        <img src="rnd-testing.jpg" alt="One Tek Solution R&D Testing Lab" loading="lazy" />
+        <div class="facility-caption"><h4>R&amp;D &amp; Testing Lab</h4><p>Quality Control</p></div>
+      </div>
+      <div class="facility-card">
+        <img src="warehouse.jpg" alt="One Tek Solution Warehouse" loading="lazy" />
+        <div class="facility-caption"><h4>Warehouse</h4><p>Inventory &amp; Dispatch</p></div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <hr class="divider" />
 
@@ -1404,18 +1472,4 @@
     document.getElementById("waDot").style.display = "none";
   }
   function sendWA(msg) {
-    window.open("https://wa.me/918505807245?text=" + encodeURIComponent(msg), "_blank");
-  }
-  function sendCustomWA() {
-    var input = document.getElementById("waInput");
-    var msg = input.value.trim();
-    if (msg) { sendWA(msg); input.value = ""; }
-  }
-  setTimeout(function() {
-    var dot = document.getElementById("waDot");
-    dot.style.display = "flex";
-  }, 3000);
-<\/script>
-
-</body>
-</html>
+    window.open("https://wa.me/91

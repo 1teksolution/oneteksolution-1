@@ -704,6 +704,7 @@
       .hero-inner { grid-template-columns: 1fr; }
       .hero-panel { display: none; }
       .about-grid { grid-template-columns: 1fr; }
+      .office-showcase { grid-template-columns: 1fr; gap: 24px; }
       .dept-inner { grid-template-columns: 1fr 1fr; }
       .dept-block { border-bottom: 1px solid var(--border); }
       .products-grid { grid-template-columns: 1fr 1fr; }
@@ -727,6 +728,10 @@
       .suppliers-grid { grid-template-columns: repeat(2, 1fr); }
       .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
       h2.sec-title { font-size: 27px; }
+      .office-img { height: 220px; }
+      .office-img-wrap { min-height: unset; }
+      .office-loc { padding: 14px 16px; }
+      .office-loc p { font-size: 12.5px; }
     }
   </style>
 </head>
@@ -1479,4 +1484,17 @@
     document.getElementById("waDot").style.display = "none";
   }
   function sendWA(msg) {
-    window.open("https://wa.me/91
+    window.open("https://wa.me/918505807245?text=" + encodeURIComponent(msg), "_blank");
+  }
+  function sendCustomWA() {
+    const input = document.getElementById("waInput");
+    const msg = input.value.trim();
+    if (msg) {
+      window.open("https://wa.me/918505807245?text=" + encodeURIComponent(msg), "_blank");
+      input.value = "";
+    }
+  }
+</script>
+
+</body>
+</html>
